@@ -1,2 +1,2 @@
-rootProject.name = "UndertaleFeup"
+rootProject.name = "hero"
 

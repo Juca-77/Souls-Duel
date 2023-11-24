@@ -6,7 +6,7 @@ project-l14gr09 created by GitHub Classroom
 
  In this 2D game you will play as a little hearth, there will be some enemys trying to kill you with his powers, you need
 to be careful and move away from their attacks otherwise you may die :(.
- This project was developed by *João Rey*(up[xxxxxxxxx]@fe.up.pt) and *Antero Morgado*(up202204971@fe.up.pt) for the LDTS UC 2023/24.
+ This project was developed by *João Rey*(up202205576@fe.up.pt) and *Antero Morgado*(up202204971@fe.up.pt) for the LDTS UC 2023/24.
 
 ### IMPLEMENTED FEATURES
 
