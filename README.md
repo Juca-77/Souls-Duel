@@ -1,7 +1,6 @@
 # project-l14gr09
-project-l14gr09 created by GitHub Classroom
 
-# LDTS--Undertale-like-Game-
+# LDTS--Undertale like Game
 ## LDTS_<T><G> - <Undertale like Game>
 
  In this 2D game you will play as a little hearth, there will be some enemys trying to kill you with his powers, you need
