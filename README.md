@@ -1,7 +1,5 @@
-# project-l14gr09
-
 # LDTS--Undertale like Game
-## LDTS_<T><G> - <Undertale like Game>
+##<project-l14gr09>
 
  In this 2D game you will play as a little hearth, there will be some enemys trying to kill you with his powers, you need
 to be careful and move away from their attacks otherwise you may die :(.
