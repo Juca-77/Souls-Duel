@@ -7,12 +7,7 @@ to be careful and move away from their attacks otherwise you may die :(.
 
 ### IMPLEMENTED FEATURES
 
-> This section should contain a list of implemented features and their descriptions. In the end of the section, include two or three screenshots that illustrate the most important features.
-
-**Examples**:
-
-- **Jumping** - The game character will jump when the space bar key is pressed.
-- **Getting hidden coins** - When the game character hits a platform from below (by jumping beneath it) it will smash that segment of the platform and will get any coins that may exist hidden there.
+> None so far.
 
 ### PLANNED FEATURES
 
@@ -24,7 +19,7 @@ to be careful and move away from their attacks otherwise you may die :(.
 - **Different attacks** - The enemys will have diferent combinations of attacks.
 - **Menu** - There will be a menu with play options.
 - **Music** - Maybe
-- **Skins** - The hero will not be a letter, using FontForge we will 'create' him.
+- **Skins** - The hero will not be a letter, using FontForge we will 'create' him as a hearth.
 
 ### DESIGN
 
@@ -35,7 +30,20 @@ to be careful and move away from their attacks otherwise you may die :(.
 - **Implementation.** Show how the pattern roles, operations and associations were mapped to the concrete design classes. Illustrate it with a UML class diagram, and refer to the corresponding source code with links to the relevant lines (these should be [relative links](https://help.github.com/en/articles/about-readmes#relative-links-and-image-paths-in-readme-files). When doing this, always point to the latest version of the code.
 - **Consequences.** Benefits and liabilities of the design after the pattern instantiation, eventually comparing these consequences with those of alternative solutions.
 
-**Example of one of such subsections**:
+**Have diferent states in game**
+
+In this game we want to have a menu with diferent options, like the main menu will have options to choose level and to play, so there will be a state that is the menu state and if the user is playing there will be a state wich is the game state.
+
+**The State Pattern**
+
+We applied the **State** pattern here to allow the representation of the diferent states between wich is game and wich is menu, that way we can be more organized and have a cleaner code.
+
+**Implementation**
+
+This figure can ilustrate how the pattern were mapped to the application classes:
+
+![Screenshot from 2023-11-25 15-26-56](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/cb619539-6112-4c95-8bfe-232362dda84a)
+
 
 ------
 
