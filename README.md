@@ -1,9 +1,11 @@
-# LDTS--Undertale like Game
+# LDTS - Soul's Duel
 ## project-l14gr09
 
- In this 2D game you will play as a little hearth, there will be some enemys trying to kill you with his powers, you need
-to be careful and move away from their attacks otherwise you may die :(.
- This project was developed by *João Rey*(up202205576@fe.up.pt) and *Antero Morgado*(up202204971@fe.up.pt) for the LDTS UC 2023/24.
+This project was developed by *João Rey*(up202205576@fe.up.pt) and *Antero Morgado*(up202204971@fe.up.pt) for the curricular unity LDTS 2023/24.
+
+Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense battles of Undertale. Assume the role of a courageous soul navigating a mysterious world filled with challenges and adversaries. Engage in thrilling battles where strategic decisions and quick reflexes are key to survival. Face formidable enemies, each with unique abilities, and navigate through their attacks to emerge victorious. Dive into intense battles and determine the fate of your soul.
+
+------
 
 ### IMPLEMENTED FEATURES
 
@@ -11,18 +13,27 @@ to be careful and move away from their attacks otherwise you may die :(.
 
 ### PLANNED FEATURES
 
-> This section is similar to the previous one but should list the features that are not yet implemented. Instead of screenshots you should include GUI mock-ups for the planned features.
-
 - **Move** - The game character will be able to move with the WASD keys.
+- **HP** - The player will have hearth points.
 - **Get hitted** - If the character get hitted he will lose Health Points(HP).
 - **Enemys** - There will be a display area where the enemys will be displayed in a Ascii design.
 - **Different attacks** - The enemys will have diferent combinations of attacks.
 - **Menu** - There will be a menu with play options.
 - **Music** - Music in the menus/in game and some sound effects.
 - **Skins** - The hero will not be a letter, using FontForge we will 'create' him as a hearth.
+- **Levels** - The player will be able to choose the level he wants to start or just to start from the beginning.
+- **Score** - As the time pass the score goes up.
+  
+As inspiration and ilustration (Mockup) of what the game will look like (or at least we will try to make it look like) there's this GIFs of two Undertale fights:
 
+![undertale-fight](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/01a079c5-7c83-4dc7-adf5-960c9f2f9a33)
+
+![3-3118](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/7d3289a4-36a6-4791-8a9e-d9146a22eaae)
 
 ------
+
+### States
+
 **Managing Different States in the Game**
 
 In our game, we aimed to introduce a diverse set of experiences by incorporating distinct states. The primary focus was on creating a menu that offers various options, including the selection of game levels and initiating gameplay.
@@ -46,6 +57,7 @@ The use of the State pattern in our game design brings several benefits:
 - Modular and Extensible: Adding new states becomes a modular process, and the system is easily extensible without modifying existing code.
 - Improved Readability: The State pattern enhances code readability by isolating the logic associated with each state, making it easier to understand and maintain.
 
+### Singleton
 
 **Managing Different Themes and Sounds**
 
@@ -72,6 +84,7 @@ The use of the Singleton pattern in the current design allows the following bene
 - Resource Efficiency: By having only one instance, we avoid unnecessary duplication of resources, such as memory, associated with managing themes and sounds.
 
 
+### Game Loop
 
 **Make the game work**
 
@@ -97,14 +110,36 @@ The integration of the Game Loop pattern into our Model-Controller-Viewer archit
 - Predictable Rendering: The synchronized game loop provides predictability in rendering frames, enhancing visual stability and reducing potential glitches.
 - Dynamic Adaptability: The ability to dynamically adjust the loop's update interval allows us to optimize performance based on the application's requirements.
 
+### Factory Method
+
+**Utilizing the Factory Method Pattern for Controller and Viewer Instances in Different States:**
+
+Within our game development, we recognized the need for dynamic instantiation of controllers and viewers based on the current game state. To address this, we employed the Factory Method pattern, allowing us to encapsulate the creation logic of these components within dedicated factory methods.
+
+**Implementation**
+
+This illustration demonstrates how the Factory Method pattern is applied in our application:
+
+![Screenshot from 2023-11-26 19-32-36](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/f27a2b35-29a6-47d4-9943-0cd8df4d1a01)
+
+
+**Consequences**
+
+Applying the Factory Method pattern to our controller and viewer instantiation offers several advantages:
+- Decoupling: The creation logic for controllers and viewers is decoupled from the Game class, enhancing flexibility and maintainability.
+- Extensibility: Introducing new states and corresponding controllers/viewers becomes a modular process without affecting existing code.
+- State-specific Implementations: Each state can have its own implementation of controller and viewer creation, tailoring the components to specific state requirements.
+- Encapsulation: The Factory Method pattern encapsulates the instantiation details, promoting a cleaner and more organized structure.
+
+------
+
 #### KNOWN CODE SMELLS
 
-> This section should describe 3 to 5 different code smells that you have identified in your current implementation.
+> None so far.
 
 ### TESTING
 
-- Screenshot of coverage report.
-- Link to mutation testing report.
+> Soon.
 
 ### SELF-EVALUATION
 
