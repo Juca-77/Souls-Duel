@@ -18,66 +18,84 @@ to be careful and move away from their attacks otherwise you may die :(.
 - **Enemys** - There will be a display area where the enemys will be displayed in a Ascii design.
 - **Different attacks** - The enemys will have diferent combinations of attacks.
 - **Menu** - There will be a menu with play options.
-- **Music** - Maybe
+- **Music** - Music in the menus/in game and some sound effects.
 - **Skins** - The hero will not be a letter, using FontForge we will 'create' him as a hearth.
 
-### DESIGN
 
-> This section should be organized in different subsections, each describing a different design problem that you had to solve during the project. Each subsection should be organized in four different parts:
+------
+**Managing Different States in the Game**
 
-- **Problem in Context.** The description of the design context and the concrete problem that motivated the instantiation of the pattern. Someone else other than the original developer should be able to read and understand all the motivations for the decisions made. When refering to the implementation before the pattern was applied, don’t forget to [link to the relevant lines of code](https://help.github.com/en/articles/creating-a-permanent-link-to-a-code-snippet) in the appropriate version.
-- **The Pattern.** Identify the design pattern to be applied, why it was selected and how it is a good fit considering the existing design context and the problem at hand.
-- **Implementation.** Show how the pattern roles, operations and associations were mapped to the concrete design classes. Illustrate it with a UML class diagram, and refer to the corresponding source code with links to the relevant lines (these should be [relative links](https://help.github.com/en/articles/about-readmes#relative-links-and-image-paths-in-readme-files). When doing this, always point to the latest version of the code.
-- **Consequences.** Benefits and liabilities of the design after the pattern instantiation, eventually comparing these consequences with those of alternative solutions.
+In our game, we aimed to introduce a diverse set of experiences by incorporating distinct states. The primary focus was on creating a menu that offers various options, including the selection of game levels and initiating gameplay.
 
-**Have diferent states in game**
+**The State Pattern for Managing Different Game States**
 
-In this game we want to have a menu with diferent options, like the main menu will have options to choose level and to play, so there will be a state that is the menu state and if the user is playing there will be a state wich is the game state.
-
-**The State Pattern**
-
-We applied the **State** pattern here to allow the representation of the diferent states between wich is game and wich is menu, that way we can be more organized and have a cleaner code.
+In our game development, we recognized the need for managing distinct states such as the main menu and the gameplay itself. To facilitate this, we implemented the State pattern, providing a structured approach to represent and transition between various states within our application.
 
 **Implementation**
 
 This figure can ilustrate how the pattern were mapped to the application classes:
 
-![Screenshot from 2023-11-25 15-26-56](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/cb619539-6112-4c95-8bfe-232362dda84a)
+![Screenshot from 2023-11-26 17-13-09](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/8a330320-e86f-4110-af00-7e14abe4565f)
 
-
-------
-
-#### THE JUMP ACTION OF THE KANGAROOBOY SHOULD BEHAVE DIFFERENTLY DEPENDING ON ITS STATE
-
-**Problem in Context**
-
-There was a lot of scattered conditional logic when deciding how the KangarooBoy should behave when jumping, as the jumps should be different depending on the items that came to his possession during the game (an helix will alow him to fly, driking a potion will allow him to jump double the height, etc.). This is a violation of the **Single Responsability Principle**. We could concentrate all the conditional logic in the same method to circumscribe the issue to that one method but the **Single Responsability Principle** would still be violated.
-
-**The Pattern**
-
-We have applied the **State** pattern. This pattern allows you to represent different states with different subclasses. We can switch to a different state of the application by switching to another implementation (i.e., another subclass). This pattern allowed to address the identified problems because […].
-
-**Implementation**
-
-The following figure shows how the pattern’s roles were mapped to the application classes.
-
-![img](https://www.fe.up.pt/~arestivo/page/img/examples/lpoo/state.svg)
-
-These classes can be found in the following files:
-
-- [Character](https://web.fe.up.pt/~arestivo/page/courses/2021/lpoo/template/src/main/java/Character.java)
-- [JumpAbilityState](https://web.fe.up.pt/~arestivo/page/courses/2021/lpoo/template/src/main/java/JumpAbilityState.java)
-- [DoubleJumpState](https://web.fe.up.pt/~arestivo/page/courses/2021/lpoo/template/src/main/java/DoubleJumpState.java)
-- [HelicopterState](https://web.fe.up.pt/~arestivo/page/courses/2021/lpoo/template/src/main/java/HelicopterState.java)
-- [IncreasedGravityState](https://web.fe.up.pt/~arestivo/page/courses/2021/lpoo/template/src/main/java/IncreasedGravityState.java)
 
 **Consequences**
 
-The use of the State Pattern in the current design allows the following benefits:
+The use of the State pattern in our game design brings several benefits:
+- Organized Code Structure: The State pattern enables a clean and organized codebase by encapsulating the behavior of each state within separate classes.
+- Flexible State Transitions: Dynamic state transitions are achieved through the setState() method, providing flexibility in managing different game states.
+- Modular and Extensible: Adding new states becomes a modular process, and the system is easily extensible without modifying existing code.
+- Improved Readability: The State pattern enhances code readability by isolating the logic associated with each state, making it easier to understand and maintain.
 
-- The several states that represent the character’s hability to jump become explicit in the code, instead of relying on a series of flags.
-- We don’t need to have a long set of conditional if or switch statements associated with the various states; instead, polimorphism is used to activate the right behavior.
-- There are now more classes and instances to manage, but still in a reasonable number.
+
+**Managing Different Themes and Sounds**
+
+In this game we wanted to have different themes in the diferent states of the game and some sounds, because of that we decided to use the singleton pattern to help us.
+
+
+**The Singleton Pattern**
+
+We applied the **Singleton** pattern to our Music class to ensure that only one instance exists, providing a global point of access for managing different themes and sounds within our application.
+
+**Implementation**
+
+This figure can ilustrate how the pattern were mapped to the application class:
+
+![Screenshot from 2023-11-26 17-28-59](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/51e32f1d-678d-406b-be8a-9c3cd54847ca)
+
+
+**Consequences**
+
+The use of the Singleton pattern in the current design allows the following benefits:
+
+- Single Point of Control: With a single instance of the Music class, we have a centralized point for controlling different themes and sounds throughout the application.
+- Global Accessibility: The Singleton pattern provides a globally accessible instance, allowing any part of the application to interact with the music functionality without the need for multiple instances.
+- Resource Efficiency: By having only one instance, we avoid unnecessary duplication of resources, such as memory, associated with managing themes and sounds.
+
+
+
+**Make the game work**
+
+We encountered a critical challenge related to the continuous and synchronized execution of the game logic. Without a structured approach to manage the dynamic nature of gameplay, we faced difficulties in maintaining consistent interactions between the model, controller, and viewer components. So we decided to implement the **Game Loop** as sugested by the teacher. 
+
+**The Game Loop Pattern**
+
+We've incorporated the **Game Loop** pattern into our application, aligning with the Model-Controller-Viewer architecture. This pattern orchestrates the continuous execution of the game logic, providing a structured and synchronized flow between the model, controller, and viewer components.
+
+**Implementation**
+
+This figure can ilustrate how the pattern were mapped to the application classes:
+
+![Screenshot from 2023-11-26 19-12-07](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/84584aac-7c40-4ae5-bcd6-e9e0563aab78)
+
+**Consequences**
+
+The integration of the Game Loop pattern into our Model-Controller-Viewer architecture yields several advantages:
+
+- Consistent Game Logic Execution: The Game Loop ensures a steady and consistent execution of the game logic, promoting smooth gameplay experiences.
+- Separation of Concerns: The Model-Controller-Viewer architecture remains well-defined, with the game loop acting as the orchestrator, keeping the concerns of the model, controller, and viewer separate.
+- Real-time Responsiveness: By controlling the update interval, the application remains responsive in real-time, adapting to changes in the game state.
+- Predictable Rendering: The synchronized game loop provides predictability in rendering frames, enhancing visual stability and reducing potential glitches.
+- Dynamic Adaptability: The ability to dynamically adjust the loop's update interval allows us to optimize performance based on the application's requirements.
 
 #### KNOWN CODE SMELLS
 
