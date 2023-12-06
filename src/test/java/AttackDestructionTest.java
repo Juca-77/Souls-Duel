@@ -1,3 +1,5 @@
+import com.aor.soulsduel.model.Position;
+import com.aor.soulsduel.model.Soul;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

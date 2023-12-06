@@ -18,7 +18,7 @@ public class MenuTest {
         menuModel = mock(MenuModel.class);
         menuController = new MenuController(menuModel);
         menu = new Menu(menuController);
-        menu.addOption("Start Game");
+        menu.addOption("Start com.aor.soulsduel.Game");
         menu.addOption("Options");
         menu.addOption("Quit");
     }
@@ -45,14 +45,14 @@ public class MenuTest {
 
     @Test
     public void executeSelectedOptionTest() throws IOException, InterruptedException {
-        // Mock the menu controller's processKey method to simulate Enter key press
+        // Mock the menu com.aor.soulsduel.controller's processKey method to simulate Enter key press
         KeyStroke keyStroke = mock(KeyStroke.class);
         when(keyStroke.getKeyType()).thenReturn(KeyType.Enter);
         // Set the selected index to a known value
         menu.setSelectedIndex(1);
         // Execute the selected option
         menu.processKey(keyStroke);
-        // Verify that the corresponding method in the menu model is called
+        // Verify that the corresponding method in the menu com.aor.soulsduel.model is called
         verify(menuModel, times(1)).executeOption(1);
     }
 }

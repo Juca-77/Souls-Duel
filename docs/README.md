@@ -1,9 +1,9 @@
-# LDTS - Soul's Duel
+# LDTS - com.aor.soulsduel.model.Soul's Duel
 ## project-l14gr09
 
 This project was developed by *João Rey*(up202205576@fe.up.pt) and *Antero Morgado*(up202204971@fe.up.pt) for the curricular unity LDTS 2023/24.
 
-Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense battles of Undertale. Assume the role of a courageous soul navigating a mysterious world filled with challenges and adversaries. Engage in thrilling battles where strategic decisions and quick reflexes are key to survival. Face formidable enemies, each with unique abilities, and navigate through their attacks to emerge victorious. Dive into intense battles and determine the fate of your soul.
+Embark on an epic adventure in "com.aor.soulsduel.model.Soul's Duel," a 2D game inspired by the intense battles of Undertale. Assume the role of a courageous soul navigating a mysterious world filled with challenges and adversaries. Engage in thrilling battles where strategic decisions and quick reflexes are key to survival. Face formidable enemies, each with unique abilities, and navigate through their attacks to emerge victorious. Dive into intense battles and determine the fate of your soul.
 
 ------
 
@@ -19,7 +19,7 @@ Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense 
 - **Enemys** - There will be a display area where the enemys will be displayed in a Ascii design.
 - **Different attacks** - The enemys will have diferent combinations of attacks.
 - **Menu** - There will be a menu with play options.
-- **Music** - Music in the menus/in game and some sound effects.
+- **menu.com.aor.soulsduel.Music** - menu.com.aor.soulsduel.Music in the menus/in game and some sound effects.
 - **Skins** - The hero will not be a letter, using FontForge we will 'create' him as a hearth.
 - **Levels** - The player will be able to choose the level he wants to start or just to start from the beginning.
 - **Score** - As the time pass the score goes up.
@@ -34,13 +34,13 @@ As inspiration and ilustration (Mockup) of what the game will look like (or at l
 
 ### States
 
-**Managing Different States in the Game**
+**Managing Different States in the com.aor.soulsduel.Game**
 
-In our game, we aimed to introduce a diverse set of experiences by incorporating distinct states. The primary focus was on creating a menu that offers various options, including the selection of game levels and initiating gameplay.
+In our game, we aimed to introduce a diverse set of experiences by incorporating distinct com.aor.soulsduel.states. The primary focus was on creating a menu that offers various options, including the selection of game levels and initiating gameplay.
 
-**The State Pattern for Managing Different Game States**
+**The State Pattern for Managing Different com.aor.soulsduel.Game States**
 
-In our game development, we recognized the need for managing distinct states such as the main menu and the gameplay itself. To facilitate this, we implemented the State pattern, providing a structured approach to represent and transition between various states within our application.
+In our game development, we recognized the need for managing distinct com.aor.soulsduel.states such as the main menu and the gameplay itself. To facilitate this, we implemented the State pattern, providing a structured approach to represent and transition between various com.aor.soulsduel.states within our application.
 
 **Implementation**
 
@@ -53,20 +53,20 @@ This figure can ilustrate how the pattern were mapped to the application classes
 
 The use of the State pattern in our game design brings several benefits:
 - Organized Code Structure: The State pattern enables a clean and organized codebase by encapsulating the behavior of each state within separate classes.
-- Flexible State Transitions: Dynamic state transitions are achieved through the setState() method, providing flexibility in managing different game states.
-- Modular and Extensible: Adding new states becomes a modular process, and the system is easily extensible without modifying existing code.
+- Flexible State Transitions: Dynamic state transitions are achieved through the setState() method, providing flexibility in managing different game com.aor.soulsduel.states.
+- Modular and Extensible: Adding new com.aor.soulsduel.states becomes a modular process, and the system is easily extensible without modifying existing code.
 - Improved Readability: The State pattern enhances code readability by isolating the logic associated with each state, making it easier to understand and maintain.
 
 ### Singleton
 
 **Managing Different Themes and Sounds**
 
-In this game we wanted to have different themes in the diferent states of the game and some sounds, because of that we decided to use the singleton pattern to help us.
+In this game we wanted to have different themes in the diferent com.aor.soulsduel.states of the game and some sounds, because of that we decided to use the singleton pattern to help us.
 
 
 **The Singleton Pattern**
 
-We applied the **Singleton** pattern to our Music class to ensure that only one instance exists, providing a global point of access for managing different themes and sounds within our application.
+We applied the **Singleton** pattern to our menu.com.aor.soulsduel.Music class to ensure that only one instance exists, providing a global point of access for managing different themes and sounds within our application.
 
 **Implementation**
 
@@ -79,20 +79,20 @@ This figure can ilustrate how the pattern were mapped to the application class:
 
 The use of the Singleton pattern in the current design allows the following benefits:
 
-- Single Point of Control: With a single instance of the Music class, we have a centralized point for controlling different themes and sounds throughout the application.
+- Single Point of Control: With a single instance of the menu.com.aor.soulsduel.Music class, we have a centralized point for controlling different themes and sounds throughout the application.
 - Global Accessibility: The Singleton pattern provides a globally accessible instance, allowing any part of the application to interact with the music functionality without the need for multiple instances.
 - Resource Efficiency: By having only one instance, we avoid unnecessary duplication of resources, such as memory, associated with managing themes and sounds.
 
 
-### Game Loop
+### com.aor.soulsduel.Game Loop
 
 **Make the game work**
 
-We encountered a critical challenge related to the continuous and synchronized execution of the game logic. Without a structured approach to manage the dynamic nature of gameplay, we faced difficulties in maintaining consistent interactions between the model, controller, and viewer components. So we decided to implement the **Game Loop** as sugested by the teacher. 
+We encountered a critical challenge related to the continuous and synchronized execution of the game logic. Without a structured approach to manage the dynamic nature of gameplay, we faced difficulties in maintaining consistent interactions between the com.aor.soulsduel.model, com.aor.soulsduel.controller, and com.aor.soulsduel.viewer components. So we decided to implement the **com.aor.soulsduel.Game Loop** as sugested by the teacher. 
 
-**The Game Loop Pattern**
+**The com.aor.soulsduel.Game Loop Pattern**
 
-We've incorporated the **Game Loop** pattern into our application, aligning with the Model-Controller-Viewer architecture. This pattern orchestrates the continuous execution of the game logic, providing a structured and synchronized flow between the model, controller, and viewer components.
+We've incorporated the **com.aor.soulsduel.Game Loop** pattern into our application, aligning with the Model-Controller-Viewer architecture. This pattern orchestrates the continuous execution of the game logic, providing a structured and synchronized flow between the com.aor.soulsduel.model, com.aor.soulsduel.controller, and com.aor.soulsduel.viewer components.
 
 **Implementation**
 
@@ -102,10 +102,10 @@ This figure can ilustrate how the pattern were mapped to the application classes
 
 **Consequences**
 
-The integration of the Game Loop pattern into our Model-Controller-Viewer architecture yields several advantages:
+The integration of the com.aor.soulsduel.Game Loop pattern into our Model-Controller-Viewer architecture yields several advantages:
 
-- Consistent Game Logic Execution: The Game Loop ensures a steady and consistent execution of the game logic, promoting smooth gameplay experiences.
-- Separation of Concerns: The Model-Controller-Viewer architecture remains well-defined, with the game loop acting as the orchestrator, keeping the concerns of the model, controller, and viewer separate.
+- Consistent com.aor.soulsduel.Game Logic Execution: The com.aor.soulsduel.Game Loop ensures a steady and consistent execution of the game logic, promoting smooth gameplay experiences.
+- Separation of Concerns: The Model-Controller-Viewer architecture remains well-defined, with the game loop acting as the orchestrator, keeping the concerns of the com.aor.soulsduel.model, com.aor.soulsduel.controller, and com.aor.soulsduel.viewer separate.
 - Real-time Responsiveness: By controlling the update interval, the application remains responsive in real-time, adapting to changes in the game state.
 - Predictable Rendering: The synchronized game loop provides predictability in rendering frames, enhancing visual stability and reducing potential glitches.
 - Dynamic Adaptability: The ability to dynamically adjust the loop's update interval allows us to optimize performance based on the application's requirements.
@@ -125,10 +125,10 @@ This illustration demonstrates how the Factory Method pattern is applied in our 
 
 **Consequences**
 
-Applying the Factory Method pattern to our controller and viewer instantiation offers several advantages:
-- Decoupling: The creation logic for controllers and viewers is decoupled from the Game class, enhancing flexibility and maintainability.
-- Extensibility: Introducing new states and corresponding controllers/viewers becomes a modular process without affecting existing code.
-- State-specific Implementations: Each state can have its own implementation of controller and viewer creation, tailoring the components to specific state requirements.
+Applying the Factory Method pattern to our com.aor.soulsduel.controller and com.aor.soulsduel.viewer instantiation offers several advantages:
+- Decoupling: The creation logic for controllers and viewers is decoupled from the com.aor.soulsduel.Game class, enhancing flexibility and maintainability.
+- Extensibility: Introducing new com.aor.soulsduel.states and corresponding controllers/viewers becomes a modular process without affecting existing code.
+- State-specific Implementations: Each state can have its own implementation of com.aor.soulsduel.controller and com.aor.soulsduel.viewer creation, tailoring the components to specific state requirements.
 - Encapsulation: The Factory Method pattern encapsulates the instantiation details, promoting a cleaner and more organized structure.
 
 ------
