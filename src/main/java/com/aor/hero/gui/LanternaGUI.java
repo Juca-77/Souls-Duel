@@ -147,7 +147,7 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawBlade(Position position) {
-        drawCharacter(position.getX(), position.getY(), 'A', "#FFFFFF");
+        drawCharacter(position.getX(), position.getY(), '@', "#FFFFFF");
     }
 
     @Override

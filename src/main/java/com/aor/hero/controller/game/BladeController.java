@@ -33,5 +33,11 @@ public class BladeController extends GameController{
             if (getModel().getHero().getPosition().equals(position))
                 getModel().getHero().decreaseHP();
         }
+        else {
+            blade.setPosition(new Position(103,29));
+            blade.kill();
+        }
+
+
     }
 }

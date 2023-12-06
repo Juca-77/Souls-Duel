@@ -80,9 +80,10 @@ public class LoaderArenaBuilder extends ArenaBuilder {
     @Override
     protected List<Blade> createBlades() {
         List<Blade> blades = new ArrayList<>();
-        for (int i=0; i<3;i++) {
-            blades.add(new Blade(10+5*i,60));
+        for (int i=0; i<8;i++) {
+            blades.add(new Blade(103+5*i,31));
         }
+
         return blades;
     }
 }

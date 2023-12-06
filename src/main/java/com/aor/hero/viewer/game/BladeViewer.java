@@ -7,6 +7,8 @@ import com.aor.hero.model.game.elements.Enemy;
 public class BladeViewer implements ElementViewer<Blade>{
     @Override
     public void draw(Blade blade, GUI gui) {
-        gui.drawEnemy(blade.getPosition());
+        if(blade.isAlive()) {
+            gui.drawBlade(blade.getPosition());
+        }
     }
 }
