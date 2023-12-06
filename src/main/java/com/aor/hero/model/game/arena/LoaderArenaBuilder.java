@@ -75,7 +75,7 @@ public class LoaderArenaBuilder extends ArenaBuilder {
     }
 
     @Override
-    protected Enemy createEnemy(){return new Enemy(100, 5);}
+    protected Enemy createEnemy(){return new Enemy(100, 5,2);}
 
     @Override
     protected List<Blade> createBlades() {

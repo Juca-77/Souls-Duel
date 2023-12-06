@@ -1,7 +1,13 @@
 package com.aor.hero.model.game.elements;
 
 public class Enemy extends Element {
-    public Enemy(int x, int y) {
+
+    private int level;
+    public Enemy(int x, int y,int level) {
         super(x, y);
+        this.level=level;
     }
+    public int getEnemyLevel() {return level;}
+
+    public void setEnemyLevel(int level) {this.level=level;}
 }

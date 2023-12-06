@@ -41,6 +41,7 @@ public class Arena {
 
     public Enemy getEnemy() {return enemy;}
 
+
     public void setEnemy(Enemy enemy) {this.enemy = enemy;}
 
     public List<Monster> getMonsters() {
