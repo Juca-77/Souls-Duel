@@ -20,11 +20,10 @@ public class Game {
         int width=47;  //bigger than 47 to have a normal execution
         int height=50; //always 60 pls ***se alterar as dimensoes alterar tmb no menucontroler para evitar erros qndo se dá replay(ou play)***
         this.gui = new LanternaGUI(width, height);
-        this.state = new GameState(new LoaderArenaBuilder(1, width, height ).createArena()); //change to menu controler
-
+        //this.state = new GameState(new LoaderArenaBuilder(1, width, height ).createArena()); //change to menu controler
+        this.state = new MenuState(new Menu());
         Music normalMode = new Music("gameplaysong.wav");
-        //normalMode.start();
-        //this.state = new GameState(new LoaderArenaBuilder(1).createArena()); //change to menu controler
+        normalMode.start();
 
     }
 
