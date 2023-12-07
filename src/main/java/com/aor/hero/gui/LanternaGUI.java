@@ -31,6 +31,7 @@ public class LanternaGUI implements GUI {
         this.screen = createScreen(terminal);
     }
 
+
     private Screen createScreen(Terminal terminal) throws IOException {
         final Screen screen;
         screen = new TerminalScreen(terminal);
@@ -124,11 +125,9 @@ public class LanternaGUI implements GUI {
             //List<String> wordsList = Arrays.asList(wordsArray);
             for (int i = 0; i < 29; i++) {
                 for (int j = 0; j < 48; j++) {
-                    if ("░".equals(String.valueOf(wordsArray[i].charAt(j)))) {
-                        drawCharacter(95 + j, i, wordsArray[i].charAt(j), "#000000");
-                    }
+
                     if ("▓".equals(String.valueOf(wordsArray[i].charAt(j)))) {
-                        drawCharacter(95 + j, i, wordsArray[i].charAt(j), "#FFFFFF");
+                        drawCharacter(position.getX() + j, position.getY()+i, wordsArray[i].charAt(j), "#FFFFFF");
                     }
                     //drawCharacter(95+j,1+i, wordsArray[i].charAt(j),"#FFFFFF");
                 }
@@ -167,11 +166,9 @@ public class LanternaGUI implements GUI {
 
             for(int i=0;i<28;i++) {
                 for(int j=0;j<52;j++) {
-                    if ("▓".equals(String.valueOf(wordsArray[i].charAt(j)))) {
-                        drawCharacter(95 + j, i, wordsArray[i].charAt(j), "#000000");
-                    }
+
                     if ("░".equals(String.valueOf(wordsArray[i].charAt(j)))) {
-                        drawCharacter(95 + j, i, wordsArray[i].charAt(j), "#FFFFFF");
+                        drawCharacter(position.getX()+ j, position.getY()+i, wordsArray[i].charAt(j), "#FFFFFF");
                     }
                 }
             }

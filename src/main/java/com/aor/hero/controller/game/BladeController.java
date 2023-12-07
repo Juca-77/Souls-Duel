@@ -20,7 +20,7 @@ public class BladeController extends GameController{
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (time - lastMovement > 100) {
+        if (time - lastMovement > 500) {
             for (Blade blade : getModel().getBlades())
                 if(blade.isAlive()) {
                     moveBlade(blade, blade.getPosition().getDown());
@@ -30,7 +30,7 @@ public class BladeController extends GameController{
     }
 
     private void moveBlade(Blade blade, Position position) {
-        if (getModel().isEmpty(position)) {
+        if (getModel().isEmpty(position) && blade.isAlive()) {
             blade.setPosition(position);
             if (getModel().getHero().getPosition().equals(position)) {
                 getModel().getHero().decreaseHP();
@@ -39,7 +39,7 @@ public class BladeController extends GameController{
 
         }
         else {
-            blade.setPosition(new Position(103,29));
+            blade.setPosition(new Position(0,0));
             blade.kill();
         }
 
