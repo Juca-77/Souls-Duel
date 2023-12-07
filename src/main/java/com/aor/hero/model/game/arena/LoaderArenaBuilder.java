@@ -19,7 +19,6 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         this.level = level;
         this.width=width;
         this.height=height;
-        //lines = ;
     }
 
 
