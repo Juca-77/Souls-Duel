@@ -34,7 +34,6 @@ public class BladeController extends GameController{
             blade.setPosition(position);
             if (getModel().getHero().getPosition().equals(position)) {
                 getModel().getHero().decreaseHP();
-                getModel().getHero().setPosition(new Position(120,39));
             }
 
 
