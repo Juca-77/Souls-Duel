@@ -1,7 +1,6 @@
 package com.aor.hero.gui;
 
 import com.aor.hero.model.Position;
-import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
@@ -18,7 +17,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Arrays;
 
 public class LanternaGUI implements GUI {
     private final Screen screen;
@@ -176,7 +174,10 @@ public class LanternaGUI implements GUI {
             }
         }
         //drawCharacter(position.getX(), position.getY(), 'H', "#FF0000");
-    }
+        if(level == 3) {
+        }
+        }
+
 
     @Override
     public void drawWall(Position position) {
@@ -197,13 +198,13 @@ public class LanternaGUI implements GUI {
     public void drawText(Position position, String text, String color) {
         TextGraphics tg = screen.newTextGraphics();
         tg.setForegroundColor(TextColor.Factory.fromString(color));
-        tg.putString(position.getX(), position.getY(), text);
+        tg.putString((int) position.getX(), (int) position.getY(), text);
     }
 
-    private void drawCharacter(int x, int y, char c, String color) {
+    private void drawCharacter(double x, double y, char c, String color) {
         TextGraphics tg = screen.newTextGraphics();
         tg.setForegroundColor(TextColor.Factory.fromString(color));
-        tg.putString(x, y + 1, "" + c);
+        tg.putString((int) x, (int) (y + 1), "" + c);
     }
 
     @Override
