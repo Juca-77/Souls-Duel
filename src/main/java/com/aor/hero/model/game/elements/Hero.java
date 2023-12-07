@@ -3,7 +3,7 @@ package com.aor.hero.model.game.elements;
 public class Hero extends Element {
     private int hp;
 
-    public Hero(int x, int y) {
+    public Hero(double x, double y) {
         super(x, y);
         this.hp = 5;
     }

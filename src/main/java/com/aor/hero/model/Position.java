@@ -3,10 +3,10 @@ package com.aor.hero.model;
 import java.util.Objects;
 
 public class Position {
-    private final int x;
-    private final int y;
+    private final double x;
+    private final double y;
 
-    public Position(int x, int y) {
+    public Position(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -41,11 +41,11 @@ public class Position {
         }
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
@@ -54,7 +54,7 @@ public class Position {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Position position = (Position) o;
-        return x == position.x && y == position.y;
+        return Double.compare(position.x, x) == 0 && Double.compare(position.y, y) == 0;
     }
 
     @Override
