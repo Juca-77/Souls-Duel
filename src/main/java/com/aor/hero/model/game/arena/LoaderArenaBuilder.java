@@ -37,12 +37,12 @@ public class LoaderArenaBuilder extends ArenaBuilder {
     protected List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
         for (int c = 0; c < 40; c++) {
-            walls.add(new Wall(getWidth()/2-19+c, 30));
-            walls.add(new Wall(getWidth()/2-19+c, 48));
+            walls.add(new Wall(getWidth()/2-19+c, 26));
+            walls.add(new Wall(getWidth()/2-19+c, 44));
         }
         for (int r = 1; r < 20; r++) {
-            walls.add(new Wall(getWidth()/2-20, 29+r));
-            walls.add(new Wall(getWidth()/2+20, 29+r));
+            walls.add(new Wall(getWidth()/2-20, 25+r));
+            walls.add(new Wall(getWidth()/2+21, 25+r));
         }
         return walls;
     }
