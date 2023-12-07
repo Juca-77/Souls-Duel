@@ -6,7 +6,7 @@ import com.aor.hero.model.Position;
 import com.aor.hero.model.game.arena.Arena;
 
 public class HeroController extends GameController {
-    private static final double MOVEMENT_SPEED = 0.1; // Adjust the speed as needed
+    private static final double MOVEMENT_SPEED = 1000.1; // Adjust the speed as needed
     private long lastUpdateTime = System.currentTimeMillis();
 
     public HeroController(Arena arena) {

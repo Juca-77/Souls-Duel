@@ -177,7 +177,10 @@ public class LanternaGUI implements GUI {
             }
         }
         //drawCharacter(position.getX(), position.getY(), 'H', "#FF0000");
-    }
+        if(level == 3) {
+        }
+        }
+
 
     @Override
     public void drawWall(Position position) {
