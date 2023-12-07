@@ -16,8 +16,10 @@ public class Game {
     private State state;
 
     public Game() throws FontFormatException, IOException, URISyntaxException {
-        this.gui = new LanternaGUI(240, 60);
-        this.state = new GameState(new LoaderArenaBuilder(1).createArena()); //change to menu controler
+        int width=200;  //bigger than 47 to have a normal execution
+        int height=60; //always 60 pls
+        this.gui = new LanternaGUI(width, height);
+        this.state = new GameState(new LoaderArenaBuilder(1, width, height ).createArena()); //change to menu controler
     }
 
     public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException {

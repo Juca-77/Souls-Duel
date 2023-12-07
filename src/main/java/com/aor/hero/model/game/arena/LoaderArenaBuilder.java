@@ -11,47 +11,39 @@ import java.util.List;
 
 public class LoaderArenaBuilder extends ArenaBuilder {
     private final int level;
-    private final List<String> lines;
+    private int width;
+    private int height;
 
-    public LoaderArenaBuilder(int level) throws IOException {
+
+    public LoaderArenaBuilder(int level, int width, int height) throws IOException {
         this.level = level;
-
-        URL resource = LoaderArenaBuilder.class.getResource("/levels/level" + level + ".lvl");
-        BufferedReader br = new BufferedReader(new FileReader(resource.getFile()));
-
-        lines = readLines(br);
+        this.width=width;
+        this.height=height;
+        //lines = ;
     }
 
-    private List<String> readLines(BufferedReader br) throws IOException {
-        List<String> lines = new ArrayList<>();
-        for (String line; (line = br.readLine()) != null; )
-            lines.add(line);
-        return lines;
-    }
+
 
     @Override
     protected int getWidth() {
-        int width = 0;
-        for (String line : lines)
-            width = Math.max(width, line.length());
         return width;
     }
 
     @Override
     protected int getHeight() {
-        return lines.size();
+        return height;
     }
 
     @Override
     protected List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
         for (int c = 0; c < 40; c++) {
-            walls.add(new Wall(101+c, 30));
-            walls.add(new Wall(101+c, 48));
+            walls.add(new Wall(getWidth()/2-19+c, 30));
+            walls.add(new Wall(getWidth()/2-19+c, 48));
         }
         for (int r = 1; r < 20; r++) {
-            walls.add(new Wall(100, 29+r));
-            walls.add(new Wall(140, 29+r));
+            walls.add(new Wall(getWidth()/2-20, 29+r));
+            walls.add(new Wall(getWidth()/2+20, 29+r));
         }
         return walls;
     }
@@ -71,17 +63,17 @@ public class LoaderArenaBuilder extends ArenaBuilder {
 
     @Override
     protected Hero createHero() {
-        return new Hero(120, 39);
+        return new Hero(getWidth()/2, 39);
     }
 
     @Override
-    protected Enemy createEnemy(){return new Enemy(100, 5,2);}
+    protected Enemy createEnemy(){return new Enemy(getWidth()/2-24, 0,1);}
 
     @Override
     protected List<Blade> createBlades() {
         List<Blade> blades = new ArrayList<>();
         for (int i=0; i<8;i++) {
-            blades.add(new Blade(103+5*i,31));
+            blades.add(new Blade(getWidth()/2-17+5*i,31));
         }
 
         return blades;
