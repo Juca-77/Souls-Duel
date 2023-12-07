@@ -7,6 +7,7 @@ import com.aor.hero.model.menu.Menu;
 import com.aor.hero.states.GameState;
 import com.aor.hero.states.MenuState;
 import com.aor.hero.states.State;
+import com.aor.hero.viewer.Music;
 
 import java.awt.*;
 import java.io.IOException;
@@ -17,7 +18,10 @@ public class Game {
 
     public Game() throws FontFormatException, IOException, URISyntaxException {
         this.gui = new LanternaGUI(240, 60);
-        this.state = new GameState(new LoaderArenaBuilder(1).createArena()); //change to menu controler
+        this.state = new MenuState(new Menu());
+        Music normalMode = new Music("gameplaysong.wav");
+        normalMode.start();
+        //this.state = new GameState(new LoaderArenaBuilder(1).createArena()); //change to menu controler
     }
 
     public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException {
