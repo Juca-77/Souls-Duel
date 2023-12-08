@@ -22,7 +22,8 @@ public class GameViewer extends Viewer<Arena> {
         drawElement(gui, getModel().getEnemy(), new EnemyViewer());
         drawElements(gui, getModel().getBlades(), new BladeViewer());
 
-        gui.drawText(new Position(getModel().getWidth()/2-20, 46), "HP: " + getModel().getHero().getHp() + "/5", "#FF0000");
+        gui.drawText(new Position(getModel().getWidth()/2-20, 46), "HP: " + getModel().getHero().getHp() + "/5", "#FFFFFF");
+        gui.drawText(new Position(getModel().getWidth()/2+14, 46), "LEVEL: 1" , "#FFFFFF");
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {
