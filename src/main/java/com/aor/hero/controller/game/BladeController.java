@@ -6,11 +6,13 @@ import com.aor.hero.model.Position;
 import com.aor.hero.model.game.arena.Arena;
 import com.aor.hero.model.game.elements.Blade;
 import com.aor.hero.model.game.elements.Monster;
+import com.aor.hero.viewer.Music;
 
 import java.io.IOException;
 
 public class BladeController extends GameController{
     private long lastMovement;
+    private Music damage = new Music("damage_sound.wav");
 
     public BladeController(Arena arena) {
         super(arena);
@@ -37,6 +39,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getUp());
                             if (getModel().getHero().getPosition().equals(blade.getPosition().getUp())) {
                                 getModel().getHero().decreaseHP();
+                                damage.startonce();
                             }
                         }
                     }
@@ -53,6 +56,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getDown());
                             if (getModel().getHero().getPosition().equals(blade.getPosition().getDown())) {
                                 getModel().getHero().decreaseHP();
+                                damage.startonce();
                             }
                         }
                     }
@@ -68,6 +72,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getLeft());
                             if (getModel().getHero().getPosition().equals(blade.getPosition().getLeft())) {
                                 getModel().getHero().decreaseHP();
+                                damage.startonce();
                             }
                         }
                     }
@@ -83,6 +88,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getRight());
                             if (getModel().getHero().getPosition().equals(blade.getPosition().getRight())) {
                                 getModel().getHero().decreaseHP();
+                                damage.startonce();
                             }
                         }
                     }
