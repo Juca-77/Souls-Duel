@@ -20,29 +20,78 @@ public class BladeController extends GameController{
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (time - lastMovement > 300) {
+        if (time - lastMovement > 200) {
             for (Blade blade : getModel().getBlades())
                 if(blade.isAlive()) {
-                    moveBlade(blade, blade.getPosition().getDown());
+                    moveBlade(blade);
                 }
             this.lastMovement = time;
         }
     }
 
-    private void moveBlade(Blade blade, Position position) {
-        if (getModel().isEmpty(position) && blade.isAlive()) {
-            blade.setPosition(position);
-            if (getModel().getHero().getPosition().equals(position)) {
-                getModel().getHero().decreaseHP();
+    private void moveBlade(Blade blade) {
+            switch (blade.getMove()) {
+                case (int) 1: {
+                    if (getModel().isEmpty(blade.getPosition().getUp()) && blade.isAlive()) {
+                        if (getModel().isEmpty(blade.getPosition().getUp()) && blade.isAlive()) {
+                            blade.setPosition(blade.getPosition().getUp());
+                            if (getModel().getHero().getPosition().equals(blade.getPosition().getUp())) {
+                                getModel().getHero().decreaseHP();
+                            }
+                        }
+                    }
+                    else {
+                        blade.setPosition(new Position(0,0));
+                        blade.kill();
+                    }
+
+                    break;
+                }
+                case (int) 2: {
+                    if (getModel().isEmpty(blade.getPosition().getDown()) && blade.isAlive()) {
+                        if (getModel().isEmpty(blade.getPosition().getDown()) && blade.isAlive()) {
+                            blade.setPosition(blade.getPosition().getDown());
+                            if (getModel().getHero().getPosition().equals(blade.getPosition().getDown())) {
+                                getModel().getHero().decreaseHP();
+                            }
+                        }
+                    }
+                    else {
+                        blade.setPosition(new Position(0,0));
+                        blade.kill();
+                    }
+                    break;
+                }
+                case (int) 3: {
+                    if (getModel().isEmpty(blade.getPosition().getLeft()) && blade.isAlive()) {
+                        if (getModel().isEmpty(blade.getPosition().getLeft()) && blade.isAlive()) {
+                            blade.setPosition(blade.getPosition().getLeft());
+                            if (getModel().getHero().getPosition().equals(blade.getPosition().getLeft())) {
+                                getModel().getHero().decreaseHP();
+                            }
+                        }
+                    }
+                    else {
+                        blade.setPosition(new Position(0,0));
+                        blade.kill();
+                    }
+                    break;
+                }
+                case (int) 4: {
+                    if (getModel().isEmpty(blade.getPosition().getRight()) && blade.isAlive()) {
+                        if (getModel().isEmpty(blade.getPosition().getRight()) && blade.isAlive()) {
+                            blade.setPosition(blade.getPosition().getRight());
+                            if (getModel().getHero().getPosition().equals(blade.getPosition().getRight())) {
+                                getModel().getHero().decreaseHP();
+                            }
+                        }
+                    }
+                    else {
+                        blade.setPosition(new Position(0,0));
+                        blade.kill();
+                    }
+                    break;
+                }
             }
-
-
-        }
-        else {
-            blade.setPosition(new Position(0,0));
-            blade.kill();
-        }
-
-
     }
 }
