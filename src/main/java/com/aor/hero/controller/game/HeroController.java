@@ -13,21 +13,6 @@ public class HeroController extends GameController {
         super(arena);
     }
 
-//    public void moveHeroLeft() {
-//        moveHero(getModel().getHero().getPosition().getLeft());
-//    }
-//
-//    public void moveHeroRight() {
-//        moveHero(getModel().getHero().getPosition().getRight());
-//    }
-//
-//    public void moveHeroUp() {
-//        moveHero(getModel().getHero().getPosition().getUp());
-//    }
-//
-//    public void moveHeroDown() {
-//        moveHero(getModel().getHero().getPosition().getDown());
-//    }
 
     private void moveHero(Position position) {
         if (getModel().isEmpty(position)) {

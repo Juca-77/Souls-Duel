@@ -37,6 +37,18 @@ public class Music {
         sound.start();
         sound.loop(Clip.LOOP_CONTINUOUSLY);
     }
+    public void startonce() {
+        sound.setMicrosecondPosition(0);
+        sound.start();
+        sleep();
+    }
+    private void sleep(){
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
     public void stop() {sound.stop();}
 
