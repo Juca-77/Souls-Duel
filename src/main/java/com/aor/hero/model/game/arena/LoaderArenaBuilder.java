@@ -72,8 +72,18 @@ public class LoaderArenaBuilder extends ArenaBuilder {
     protected List<Blade> createBlades() {
         List<Blade> blades = new ArrayList<>();
         for (int i=0; i<8;i++) {
-            blades.add(new Blade(getWidth()/2-17+5*i,31));
+            blades.add(new Blade(getWidth()/2-17+5*i,29, 2)); //1=up 2=down 3=left 4=right
         }
+        for (int i=0; i<8;i++) {
+            blades.add(new Blade(getWidth()/2-17,27+2*i, 4)); //1=up 2=down 3=left 4=right
+        }
+        for (int i=0; i<8;i++) {
+            blades.add(new Blade(getWidth()/2-17+5*i,38, 1)); //1=up 2=down 3=left 4=right
+        }
+        for (int i=0; i<8;i++) {
+            blades.add(new Blade(getWidth()/2+19,27+2*i, 3)); //1=up 2=down 3=left 4=right
+        }
+
 
         return blades;
     }
