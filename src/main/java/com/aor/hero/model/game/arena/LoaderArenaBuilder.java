@@ -2,10 +2,7 @@ package com.aor.hero.model.game.arena;
 
 import com.aor.hero.model.game.elements.*;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +18,7 @@ public class LoaderArenaBuilder {
         //arena.setMonsters(createMonsters());
         arena.setWalls(createWalls());
         arena.setEnemy(createEnemy(level));
-        arena.setBlades(createBlades());
+        arena.setBlades(createBlades1());
 
         return arena;
     }
@@ -80,7 +77,7 @@ public class LoaderArenaBuilder {
     public Enemy createEnemy(int level){return new Enemy(getWidth()/2-24, 0,level);}
 
 
-    public List<Blade> createBlades() {
+    public List<Blade> createBlades1() {
         List<Blade> blades = new ArrayList<>();
         for (int i=0; i<8;i++) {
             blades.add(new Blade(getWidth()/2-17+5*i,29, 2)); //1=up 2=down 3=left 4=right

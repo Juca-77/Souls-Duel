@@ -40,6 +40,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getUp());
                             if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
+                                damage.stop();
                                 damage.startonce();
 
                             }
@@ -58,6 +59,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getDown());
                             if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
+                                damage.stop();
                                 damage.startonce();
                             }
                         }
@@ -74,6 +76,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getLeft());
                             if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
+                                damage.stop();
                                 damage.startonce();
                             }
                         }
@@ -90,6 +93,7 @@ public class BladeController extends GameController{
                             blade.setPosition(blade.getPosition().getRight());
                             if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
+                                damage.stop();
                                 damage.startonce();
                             }
                         }

@@ -22,6 +22,7 @@ public class HeroController extends GameController {
             getModel().getHero().setPosition(position);
             if (getModel().isBlade(position)) {
                 getModel().getHero().decreaseHP();
+                damage.stop();
                 damage.startonce();
             }
         }
