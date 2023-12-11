@@ -9,6 +9,8 @@ public class Arena {
     private final int width;
     private final int height;
 
+    private int level;
+
     private Hero hero;
 
     private Enemy enemy;
@@ -17,9 +19,10 @@ public class Arena {
     private List<Monster> monsters;
     private List<Wall> walls;
 
-    public Arena(int width, int height) {
+    public Arena(int width, int height, int level) {
         this.width = width;
         this.height = height;
+        this.level= level;
     }
 
     public int getWidth() {
@@ -80,4 +83,8 @@ public class Arena {
                 return true;
         return false;
     }
+
+    public int getLevel() {return level;}
+
+    public void setLevel(int level) {this.level=level;}
 }
