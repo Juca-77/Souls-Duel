@@ -14,7 +14,6 @@ public class Arena {
     private Enemy enemy;
 
     private List<Blade> blades;
-
     private List<Monster> monsters;
     private List<Wall> walls;
 
@@ -56,6 +55,10 @@ public class Arena {
 
     public void setBlades(List<Blade> blades) {this.blades=blades;}
 
+    public void addBlades(List<Blade> blades) {
+        this.blades.addAll(blades);
+    }
+
     public List<Wall> getWalls() {
         return walls;
     }
@@ -71,9 +74,9 @@ public class Arena {
         return true;
     }
 
-    public boolean isMonster(Position position) {
-        for (Monster monster : monsters)
-            if (monster.getPosition().equals(position))
+    public boolean isBlade(Position position) {
+        for (Blade blade : blades)
+            if (blade.getPosition().equals(position))
                 return true;
         return false;
     }

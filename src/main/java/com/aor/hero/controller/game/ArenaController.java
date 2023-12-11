@@ -10,14 +10,14 @@ import java.io.IOException;
 
 public class ArenaController extends GameController {
     private final HeroController heroController;
-    private final MonsterController monsterController;
+    //private final MonsterController monsterController;
     private final BladeController bladesController;
 
     public ArenaController(Arena arena) {
         super(arena);
 
         this.heroController = new HeroController(arena);
-        this.monsterController = new MonsterController(arena);
+        //this.monsterController = new MonsterController(arena);
         this.bladesController = new BladeController(arena);
     }
 
@@ -26,7 +26,7 @@ public class ArenaController extends GameController {
             game.setState(new MenuState(new Menu()));
         else {
             heroController.step(game, action, time);
-            monsterController.step(game, action, time);
+            //monsterController.step(game, action, time);
             bladesController.step(game, action, time);
         }
     }

@@ -9,11 +9,22 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoaderArenaBuilder extends ArenaBuilder {
+public class LoaderArenaBuilder {
     private final int level;
     private int width;
     private int height;
 
+    public Arena createArena() {
+        Arena arena = new Arena(getWidth(), getHeight());
+
+        arena.setHero(createHero());
+        //arena.setMonsters(createMonsters());
+        arena.setWalls(createWalls());
+        arena.setEnemy(createEnemy(level));
+        arena.setBlades(createBlades());
+
+        return arena;
+    }
 
     public LoaderArenaBuilder(int level, int width, int height) throws IOException {
         this.level = level;
@@ -23,18 +34,18 @@ public class LoaderArenaBuilder extends ArenaBuilder {
 
 
 
-    @Override
-    protected int getWidth() {
+
+    public int getWidth() {
         return width;
     }
 
-    @Override
-    protected int getHeight() {
+
+    public int getHeight() {
         return height;
     }
 
-    @Override
-    protected List<Wall> createWalls() {
+
+    public List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
         for (int c = 0; c < 40; c++) {
             walls.add(new Wall(getWidth()/2-19+c, 26));
@@ -47,8 +58,8 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         return walls;
     }
 
-    @Override
-    protected List<Monster> createMonsters() {
+
+    public List<Monster> createMonsters() {
         List<Monster> monsters = new ArrayList<>();
 /*
         for (int y = 0; y < lines.size(); y++) {
@@ -60,16 +71,16 @@ public class LoaderArenaBuilder extends ArenaBuilder {
         return monsters;
     }
 
-    @Override
-    protected Hero createHero() {
+
+    public Hero createHero() {
         return new Hero(getWidth()/2, 39);
     }
 
-    @Override
-    protected Enemy createEnemy(){return new Enemy(getWidth()/2-24, 0,1);}
 
-    @Override
-    protected List<Blade> createBlades() {
+    public Enemy createEnemy(int level){return new Enemy(getWidth()/2-24, 0,level);}
+
+
+    public List<Blade> createBlades() {
         List<Blade> blades = new ArrayList<>();
         for (int i=0; i<8;i++) {
             blades.add(new Blade(getWidth()/2-17+5*i,29, 2)); //1=up 2=down 3=left 4=right

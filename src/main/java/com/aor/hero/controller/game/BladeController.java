@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class BladeController extends GameController{
     private long lastMovement;
-    private Music damage = new Music("damage_sound.wav");
+
 
     public BladeController(Arena arena) {
         super(arena);
@@ -37,9 +37,9 @@ public class BladeController extends GameController{
                     if (getModel().isEmpty(blade.getPosition().getUp()) && blade.isAlive()) {
                         if (getModel().isEmpty(blade.getPosition().getUp()) && blade.isAlive()) {
                             blade.setPosition(blade.getPosition().getUp());
-                            if (getModel().getHero().getPosition().equals(blade.getPosition().getUp())) {
+                            if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
-                                damage.startonce();
+
                             }
                         }
                     }
@@ -54,9 +54,9 @@ public class BladeController extends GameController{
                     if (getModel().isEmpty(blade.getPosition().getDown()) && blade.isAlive()) {
                         if (getModel().isEmpty(blade.getPosition().getDown()) && blade.isAlive()) {
                             blade.setPosition(blade.getPosition().getDown());
-                            if (getModel().getHero().getPosition().equals(blade.getPosition().getDown())) {
+                            if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
-                                damage.startonce();
+
                             }
                         }
                     }
@@ -70,9 +70,9 @@ public class BladeController extends GameController{
                     if (getModel().isEmpty(blade.getPosition().getLeft()) && blade.isAlive()) {
                         if (getModel().isEmpty(blade.getPosition().getLeft()) && blade.isAlive()) {
                             blade.setPosition(blade.getPosition().getLeft());
-                            if (getModel().getHero().getPosition().equals(blade.getPosition().getLeft())) {
+                            if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
-                                damage.startonce();
+
                             }
                         }
                     }
@@ -86,9 +86,9 @@ public class BladeController extends GameController{
                     if (getModel().isEmpty(blade.getPosition().getRight()) && blade.isAlive()) {
                         if (getModel().isEmpty(blade.getPosition().getRight()) && blade.isAlive()) {
                             blade.setPosition(blade.getPosition().getRight());
-                            if (getModel().getHero().getPosition().equals(blade.getPosition().getRight())) {
+                            if (getModel().getHero().getPosition().equals(blade.getPosition())) {
                                 getModel().getHero().decreaseHP();
-                                damage.startonce();
+
                             }
                         }
                     }
