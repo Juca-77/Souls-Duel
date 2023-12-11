@@ -23,7 +23,6 @@ public class Game {
         this.state = new MenuState(new Menu());
         Music normalMode = new Music("gameplaysong.wav");
         normalMode.start();
-
     }
 
     public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException {
