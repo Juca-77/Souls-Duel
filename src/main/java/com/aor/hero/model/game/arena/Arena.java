@@ -9,18 +9,20 @@ public class Arena {
     private final int width;
     private final int height;
 
+    private int level;
+
     private Hero hero;
 
     private Enemy enemy;
 
     private List<Blade> blades;
-
     private List<Monster> monsters;
     private List<Wall> walls;
 
-    public Arena(int width, int height) {
+    public Arena(int width, int height, int level) {
         this.width = width;
         this.height = height;
+        this.level= level;
     }
 
     public int getWidth() {
@@ -56,6 +58,10 @@ public class Arena {
 
     public void setBlades(List<Blade> blades) {this.blades=blades;}
 
+    public void addBlades(List<Blade> blades) {
+        this.blades.addAll(blades);
+    }
+
     public List<Wall> getWalls() {
         return walls;
     }
@@ -71,10 +77,14 @@ public class Arena {
         return true;
     }
 
-    public boolean isMonster(Position position) {
-        for (Monster monster : monsters)
-            if (monster.getPosition().equals(position))
+    public boolean isBlade(Position position) {
+        for (Blade blade : blades)
+            if (blade.getPosition().equals(position))
                 return true;
         return false;
     }
+
+    public int getLevel() {return level;}
+
+    public void setLevel(int level) {this.level=level;}
 }
