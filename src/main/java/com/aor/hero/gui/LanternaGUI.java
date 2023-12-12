@@ -128,6 +128,7 @@ public class LanternaGUI implements GUI {
                     //drawCharacter(95+j,1+i, wordsArray[i].charAt(j),"#FFFFFF");
                 }
             }
+            drawText(new Position(48, 42), "Sans", "#FFFFFF");
         }
         if (level== 2) {
             String s = "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ " +
@@ -165,6 +166,7 @@ public class LanternaGUI implements GUI {
                     }
                 }
             }
+            drawText(new Position(47, 42), "Flowey", "#FFFFFF");
         }
 
         if(level == 3) {
