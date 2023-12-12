@@ -39,7 +39,7 @@ public class LoaderArenaBuilder {
             public void run() {
                 arena.addBlades(createBlades1());
             }
-        }, 2000);
+        }, 1200);
 
         timer.schedule(new TimerTask() {
             @Override
@@ -67,7 +67,7 @@ public class LoaderArenaBuilder {
             public void run() {
                 arena.addBlades(createBlades3());
             }
-        }, 17800);
+        }, 12800);
 
         return arena;
     }
@@ -130,8 +130,15 @@ public class LoaderArenaBuilder {
 
 
     public Enemy createEnemy(){return new Enemy(getWidth()/2-24, 0,level);}
-
+    
     public List<Blade> createBlades1() {
+        List<Blade> blades = new ArrayList<>();
+        for (int i=0; i<9;i++) {
+            blades.add(new Blade(getWidth()/2-14,27+i, 4)); //1=up 2=down 3=left 4=right
+        }
+        return blades;
+    }
+    public List<Blade> createBlades2_0() {
         List<Blade> blades = new ArrayList<>();
         for (int i=0; i<10;i++) {
             blades.add(new Blade(getWidth()/2-14+i,27, 2)); //1=up 2=down 3=left 4=right
@@ -145,13 +152,7 @@ public class LoaderArenaBuilder {
         return blades;
     }
 
-    public List<Blade> createBlades2_0() {
-        List<Blade> blades = new ArrayList<>();
-        for (int i=0; i<9;i++) {
-            blades.add(new Blade(getWidth()/2-14,27+i, 4)); //1=up 2=down 3=left 4=right
-        }
-        return blades;
-    }
+
 
     public List<Blade> createBlades2_1() {
         List<Blade> blades = new ArrayList<>();
