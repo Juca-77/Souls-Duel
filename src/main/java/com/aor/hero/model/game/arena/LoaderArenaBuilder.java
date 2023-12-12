@@ -39,7 +39,7 @@ public class LoaderArenaBuilder {
             public void run() {
                 arena.addBlades(createBlades1());
             }
-        }, 2000);
+        }, 1200);
 
         timer.schedule(new TimerTask() {
             @Override
@@ -67,7 +67,7 @@ public class LoaderArenaBuilder {
             public void run() {
                 arena.addBlades(createBlades3());
             }
-        }, 17800);
+        }, 12800);
 
         return arena;
     }
