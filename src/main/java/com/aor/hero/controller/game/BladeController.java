@@ -23,7 +23,7 @@ public class BladeController extends GameController{
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (time - lastMovement > 200) {
+        if (time - lastMovement > 100) {
             for (Blade blade : getModel().getBlades())
                 if(blade.isAlive()) {
                     moveBlade(blade);
