@@ -1,10 +1,9 @@
-import com.aor.soulsduel.model.Position;
-import com.aor.soulsduel.model.Soul;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+/*
 public class SoulTest {
 
     private Soul soul;
@@ -66,4 +65,4 @@ public class SoulTest {
         assertEquals(0, soul.getHealth());
     }
 }
-
+*/

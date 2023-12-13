@@ -3,10 +3,10 @@ package com.aor.hero.model;
 import java.util.Objects;
 
 public class Position {
-    private final double x;
-    private final double y;
+    private final int x;
+    private final int y;
 
-    public Position(double x, double y) {
+    public Position(int x, int y) {
         this.x = x;
         this.y = y;
     }

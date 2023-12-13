@@ -11,6 +11,9 @@ public interface GUI {
 
     void drawEnemy(Position position, int level);
     void drawImage(Position position);
+    void drawDead(Position position);
+
+    void drawWin(Position position);
 
     void drawBlade(Position position);
 
