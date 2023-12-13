@@ -19,11 +19,7 @@ public class MenuViewer extends Viewer<Menu> {
         int entryX = (menuWidth - getModel().getEntry(0).length()) / 2;
         for (int i = 0; i < getModel().getNumberEntries(); i++) {
             //int entryX = (menuWidth - getModel().getEntry(i).length()) / 2;
-            gui.drawText(
-                    new Position(entryX, 30 + i),
-                    getModel().getEntry(i),
-                    getModel().isSelected(i) ? "#FFD700" : "#FFFFFF"
-                    );
+            gui.drawText(new Position(entryX, 30 + i), getModel().getEntry(i), getModel().isSelected(i) ? "#FFD700" : "#FFFFFF");
         }
     }
 }

@@ -14,6 +14,7 @@ public class ArenaController extends GameController {
     private final HeroController heroController;
     //private final MonsterController monsterController;
     private final BladeController bladesController;
+    private final GrenadeController grenadeController;
     private Arena arena;
 
 
@@ -22,6 +23,7 @@ public class ArenaController extends GameController {
         this.heroController = new HeroController(arena);
         //this.monsterController = new MonsterController(arena);
         this.bladesController = new BladeController(arena);
+        this.grenadeController = new GrenadeController(arena);
     }
 
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
@@ -35,6 +37,7 @@ public class ArenaController extends GameController {
             heroController.step(game, action, time);
             //monsterController.step(game, action, time);
             bladesController.step(game, action, time);
+            grenadeController.step(game,action,time);
         }
     }
 }

@@ -3,7 +3,7 @@ package com.aor.hero.controller.menu;
 import com.aor.hero.Game;
 import com.aor.hero.controller.Controller;
 import com.aor.hero.gui.GUI;
-import com.aor.hero.model.game.arena.LoaderArenaBuilder;
+import com.aor.hero.model.game.arena.ArenaBuilder;
 import com.aor.hero.model.menu.Menu;
 import com.aor.hero.states.GameState;
 
@@ -25,7 +25,7 @@ public class MenuController extends Controller<Menu> {
                 break;
             case SELECT:
                 if (getModel().isSelectedExit()) game.setState(null);
-                if (getModel().isSelectedStart()) game.setState(new GameState(new LoaderArenaBuilder(1, 100,70).createArena())); //change in menu controller from Game
+                if (getModel().isSelectedStart()) game.setState(new GameState(new ArenaBuilder(1, 100,70).createArena())); //change in menu controller from Game
         }
     }
 }
