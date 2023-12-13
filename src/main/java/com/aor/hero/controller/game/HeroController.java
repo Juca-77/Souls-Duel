@@ -7,7 +7,7 @@ import com.aor.hero.model.game.arena.Arena;
 import com.aor.hero.viewer.Music;
 
 public class HeroController extends GameController {
-    private static final double MOVEMENT_SPEED = 1000.1; // Adjust the speed as needed
+    private static final double MOVEMENT_SPEED = 0.1; // Adjust the speed as needed
     private long lastUpdateTime = System.currentTimeMillis();
 
     private Music damage = new Music("damage_sound.wav");
