@@ -18,6 +18,8 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
+
+
 public class LanternaGUI implements GUI {
     private final Screen screen;
 
@@ -303,6 +305,7 @@ public class LanternaGUI implements GUI {
         tg.setForegroundColor(TextColor.Factory.fromString(color));
         tg.putString((int) position.getX(), (int) position.getY(), text);
     }
+
 
     private void drawCharacter(double x, double y, char c, String color) {
         TextGraphics tg = screen.newTextGraphics();
