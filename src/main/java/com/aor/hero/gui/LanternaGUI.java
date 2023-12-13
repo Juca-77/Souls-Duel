@@ -219,7 +219,7 @@ public class LanternaGUI implements GUI {
                     }
                 }
             }
-            drawText(new Position(47, 42), "Muffet", "#FFFFFF");
+            drawText(new Position(49, 42), "Frog", "#FFFFFF");
         }
 
     }
@@ -295,6 +295,11 @@ public class LanternaGUI implements GUI {
     @Override
     public void drawBlade(Position position) {
         drawCharacter(position.getX(), position.getY(), '@', "#FFFFFF");
+    }
+
+    @Override
+    public void drawGrenade(Position position) {
+        drawCharacter(position.getX(), position.getY(), '*', "#FFFFFF");
     }
 
     @Override

@@ -14,6 +14,8 @@ public interface GUI {
 
     void drawBlade(Position position);
 
+    void drawGrenade(Position position);
+
     void drawWall(Position position);
 
     void drawMonster(Position position);
