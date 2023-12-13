@@ -7,23 +7,30 @@ import com.aor.hero.model.menu.Menu;
 import com.aor.hero.states.MenuState;
 
 import java.io.IOException;
+import java.sql.Time;
+import java.util.Timer;
 
 public class ArenaController extends GameController {
     private final HeroController heroController;
     //private final MonsterController monsterController;
     private final BladeController bladesController;
+    private Arena arena;
+
 
     public ArenaController(Arena arena) {
         super(arena);
-
         this.heroController = new HeroController(arena);
         //this.monsterController = new MonsterController(arena);
         this.bladesController = new BladeController(arena);
     }
 
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
-        if (action == GUI.ACTION.QUIT || getModel().getHero().getHp() == 0)
+        if (action == GUI.ACTION.QUIT || getModel().getHero().getHp() == 0) {
+            getModel().getTimer().cancel();
             game.setState(new MenuState(new Menu()));
+
+        }
+
         else {
             heroController.step(game, action, time);
             //monsterController.step(game, action, time);

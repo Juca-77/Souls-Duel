@@ -4,10 +4,13 @@ import com.aor.hero.model.Position;
 import com.aor.hero.model.game.elements.*;
 
 import java.util.List;
+import java.util.Timer;
 
 public class Arena {
     private final int width;
     private final int height;
+
+    private Timer timer;
 
     private int level;
 
@@ -23,6 +26,7 @@ public class Arena {
         this.width = width;
         this.height = height;
         this.level= level;
+        this.timer=new Timer();
     }
 
     public int getWidth() {
@@ -31,6 +35,14 @@ public class Arena {
 
     public int getHeight() {
         return height;
+    }
+
+    public void setTimer(Timer timer) {
+        this.timer = timer;
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 
     public Hero getHero() {

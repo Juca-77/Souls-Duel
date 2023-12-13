@@ -5,7 +5,7 @@ public class Hero extends Element {
 
     public Hero(double x, double y) {
         super(x, y);
-        this.hp = 5;
+        this.hp = 100;
     }
 
     public void decreaseHP() {
