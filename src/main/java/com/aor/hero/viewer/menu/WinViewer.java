@@ -2,25 +2,20 @@ package com.aor.hero.viewer.menu;
 
 import com.aor.hero.gui.GUI;
 import com.aor.hero.model.Position;
-import com.aor.hero.model.menu.MainMenu;
+import com.aor.hero.model.menu.WinMenu;
 import com.aor.hero.viewer.Viewer;
 
-public class MenuViewer extends Viewer<MainMenu> {
-    public MenuViewer(MainMenu menu) {
-        super(menu);
+public class WinViewer extends Viewer<WinMenu> {
+    public WinViewer(WinMenu model) {
+        super(model);
     }
 
     @Override
-    public void drawElements(GUI gui) {
-
+    protected void drawElements(GUI gui) {
         int menuWidth = 100;
-        int titleX = (menuWidth - "Menu".length()) / 2;
-        gui.drawText(new Position(titleX-1, 40), "Menu", "#FFFFFF");
         int entryX = (menuWidth - getModel().getEntry(0).length()) / 2;
         for (int i = 0; i < getModel().getNumberEntries(); i++) {
-            //int entryX = (menuWidth - getModel().getEntry(i).length()) / 2;
             gui.drawText(new Position(entryX, 42 + i), getModel().getEntry(i), getModel().isSelected(i) ? "#FF0000" : "#FFFFFF");
         }
-        gui.drawImage(new Position(0,0));
     }
 }

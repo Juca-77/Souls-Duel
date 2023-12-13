@@ -1,8 +1,8 @@
 package com.aor.hero;
 
 import com.aor.hero.gui.LanternaGUI;
-import com.aor.hero.model.menu.Menu;
-import com.aor.hero.states.MenuState;
+import com.aor.hero.model.menu.MainMenu;
+import com.aor.hero.states.MainMenuState;
 import com.aor.hero.states.State;
 import com.aor.hero.viewer.Music;
 
@@ -19,7 +19,7 @@ public class Game {
         //bigger than 47 to have a normal execution
          //always 60 pls ***se alterar as dimensoes alterar tmb no menucontroler para evitar erros qndo se dá replay(ou play)***
         this.gui = new LanternaGUI(100, 70);
-        this.state = new MenuState(new Menu());
+        this.state = new MainMenuState(new MainMenu());
 
     }
 
