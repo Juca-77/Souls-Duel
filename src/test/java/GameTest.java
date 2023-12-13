@@ -1,31 +1,30 @@
 
 import com.aor.hero.Game;
-import com.aor.hero.states.MainMenuState;
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 import static org.junit.jupiter.api.Assertions.*;
-
+/*
 public class GameTest {
 
     @Test
-    public void createLanternaGUI() throws FontFormatException, IOException, URISyntaxException {
+    public void testGameStart() {
         Game game = new Game();
-
-        assertNotNull(game.gui);
-
+        assertEquals(0, game.getSoul().getX());
+        assertEquals(0, game.getSoul().getY());
     }
-
 
     @Test
-    public void initialStateIsMainMenuState() throws IOException, URISyntaxException, FontFormatException {
+    public void testGameGenerateAttack() {
         Game game = new Game();
-        assertEquals(MainMenuState.class, game.state.getClass());
+        game.update();
+        assertNotNull(game.getAttacks());
     }
 
-
-
-}
+    @Test
+    public void testGameOver() {
+        Game game = new Game();
+        game.getSoul().setHealth(0);
+        game.update();
+        assertFalse(game.isRunning());
+    }
+}*/

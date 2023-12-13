@@ -3,6 +3,7 @@ package com.aor.hero.model.game.arena;
 import com.aor.hero.model.Position;
 import com.aor.hero.model.game.elements.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 
@@ -29,6 +30,9 @@ public class Arena {
         this.height = height;
         this.level= level;
         this.timer=new Timer();
+        this.blades=new ArrayList<>();
+        this.grenades=new ArrayList<>();
+        this.enemy=new Enemy(getWidth()/2-24, 0,level);
     }
 
     public int getWidth() {
@@ -112,5 +116,6 @@ public class Arena {
 
     public int getLevel() {return level;}
 
-    public void setLevel(int level) {this.level=level;}
+    public void setLevel(int level) {this.level=level;
+    this.enemy.setEnemyLevel(level);}
 }
