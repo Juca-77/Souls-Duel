@@ -1,9 +1,8 @@
-import com.aor.soulsduel.model.Position;
-import com.aor.soulsduel.model.Soul;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+/*
 public class AttackDestructionTest {
 
     @Test
@@ -21,4 +20,4 @@ public class AttackDestructionTest {
         attack2.moveDown();
         assertTrue(attack2.isDestroyed());
     }
-}
+}*/

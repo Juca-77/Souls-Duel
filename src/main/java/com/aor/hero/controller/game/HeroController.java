@@ -30,53 +30,29 @@ public class HeroController extends GameController {
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) {
-        long elapsedTime = time - lastUpdateTime;
-        switch (action) {
-            case UP:
-                moveHeroUp(elapsedTime);
-                break;
-            case RIGHT:
-                moveHeroRight(elapsedTime);
-                break;
-            case DOWN:
-                moveHeroDown(elapsedTime);
-                break;
-            case LEFT:
-                moveHeroLeft(elapsedTime);
-                break;
-        }
-
-        lastUpdateTime = time;
+        if (action == GUI.ACTION.UP) moveHeroUp();
+        if (action == GUI.ACTION.RIGHT) moveHeroRight();
+        if (action == GUI.ACTION.DOWN) moveHeroDown();
+        if (action == GUI.ACTION.LEFT) moveHeroLeft();
     }
 
-    private void moveHeroLeft(long elapsedTime) {
-        moveHeroSmooth(getModel().getHero().getPosition().getLeft(), elapsedTime);
+    public void moveHeroLeft() {
+        moveHero(getModel().getHero().getPosition().getLeft());
     }
 
-    private void moveHeroRight(long elapsedTime) {
-        moveHeroSmooth(getModel().getHero().getPosition().getRight(), elapsedTime);
+    public void moveHeroRight() {
+        moveHero(getModel().getHero().getPosition().getRight());
     }
 
-    private void moveHeroUp(long elapsedTime) {
-        moveHeroSmooth(getModel().getHero().getPosition().getUp(), elapsedTime);
+    public void moveHeroUp() {
+        moveHero(getModel().getHero().getPosition().getUp());
     }
 
-    private void moveHeroDown(long elapsedTime) {
-        moveHeroSmooth(getModel().getHero().getPosition().getDown(), elapsedTime);
+    public void moveHeroDown() {
+        moveHero(getModel().getHero().getPosition().getDown());
     }
 
-    private void moveHeroSmooth(Position targetPosition, long elapsedTime) {
-        double speed = MOVEMENT_SPEED * elapsedTime;
-        double deltaX = targetPosition.getX() - getModel().getHero().getPosition().getX();
-        double deltaY = targetPosition.getY() - getModel().getHero().getPosition().getY();
-        double distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-        if (distance > 0) {
-            double factor = Math.min(1, speed / distance);
-            double newX = getModel().getHero().getPosition().getX() + factor * deltaX;
-            double newY = getModel().getHero().getPosition().getY() + factor * deltaY;
 
-            Position newPosition = new Position((double) newX, (double) newY);
-            moveHero(newPosition);
-        }
-    }
+
+
 }

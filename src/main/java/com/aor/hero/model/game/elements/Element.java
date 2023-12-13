@@ -5,7 +5,7 @@ import com.aor.hero.model.Position;
 public class Element {
     private Position position;
 
-    public Element(double x, double y) {
+    public Element(int  x, int y) {
         this.position = new Position(x, y);
     }
 

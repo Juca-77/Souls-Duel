@@ -18,7 +18,7 @@ public class ArenaBuilder {
     public Arena createArena() {
         Arena arena = new Arena(getWidth(), getHeight(), level);
         arena.setWalls(createWalls());
-        arena.setEnemy(createEnemy());
+
         arena.setHero(createHero());
         arena.setBlades(new ArrayList<>());
         arena.setGrenades(new ArrayList<>());
@@ -353,7 +353,6 @@ public class ArenaBuilder {
             public void run() {
                 level++;
                 arena.setLevel(level);
-                arena.setEnemy(createEnemy());
             }
         }, 66000);
 
@@ -566,7 +565,6 @@ public class ArenaBuilder {
             public void run() {
                 level++;
                 arena.setLevel(level);
-                arena.setEnemy(createEnemy());
             }
         }, 114000);
 
@@ -970,7 +968,6 @@ public class ArenaBuilder {
             public void run() {
                 level++;
                 arena.setLevel(level);
-                arena.setEnemy(createEnemy());
             }
         }, 200000);
 
@@ -1652,7 +1649,6 @@ public class ArenaBuilder {
     }
 
 
-    public Enemy createEnemy(){return new Enemy(getWidth()/2-24, 0,level);}
     
     public List<Blade> createBlades1() {
         List<Blade> blades = new ArrayList<>();

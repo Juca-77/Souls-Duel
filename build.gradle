@@ -5,7 +5,7 @@ plugins {
 }
 
 application {
-    mainClass.set("Application")
+    mainClass.set('com.aor.hero.game.Game')
 }
 
 group = "com.juca-77.Soul"
@@ -19,11 +19,16 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation ("com.googlecode.lanterna:lanterna:3.1.1")
-
-
+    testImplementation 'net.jqwik:jqwik:1.5.1'
+    testImplementation 'org.mockito:mockito-core:3.7.7'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
 
-tasks.test {
-    useJUnitPlatform()
+
+test {
+    useJUnitPlatform {
+        includeEngines('junit-jupiter', 'jqwik')
+    }
 }
