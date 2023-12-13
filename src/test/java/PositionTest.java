@@ -6,20 +6,19 @@ import org.junit.jupiter.api.Test;
 
 public class PositionTest {
 
-        private Position position;
+    private Position position;
 
-        @BeforeEach
-        public void helper(){
-            position = new Position(10,5);
+    @BeforeEach
+    public void helper(){
+        position = new Position(10,5);
 
-        }
-        @Test
-        public void setPositionTest(){
-            int xp= (int) position.getX();
-            int yp = (int) position.getY();
-            Assertions.assertEquals(10,xp);
-            Assertions.assertEquals(5,yp);
-        }
     }
-
+    @Test
+    public void setPositionTest(){
+        int xp= (int) position.getX();
+        int yp = (int) position.getY();
+        Assertions.assertEquals(10,xp);
+        Assertions.assertEquals(5,yp);
+    }
+}
 

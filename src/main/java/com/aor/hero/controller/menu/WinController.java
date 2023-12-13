@@ -19,10 +19,10 @@ public class WinController extends Controller<WinMenu> {
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         switch (action) {
-            case UP:
+            case LEFT:
                 getModel().previousEntry();
                 break;
-            case DOWN:
+            case RIGHT:
                 getModel().nextEntry();
                 break;
             case SELECT:
