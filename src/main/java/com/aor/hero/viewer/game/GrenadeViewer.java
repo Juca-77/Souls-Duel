@@ -8,7 +8,7 @@ public class GrenadeViewer implements ElementViewer<Grenade> {
     @Override
     public void draw(Grenade grenade, GUI gui) {
         if(grenade.isAlive()) {
-            gui.drawBlade(grenade.getPosition());
+            gui.drawGrenade(grenade.getPosition());
         }
     }
 }

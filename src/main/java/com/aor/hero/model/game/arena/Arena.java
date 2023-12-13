@@ -20,6 +20,8 @@ public class Arena {
 
     private List<Blade> blades;
     private List<Monster> monsters;
+
+    private List<Grenade> grenades;
     private List<Wall> walls;
 
     public Arena(int width, int height, int level) {
@@ -70,8 +72,20 @@ public class Arena {
 
     public void setBlades(List<Blade> blades) {this.blades=blades;}
 
+    public List<Grenade> getGrenades() {
+        return grenades;
+    }
+
+    public void setGrenades(List<Grenade> grenades) {
+        this.grenades = grenades;
+    }
+
     public void addBlades(List<Blade> blades) {
         this.blades.addAll(blades);
+    }
+
+    public void addGrenades(List<Grenade> grenades) {
+        this.grenades.addAll(grenades);
     }
 
     public List<Wall> getWalls() {

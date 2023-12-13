@@ -18,11 +18,8 @@ public class MenuViewer extends Viewer<Menu> {
         gui.drawText(new Position(titleX-1, 40), "Menu", "#FFFFFF");
         int entryX = (menuWidth - getModel().getEntry(0).length()) / 2;
         for (int i = 0; i < getModel().getNumberEntries(); i++) {
-            gui.drawText(
-                    new Position(entryX, 42 + i),
-                    getModel().getEntry(i),
-                    getModel().isSelected(i) ? "#FFD700" : "#FFFFFF"
-                    );
+            //int entryX = (menuWidth - getModel().getEntry(i).length()) / 2;
+            gui.drawText(new Position(entryX, 42 + i), getModel().getEntry(i), getModel().isSelected(i) ? "#FFD700" : "#FFFFFF");
         }
         gui.drawImage(new Position(0,0));
     }
