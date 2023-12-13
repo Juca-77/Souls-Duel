@@ -53,7 +53,7 @@ public class HeroController extends GameController {
         moveHeroSmooth(getModel().getHero().getPosition().getLeft(), elapsedTime);
     }
 
-    private void moveHeroRight(long elapsedTime) {
+    public void moveHeroRight(long elapsedTime) {
         moveHeroSmooth(getModel().getHero().getPosition().getRight(), elapsedTime);
     }
 

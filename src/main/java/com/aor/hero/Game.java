@@ -12,8 +12,8 @@ import java.net.URISyntaxException;
 import java.util.ConcurrentModificationException;
 
 public class Game {
-    private final LanternaGUI gui;
-    private State state;
+    public final LanternaGUI gui;
+    public State state;
 
     public Game() throws FontFormatException, IOException, URISyntaxException {
         //bigger than 47 to have a normal execution

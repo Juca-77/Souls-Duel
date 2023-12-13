@@ -1,29 +1,31 @@
-import com.aor.soulsduel.Game;
+
+import com.aor.hero.Game;
+import com.aor.hero.states.MainMenuState;
 import org.junit.jupiter.api.Test;
+
+import java.awt.*;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GameTest {
 
     @Test
-    public void testGameStart() {
+    public void createLanternaGUI() throws FontFormatException, IOException, URISyntaxException {
         Game game = new Game();
-        assertEquals(0, game.getSoul().getX());
-        assertEquals(0, game.getSoul().getY());
+
+        assertNotNull(game.gui);
+
     }
 
-    @Test
-    public void testGameGenerateAttack() {
-        Game game = new Game();
-        game.update();
-        assertNotNull(game.getAttacks());
-    }
 
     @Test
-    public void testGameOver() {
+    public void initialStateIsMainMenuState() throws IOException, URISyntaxException, FontFormatException {
         Game game = new Game();
-        game.getSoul().setHealth(0);
-        game.update();
-        assertFalse(game.isRunning());
+        assertEquals(MainMenuState.class, game.state.getClass());
     }
+
+
+
 }
