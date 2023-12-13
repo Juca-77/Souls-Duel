@@ -15,11 +15,12 @@ public class MenuViewer extends Viewer<Menu> {
 
         int menuWidth = 100;
         int titleX = (menuWidth - "Menu".length()) / 2;
-        gui.drawText(new Position(titleX-1, 28), "Menu", "#FFFFFF");
+        gui.drawText(new Position(titleX-1, 40), "Menu", "#FFFFFF");
         int entryX = (menuWidth - getModel().getEntry(0).length()) / 2;
         for (int i = 0; i < getModel().getNumberEntries(); i++) {
             //int entryX = (menuWidth - getModel().getEntry(i).length()) / 2;
-            gui.drawText(new Position(entryX, 30 + i), getModel().getEntry(i), getModel().isSelected(i) ? "#FFD700" : "#FFFFFF");
+            gui.drawText(new Position(entryX, 42 + i), getModel().getEntry(i), getModel().isSelected(i) ? "#FFD700" : "#FFFFFF");
         }
+        gui.drawImage(new Position(0,0));
     }
 }

@@ -10,6 +10,7 @@ public interface GUI {
     void drawHero(Position position);
 
     void drawEnemy(Position position, int level);
+    void drawImage(Position position);
 
     void drawBlade(Position position);
 
