@@ -5,14 +5,14 @@ import com.aor.hero.controller.Controller;
 import com.aor.hero.gui.GUI;
 import com.aor.hero.model.game.arena.ArenaBuilder;
 import com.aor.hero.model.menu.MainMenu;
+import com.aor.hero.model.menu.WinMenu;
 import com.aor.hero.states.GameState;
+import com.aor.hero.states.MainMenuState;
 
 import java.io.IOException;
 
-public class MenuController extends Controller<MainMenu> {
-
-
-    public MenuController(MainMenu model) {
+public class WinController extends Controller<WinMenu> {
+    public WinController(WinMenu model) {
         super(model);
     }
 
@@ -26,8 +26,7 @@ public class MenuController extends Controller<MainMenu> {
                 getModel().nextEntry();
                 break;
             case SELECT:
-                if (getModel().isSelectedExit()) game.setState(null);
-                if (getModel().isSelectedStart()) game.setState(new GameState(new ArenaBuilder(1, 100,70).createArena())); //change in menu controller from Game
+                if (getModel().isSelectedBack()) game.setState(new MainMenuState(new MainMenu()));
         }
     }
 }
