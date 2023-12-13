@@ -12,6 +12,8 @@ import com.aor.hero.viewer.Music;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ConcurrentModificationException;
+
 public class Game {
     private final LanternaGUI gui;
     private State state;
@@ -25,7 +27,7 @@ public class Game {
         normalMode.start();
     }
 
-    public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException {
+    public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException, ConcurrentModificationException {
         new Game().start();
     }
 
