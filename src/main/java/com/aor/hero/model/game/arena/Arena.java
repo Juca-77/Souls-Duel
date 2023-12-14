@@ -20,7 +20,7 @@ public class Arena {
     private Enemy enemy;
 
     private List<Blade> blades;
-    private List<Monster> monsters;
+
 
     private List<Grenade> grenades;
     private List<Wall> walls;
@@ -64,13 +64,7 @@ public class Arena {
 
     public void setEnemy(Enemy enemy) {this.enemy = enemy;}
 
-    public List<Monster> getMonsters() {
-        return monsters;
-    }
-
-    public void setMonsters(List<Monster> monsters) {
-        this.monsters = monsters;
-    }
+    
 
     public List<Blade> getBlades() {return blades;}
 

@@ -16,6 +16,9 @@ public class HeroController extends GameController {
         super(arena);
     }
 
+    public Music getDamage() {
+        return damage;
+    }
 
     private void moveHero(Position position) {
         if (getModel().isEmpty(position)) {

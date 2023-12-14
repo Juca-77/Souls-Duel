@@ -25,7 +25,6 @@ class HeroControllerTest {
         arena.setHero(hero);
 
         arena.setWalls(Arrays.asList());
-        arena.setMonsters(Arrays.asList());
 
         controller = new HeroController(arena);
     }

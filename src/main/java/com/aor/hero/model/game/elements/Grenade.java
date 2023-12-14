@@ -12,9 +12,6 @@ public class Grenade extends Element{
         this.move=move;
         isAlive=true;
     }
-    public void explode() {
-        kill();
-    }
 
     public int getMove() {return move;}
 
