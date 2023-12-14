@@ -1,23 +1,12 @@
 package states;
 
-import com.aor.hero.Game;
-import com.aor.hero.controller.menu.MenuController;
-import com.aor.hero.gui.GUI;
-import com.aor.hero.gui.LanternaGUI;
-import com.aor.hero.model.menu.MainMenu;
-import com.aor.hero.states.MainMenuState;
-import com.aor.hero.viewer.Music;
-import com.aor.hero.viewer.menu.MenuViewer;
-import com.googlecode.lanterna.screen.Screen;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import SoulsDuel.controller.menu.MenuController;
+import SoulsDuel.model.menu.MainMenu;
+import SoulsDuel.states.MainMenuState;
+import SoulsDuel.viewer.menu.MenuViewer;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 public class MainMenuStateTest {
     @Test

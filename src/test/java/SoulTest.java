@@ -1,6 +1,6 @@
 
-import com.aor.hero.model.Position;
-import com.aor.hero.model.game.elements.Soul;
+import SoulsDuel.model.Position;
+import SoulsDuel.model.game.elements.Soul;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

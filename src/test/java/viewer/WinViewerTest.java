@@ -1,13 +1,12 @@
 package viewer;
 
-import com.aor.hero.gui.GUI;
-import com.aor.hero.model.Position;
-import com.aor.hero.model.menu.WinMenu;
-import com.aor.hero.viewer.menu.WinViewer;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.model.Position;
+import SoulsDuel.model.menu.WinMenu;
+import SoulsDuel.viewer.menu.WinViewer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.*;
 
 public class WinViewerTest {

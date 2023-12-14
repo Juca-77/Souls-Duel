@@ -1,6 +1,6 @@
 package model;
 
-import com.aor.hero.model.game.elements.Enemy;
+import SoulsDuel.model.game.elements.Enemy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

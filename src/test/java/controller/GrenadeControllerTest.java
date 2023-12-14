@@ -1,13 +1,13 @@
 package controller;
 
-import com.aor.hero.Game;
-import com.aor.hero.controller.game.GrenadeController;
-import com.aor.hero.gui.GUI;
-import com.aor.hero.model.Position;
-import com.aor.hero.model.game.arena.Arena;
-import com.aor.hero.model.game.elements.Grenade;
-import com.aor.hero.model.game.elements.Soul;
-import com.aor.hero.model.game.elements.Wall;
+import SoulsDuel.Game;
+import SoulsDuel.controller.game.GrenadeController;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.model.Position;
+import SoulsDuel.model.game.arena.Arena;
+import SoulsDuel.model.game.elements.Grenade;
+import SoulsDuel.model.game.elements.Soul;
+import SoulsDuel.model.game.elements.Wall;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

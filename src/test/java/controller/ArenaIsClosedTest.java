@@ -1,9 +1,9 @@
 package controller;
 
-import com.aor.hero.controller.game.SoulController;
-import com.aor.hero.gui.GUI;
-import com.aor.hero.model.game.arena.Arena;
-import com.aor.hero.model.game.arena.ArenaBuilder;
+import SoulsDuel.controller.game.SoulController;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.model.game.arena.Arena;
+import SoulsDuel.model.game.arena.ArenaBuilder;
 
 import net.jqwik.api.*;
 import net.jqwik.api.constraints.IntRange;

@@ -1,6 +1,6 @@
 package model;
 
-import com.aor.hero.model.menu.MainMenu;
+import SoulsDuel.model.menu.MainMenu;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

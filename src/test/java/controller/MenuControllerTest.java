@@ -1,10 +1,10 @@
 package controller;
 
-import com.aor.hero.Game;
-import com.aor.hero.controller.menu.MenuController;
-import com.aor.hero.gui.GUI;
-import com.aor.hero.model.menu.MainMenu;
-import com.aor.hero.states.GameState;
+import SoulsDuel.Game;
+import SoulsDuel.controller.menu.MenuController;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.model.menu.MainMenu;
+import SoulsDuel.states.GameState;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

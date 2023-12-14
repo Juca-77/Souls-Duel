@@ -1,9 +1,9 @@
 package viewer;
 
-import com.aor.hero.gui.GUI;
-import com.aor.hero.model.Position;
-import com.aor.hero.model.menu.MainMenu;
-import com.aor.hero.viewer.menu.MenuViewer;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.model.Position;
+import SoulsDuel.model.menu.MainMenu;
+import SoulsDuel.viewer.menu.MenuViewer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;

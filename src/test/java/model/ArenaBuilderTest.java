@@ -1,10 +1,9 @@
 package model;
 
-import com.aor.hero.model.game.arena.Arena;
-import com.aor.hero.model.game.arena.ArenaBuilder;
-import com.aor.hero.model.game.elements.Blade;
+import SoulsDuel.model.game.arena.Arena;
+import SoulsDuel.model.game.arena.ArenaBuilder;
+import SoulsDuel.model.game.elements.Blade;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
 
 import java.io.IOException;
 

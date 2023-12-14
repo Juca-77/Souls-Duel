@@ -1,8 +1,8 @@
 package model;
 
-import com.aor.hero.model.Position;
-import com.aor.hero.model.game.arena.Arena;
-import com.aor.hero.model.game.elements.*;
+import SoulsDuel.model.Position;
+import SoulsDuel.model.game.arena.Arena;
+import SoulsDuel.model.game.elements.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

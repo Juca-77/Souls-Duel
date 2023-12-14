@@ -1,11 +1,11 @@
 package controller;
 
-import com.aor.hero.controller.game.SoulController;
-import com.aor.hero.model.Position;
-import com.aor.hero.model.game.arena.Arena;
-import com.aor.hero.model.game.elements.Soul;
-import com.aor.hero.model.game.elements.Wall;
-import com.aor.hero.viewer.Music;
+import SoulsDuel.controller.game.SoulController;
+import SoulsDuel.model.Position;
+import SoulsDuel.model.game.arena.Arena;
+import SoulsDuel.model.game.elements.Soul;
+import SoulsDuel.model.game.elements.Wall;
+import SoulsDuel.viewer.Music;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

@@ -1,5 +1,5 @@
 
-import com.aor.hero.model.Position;
+import SoulsDuel.model.Position;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

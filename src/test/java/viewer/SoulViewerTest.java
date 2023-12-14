@@ -1,8 +1,8 @@
 package viewer;
 
-import com.aor.hero.gui.GUI;
-import com.aor.hero.model.game.elements.Soul;
-import com.aor.hero.viewer.game.SoulViewer;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.model.game.elements.Soul;
+import SoulsDuel.viewer.game.SoulViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

@@ -1,17 +1,10 @@
 
-import com.aor.hero.Game;
-import com.aor.hero.gui.GUI;
-import com.aor.hero.gui.LanternaGUI;
-import com.aor.hero.states.GameState;
-import com.aor.hero.states.MainMenuState;
-import com.aor.hero.states.State;
+import SoulsDuel.Game;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.gui.LanternaGUI;
+import SoulsDuel.states.MainMenuState;
+import SoulsDuel.states.State;
 import org.junit.jupiter.api.Test;
-
-import java.awt.*;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 

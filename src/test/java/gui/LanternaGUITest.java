@@ -1,18 +1,16 @@
 package gui;
 
-import com.aor.hero.gui.LanternaGUI;
-import com.aor.hero.model.Position;
+import SoulsDuel.gui.LanternaGUI;
+import SoulsDuel.model.Position;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.screen.Screen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 
 import java.io.IOException;
 
-import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.verify;
 
 class LanternaGUITest {

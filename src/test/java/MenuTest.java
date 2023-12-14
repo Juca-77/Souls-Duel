@@ -1,13 +1,3 @@
-import com.aor.hero.controller.menu.MenuController;
-import com.googlecode.lanterna.input.KeyType;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.io.IOException;
-
-import static org.mockito.Mockito.*;
 /*
 
 public class MenuTest {
