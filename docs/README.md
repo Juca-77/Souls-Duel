@@ -9,20 +9,22 @@ Embark on an epic adventure in "com.aor.soulsduel.model.Soul's Duel," a 2D game 
 
 ### IMPLEMENTED FEATURES
 
-> None so far.
-
-### PLANNED FEATURES
-
 - **Move** - The game character will be able to move with the WASD keys.
 - **HP** - The player will have hearth points.
 - **Get hitted** - If the character get hitted he will lose Health Points(HP).
 - **Enemys** - There will be a display area where the enemys will be displayed in a Ascii design.
 - **Different attacks** - The enemys will have diferent combinations of attacks.
 - **Menu** - There will be a menu with play options.
-- **menu.com.aor.soulsduel.Music** - menu.com.aor.soulsduel.Music in the menus/in game and some sound effects.
+- **Music** - Music in the menus/in game and some sound effects.
 - **Skins** - The hero will not be a letter, using FontForge we will 'create' him as a hearth.
-- **Levels** - The player will be able to choose the level he wants to start or just to start from the beginning.
+- **Levels** - The player will be able to play in 4 different levels.
+
+### PLANNED FEATURES
+
 - **Score** - As the time pass the score goes up.
+
+
+
   
 As inspiration and ilustration (Mockup) of what the game will look like (or at least we will try to make it look like) there's this GIFs of two Undertale fights:
 
@@ -34,7 +36,7 @@ As inspiration and ilustration (Mockup) of what the game will look like (or at l
 
 ### States
 
-**Managing Different States in the com.aor.soulsduel.Game**
+**Managing Different States in the Game**
 
 In our game, we aimed to introduce a diverse set of experiences by incorporating distinct com.aor.soulsduel.states. The primary focus was on creating a menu that offers various options, including the selection of game levels and initiating gameplay.
 
