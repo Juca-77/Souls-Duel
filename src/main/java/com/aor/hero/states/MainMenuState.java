@@ -12,12 +12,12 @@ public class MainMenuState extends State<MainMenu> {
     }
 
     @Override
-    protected Viewer<MainMenu> getViewer() {
+    public Viewer<MainMenu> getViewer() {
         return new MenuViewer(getModel());
     }
 
     @Override
-    protected Controller<MainMenu> getController() {
+    public Controller<MainMenu> getController() {
         return new MenuController(getModel());
     }
 }

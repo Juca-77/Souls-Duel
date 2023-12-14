@@ -5,12 +5,9 @@ import com.aor.hero.gui.GUI;
 import com.aor.hero.model.Position;
 import com.aor.hero.model.game.arena.Arena;
 import com.aor.hero.model.game.elements.Blade;
-import com.aor.hero.model.game.elements.Monster;
 import com.aor.hero.viewer.Music;
 
 import java.io.IOException;
-
-import static java.lang.Math.cos;
 
 public class BladeController extends GameController{
     private long lastMovement;

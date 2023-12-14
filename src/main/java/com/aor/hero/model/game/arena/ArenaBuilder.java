@@ -1620,32 +1620,24 @@ public class ArenaBuilder {
     public List<Wall> createWalls() {
         List<Wall> walls = new ArrayList<>();
         for (int c = 0; c < 29; c++) {
-            walls.add(new Wall(getWidth()/2-14+c, 26));
-            walls.add(new Wall(getWidth()/2-14+c, 39));
+            walls.add(new Wall(width/2-14+c, height/2-9));
+            walls.add(new Wall(width/2-14+c, height/2+4));
         }
         for (int r = 1; r < 15; r++) {
-            walls.add(new Wall(getWidth()/2-15, 25+r));
-            walls.add(new Wall(getWidth()/2+15, 25+r));
+            walls.add(new Wall(width/2-15, height/2-10+r));
+            walls.add(new Wall(width/2+15, height/2-10+r));
         }
         return walls;
     }
 
 
-    public List<Monster> createMonsters() {
-        List<Monster> monsters = new ArrayList<>();
-/*
-        for (int y = 0; y < lines.size(); y++) {
-            String line = lines.get(y);
-            for (int x = 0; x < line.length(); x++)
-                if (line.charAt(x) == 'M') monsters.add(new Monster(x, y));
-        }*/
 
-        return monsters;
-    }
+
+    
 
 
     public Hero createHero() {
-        return new Hero(getWidth()/2, 32);
+        return new Hero(width/2, height/2-3);
     }
 
 

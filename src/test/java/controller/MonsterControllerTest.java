@@ -1,20 +1,5 @@
 package controller;
 
-import com.aor.hero.Game;
-import com.aor.hero.controller.game.MonsterController;
-import com.aor.hero.gui.GUI;
-import com.aor.hero.model.Position;
-import com.aor.hero.model.game.arena.Arena;
-import com.aor.hero.model.game.elements.Hero;
-import com.aor.hero.model.game.elements.Monster;
-import com.aor.hero.model.game.elements.Wall;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.io.IOException;
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /*
