@@ -3,10 +3,7 @@ package viewer;
 import com.aor.hero.gui.GUI;
 import com.aor.hero.model.Position;
 import com.aor.hero.model.game.arena.Arena;
-import com.aor.hero.model.game.elements.Blade;
-import com.aor.hero.model.game.elements.Hero;
-import com.aor.hero.model.game.elements.Monster;
-import com.aor.hero.model.game.elements.Wall;
+import com.aor.hero.model.game.elements.*;
 import com.aor.hero.viewer.game.GameViewer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,12 +19,13 @@ class ArenaViewerTest {
 
     @BeforeEach
     void setUp() {
-        arena = new Arena(10, 10, 1);
+        arena = new Arena(10, 10,1);
         gui = Mockito.mock(GUI.class);
         viewer = new GameViewer(arena);
 
         arena.setWalls(Arrays.asList(new Wall(1, 2), new Wall(2, 3), new Wall(3, 4)));
-        arena.setBlades(Arrays.asList(new Blade(4, 5,1), new Blade(5, 6,1)));
+        arena.setGrenades(Arrays.asList(new Grenade(4, 5,1)));
+        arena.setBlades(Arrays.asList(new Blade(4, 5,1)));
         arena.setHero(new Hero(5, 8));
     }
 
@@ -41,8 +39,8 @@ class ArenaViewerTest {
         Mockito.verify(gui, Mockito.times(1)).drawWall(new Position(3, 4));
         Mockito.verify(gui, Mockito.times(3)).drawWall(Mockito.any(Position.class));
     }
-
-    /*@Test
+/*
+    @Test
     void drawMonsters() throws IOException {
         viewer.draw(gui);
 

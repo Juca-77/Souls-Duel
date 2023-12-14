@@ -27,19 +27,7 @@ public class Position {
         return new Position(x, y + 1);
     }
 
-    public Position getRandomNeighbour() {
-        int n = (int) (Math.random() * 4);
-        switch (n) {
-            case 0:
-                return getUp();
-            case 1:
-                return getRight();
-            case 2:
-                return getDown();
-            default:
-                return getLeft();
-        }
-    }
+
 
     public double getX() {
         return x;
@@ -55,10 +43,5 @@ public class Position {
         if (o == null || getClass() != o.getClass()) return false;
         Position position = (Position) o;
         return Double.compare(position.x, x) == 0 && Double.compare(position.y, y) == 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(x, y);
     }
 }
