@@ -4,7 +4,6 @@ import com.aor.hero.gui.GUI;
 import com.aor.hero.model.Position;
 import com.aor.hero.model.game.arena.Arena;
 import com.aor.hero.model.game.elements.Element;
-import com.aor.hero.model.game.elements.Enemy;
 import com.aor.hero.viewer.Viewer;
 
 import java.util.List;
@@ -18,7 +17,7 @@ public class GameViewer extends Viewer<Arena> {
     public void drawElements(GUI gui) {
         drawElements(gui, getModel().getWalls(), new WallViewer());
         //drawElements(gui, getModel().getMonsters(), new MonsterViewer());
-        drawElement(gui, getModel().getHero(), new HeroViewer());
+        drawElement(gui, getModel().getHero(), new SoulViewer());
         drawElement(gui, getModel().getEnemy(), new EnemyViewer());
         drawElements(gui, getModel().getBlades(), new BladeViewer());
         drawElements(gui, getModel().getGrenades(), new GrenadeViewer());

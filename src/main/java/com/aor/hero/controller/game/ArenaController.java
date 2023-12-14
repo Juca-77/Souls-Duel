@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.TimerTask;
 
 public class ArenaController extends GameController {
-    private final HeroController heroController;
+    private final SoulController soulController;
     //private final MonsterController monsterController;
     private final BladeController bladesController;
     private final GrenadeController grenadeController;
@@ -33,7 +33,7 @@ public class ArenaController extends GameController {
             }
         }, 315000);
 
-        this.heroController = new HeroController(arena);
+        this.soulController = new SoulController(arena);
         //this.monsterController = new MonsterController(arena);
         this.bladesController = new BladeController(arena);
         this.grenadeController = new GrenadeController(arena);
@@ -56,7 +56,7 @@ public class ArenaController extends GameController {
         }
 
         else {
-            heroController.step(game, action, time);
+            soulController.step(game, action, time);
             //monsterController.step(game, action, time);
             bladesController.step(game, action, time);
             grenadeController.step(game,action,time);

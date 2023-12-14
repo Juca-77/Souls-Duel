@@ -40,4 +40,8 @@ public class DeadMenu  {
     public int getNumberEntries() {
         return this.entries.size();
     }
+
+    public int getCurrentEntry() {
+        return currentEntry;
+    }
 }

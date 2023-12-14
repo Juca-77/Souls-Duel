@@ -8,21 +8,20 @@ import com.aor.hero.gui.GUI;
 import com.aor.hero.model.Position;
 import com.aor.hero.model.game.arena.Arena;
 import com.aor.hero.model.game.elements.Blade;
-import com.aor.hero.model.game.elements.Hero;
+import com.aor.hero.model.game.elements.Soul;
 import com.aor.hero.model.game.elements.Wall;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import java.io.IOException;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class BladeControllerTest {
     private BladeController controller;
-    private Hero hero;
+    private Soul soul;
     private Arena arena;
     private Game game;
 
@@ -30,15 +29,17 @@ public class BladeControllerTest {
     void setUp() {
         arena = new Arena(10, 10,1);
 
-        hero = new Hero(5, 5);
-        arena.setHero(hero);
+        soul = new Soul(5, 5);
+        arena.setHero(soul);
 
         arena.setWalls(Arrays.asList());
         arena.setBlades(Arrays.asList());
 
+
+
         controller = new BladeController(arena);
 
-        game = Mockito.mock(Game.class);
+        game = mock(Game.class);
     }
     @Test
     void moveBladeRightEmpty() throws IOException {
@@ -110,4 +111,26 @@ public class BladeControllerTest {
         assertEquals(new Position(0, 0), blade.getPosition());
         assertFalse(blade.isAlive());
     }
+
+    @Test
+    void moveBladeCase5() throws IOException {
+        Blade blade=new Blade(5,5,5);
+        arena.setBlades(Arrays.asList(blade));
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        assertNotNull(blade.getPosition());
+        // Add additional assertions based on your requirements for case 5
+    }
+
+    @Test
+    void moveBladeCase6() throws IOException {
+        Blade blade=new Blade(5,5,6);
+        arena.setBlades(Arrays.asList(blade));
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        assertNotNull(blade.getPosition());
+        // Add additional assertions based on your requirements for case 5
+    }
+
+
 }

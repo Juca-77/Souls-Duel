@@ -13,10 +13,11 @@ public class ArenaBuilder {
     private int width;
     private int height;
     private Timer timer;
+    private Arena arena;
 
 
     public Arena createArena() {
-        Arena arena = new Arena(getWidth(), getHeight(), level);
+        arena = new Arena(getWidth(), getHeight(), level);
         arena.setWalls(createWalls());
 
         arena.setHero(createHero());
@@ -25,328 +26,93 @@ public class ArenaBuilder {
         timer=arena.getTimer();
         //arena.setMonsters(createMonsters());
 
+        scheduleBlades2_1(1500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_1());
-            }
-        }, 1500);
+        scheduleBladesCos2_2(5000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_2());
-            }
-        }, 5000);
+        scheduleBlades2_1(8500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_1());
-            }
-        }, 8500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_2());
-            }
-        }, 11500);
+        scheduleBladesCos2_2(11500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades3());
-            }
-        }, 14800);
+        scheduleGrenades3(14800);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 17000+2000);
+        scheduleBlades4(17000+2000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 17000+2500);
+        scheduleBlades4(17000+2500);
+        scheduleBlades4(17000+3000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 17000+3000);
+        scheduleBlades4_1(17000+3500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_1());
-            }
-        }, 17000+3500);
+        scheduleBlades4_2(17000+4000);
+        scheduleBlades4_6(17000+4500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_2());
-            }
-        }, 17000+4000);
+        scheduleBlades4_2(17000+5000);
+        scheduleBlades4_1(17000+5500);
+        scheduleBlades4(17000+6000);
+        scheduleBlades4_3(17000+6500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_6());
-            }
-        }, 17000+4500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_2());
-            }
-        }, 17000+5000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_1());
-            }
-        }, 17000+5500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 17000+6000);
+        scheduleBlades4_4(17000+7000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 17000+6500);
+        scheduleBlades4_5(17000+7500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 17000+7000);
+        scheduleBlades4_5(17000+8000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 17000+7500);
+        scheduleBlades4_5(17000+8500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 17000+8000);
+        scheduleBlades4_5(17000+9000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 17000+8500);
+        scheduleBlades4_4(17000+9500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 17000+9000);
+        scheduleBlades4_3(17000+10000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 17000+9500);
+        scheduleBlades4(17000+10500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 17000+10000);
+        scheduleBlades4(17000+11000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 17000+10500);
+        scheduleBlades4_3(17000+11500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 17000+11000);
+        scheduleBlades4_4(17000+12000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 17000+11500);
+        scheduleBlades4_5(17000+12500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 17000+12000);
+        scheduleBlades4_5(17000+13000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 17000+12500);
+        scheduleBlades4_4(17000+13500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 17000+13000);
+        scheduleBlades4_3(17000+14000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 17000+13500);
+        scheduleBlades4(17000+14500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 17000+14000);
+        scheduleBlades4_1(17000+15000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 17000+14500);
+        scheduleBlades4_2(17000+15500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_1());
-            }
-        }, 17000+15000);
+        scheduleBlades4_6(17000+16000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_2());
-            }
-        }, 17000+15500);
+        scheduleBlades2_1(37000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_6());
-            }
-        }, 17000+16000);
+        scheduleBlades2_2(38500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_1());
-            }
-        }, 37000);
+        scheduleBlades2_1L(42000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_2());
-            }
-        }, 38500);
+        scheduleBlades2_2L(43500);
+        scheduleBlades2_1L(45000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_1L());
-            }
-        }, 42000);
+        scheduleBlades2_2L(46500);
+        scheduleBlades2_1(50000);
+        scheduleBlades2_2(51500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_2L());
-            }
-        }, 43500);
+        scheduleBlades2_1(53000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_1L());
-            }
-        }, 45000);
+        scheduleBlades2_2(54500);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_2L());
-            }
-        }, 46500);
+        scheduleBladesParalels3(58000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_1());
-            }
-        }, 50000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_2());
-            }
-        }, 51500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_1());
-            }
-        }, 53000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades2_2());
-            }
-        }, 54500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels3());
-            }
-        }, 58000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels4());
-            }
-        }, 62000);
+        scheduleBladesParalels4(62000);
 
         timer.schedule(new TimerTask() {
            @Override
@@ -356,209 +122,78 @@ public class ArenaBuilder {
             }
         }, 66000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades3());
-            }
-        }, 70000);
+        scheduleBlades3(70000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades3());
-            }
-        }, 73000);
+        scheduleBlades3(73000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades3());
-            }
-        }, 76000);
+        scheduleBlades3(76000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels1());
-            }
-        }, 80000);
+        scheduleBladesParalels1(80000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels2());
-            }
-        }, 82000);
+        scheduleBladesParalels2(82000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels1());
-            }
-        }, 84000);
+        scheduleBladesParalels1(84000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels2());
-            }
-        }, 86000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_1());
-            }
-        }, 88000);
+        scheduleBladesParalels2(86000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_2());
-            }
-        }, 90000);
+        scheduleBlades5_1(88000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_1());
-            }
-        }, 92000);
+        scheduleBlades5_2(90000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_1());
-                arena.addBlades(createBlades5_2());
-            }
-        }, 92000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-            }
-        }, 95000);
+        scheduleBlades5_1(92000);
+        scheduleBlades5_2(92000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6LU());
-            }
-        }, 96000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-            }
-        }, 97000);
+        scheduleBlades6CU(95000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-                arena.addBlades(createBlades6LU());
-            }
-        }, 98000);
+        scheduleBlades6LU(96000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6LU());
-            }
-        }, 99000);
+        scheduleBlades6RU(97000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-                arena.addBlades(createBlades6LU());
-            }
-        }, 100000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-            }
-        }, 101000);
+        scheduleBlades6RU(98000);
+        scheduleBlades6LU(98000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-            }
-        }, 102000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6LU());
-            }
-        }, 103000);
+        scheduleBlades6CU(99000);
+        scheduleBlades6LU(99000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-            }
-        }, 104000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6LU());
-            }
-        }, 105000);
+        scheduleBlades6RU(100000);
+        scheduleBlades6LU(100000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-            }
-        }, 106000);
+        scheduleBlades6RU(101000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-            }
-        }, 107000);
+        scheduleBlades6RU(102000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6LU());
-            }
-        }, 108000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6LU());
-            }
-        }, 109000);
+        scheduleBlades6CU(103000);
+        scheduleBlades6LU(103000);
+        scheduleBlades6CU(104000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6RU());
-            }
-        }, 110000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6RU());
-            }
-        }, 112000);
+        scheduleBlades6LU(105000);
+
+
+        scheduleBlades6RU(106000);
+
+        scheduleBlades6CU(107000);
+
+        scheduleBlades6LU(108000);
+
+
+        scheduleBlades6CU(109000);
+        scheduleBlades6LU(109000);
+
+
+        scheduleBlades6CU(110000);
+        scheduleBlades6RU(110000);
+
+
+        scheduleBlades6CU(112000);
+        scheduleBlades6RU(112000);
 
         timer.schedule(new TimerTask() {
             @Override
@@ -568,401 +203,127 @@ public class ArenaBuilder {
             }
         }, 114000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 116000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 117000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 117500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 118000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 118500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 119000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 120000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 120500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 120750);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-            }
-        }, 121000);
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 121250);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 121500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 121750);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 122500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-            }
-        }, 122500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_3());
-            }
-        }, 122750);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos3());
-                arena.addBlades(createBladesCos2_3());
-            }
-        }, 123000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos3());
-                arena.addBlades(createBladesCos3_1());
-            }
-        }, 123500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos2_2());
-                arena.addBlades(createBladesCos3_1());
-            }
-        }, 123500);
-
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenade());
-
-            }
-        }, 126000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades());
-
-            }
-        }, 130000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades2());
-
-            }
-        }, 134000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades3());
-
-            }
-        }, 138500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades());
-
-            }
-        }, 142000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenadesLast());
-
-            }
-        }, 146000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades3());
-
-            }
-        }, 149000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 152000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 155000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 155500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 157000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 157500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 158500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 159000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 159500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 159750);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-            }
-        }, 160000);
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 160250);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 160500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 160750);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 161500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-            }
-        }, 162500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_3());
-            }
-        }, 162750);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos3());
-                arena.addBlades(createBladesCos2_3());
-            }
-        }, 163000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos3());
-                arena.addBlades(createBladesCos3_1());
-            }
-        }, 163500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenade());
-
-            }
-        }, 168000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades());
-
-            }
-        }, 173000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades2());
-
-            }
-        }, 177000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades3());
-
-            }
-        }, 181500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades());
-
-            }
-        }, 185500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenadesLast());
-
-            }
-        }, 189500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades3());
-
-            }
-        }, 195000);
+        scheduleBladesCos1(116000);
 
+
+        scheduleBladesCos2(117000);
+        scheduleBladesCos1(117000);
+
+
+        scheduleBladesCos2(117500);
+        scheduleBladesCos1(117500);
+
+
+        scheduleBladesCos2(118000);
+        scheduleBladesCos1(118000);
+
+        scheduleBladesCos1(118500);
+        scheduleBladesCos1(119000);
+
+        scheduleBladesCos1_1(120000);
+        scheduleBladesCos2(120000);
+
+        scheduleBladesCos1(120500);
+        scheduleBladesCos2_1(120500);
+
+
+        scheduleBlades2_1(120750);
+        scheduleBladesCos1_2(120750);
+        scheduleBladesCos1_2(121000);
+        scheduleBladesCos1(12150);
+
+
+        scheduleBladesCos1_1(121500);
+        scheduleBladesCos2(121500);
+
+        scheduleBladesCos1(121750);
+        scheduleBladesCos2_1(121750);
+
+        scheduleBladesCos1_2(122500);
+        scheduleBladesCos2_1(122500);
+
+
+        scheduleBladesCos1_2(122500);
+
+
+        scheduleBladesCos1_2(122750);
+        scheduleBladesCos2_3(122750);
+
+
+        scheduleBladesCos3(123000);
+        scheduleBladesCos2_3(123000);
+
+
+        scheduleBladesCos3(123500);
+        scheduleBladesCos3_1(123500);
+
+        scheduleBlades2_2(123500);
+        scheduleBladesCos3_1(123500);
+
+
+        scheduleGrenade(1236000);
+
+        scheduleGrenades(130000);
+
+        scheduleGrenades2(134000);
+        scheduleGrenades3(138500);
+        scheduleGrenades(142000);
+        scheduleGrenadesLast(146000);
+        scheduleGrenades3(149000);
+        scheduleBladesCos1(152000);
+
+        scheduleBladesCos1(155000);
+        scheduleBladesCos2(155000);
+
+
+        scheduleBladesCos1(155500);
+        scheduleBladesCos2(155500);
+
+
+        scheduleBladesCos1(157000);
+        scheduleBladesCos2(157000);
+
+        scheduleBladesCos1(157500);
+        scheduleBladesCos1(158500);
+
+        scheduleBladesCos1_1(159000);
+        scheduleBladesCos2(159000);
+
+        scheduleBladesCos1(159500);
+        scheduleBladesCos2_1(159500);
+
+        scheduleBladesCos1_2(159750);
+        scheduleBladesCos2_1(159750);
+
+        scheduleBladesCos1_2(160000);
+        scheduleBladesCos1(160250);
+
+        scheduleBladesCos1_1(160500);
+        scheduleBladesCos2(160500);
+
+
+        scheduleBladesCos1(160750);
+        scheduleBladesCos2(160750);
+
+
+        scheduleBladesCos1_2(161500);
+        scheduleBladesCos2_1(161500);
+
+        scheduleBladesCos1_2(162500);
+
+
+        scheduleBladesCos1_2(162750);
+        scheduleBladesCos2_3(162750);
+
+
+        scheduleGrenade(168000);
+
+        scheduleGrenades(173000);
+        scheduleGrenades2(177000);
+        scheduleGrenades3(181500);
+        scheduleGrenades(185500);
+        scheduleGrenadesLast(189500);
+        scheduleGrenades3(195000);
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -971,628 +332,511 @@ public class ArenaBuilder {
             }
         }, 200000);
 
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-            }
-        }, 202000);
+        scheduleBlades6CU(202000);
+
+        scheduleBlades6LU(203000);
+
+        scheduleBlades6RU(204000);
+
+
+        scheduleBlades6LU(205000);
+        scheduleBlades6RU(205000);
+
+        scheduleBlades6CU(206000);
+        scheduleBlades6LU(206000);
+
+        scheduleBlades6RU(207000);
+        scheduleBlades6LU(207000);
+        scheduleBlades6RU(208000);
+        scheduleBlades6RU(209000);
+
+        scheduleBlades6CU(210000);
+        scheduleBlades6LU(210000);
+        scheduleBlades6CU(211000);
+        scheduleBlades6LU(212000);
+        scheduleBlades6RU(213000);
+        scheduleBlades6CU(214000);
+        scheduleBlades6LU(215000);
+
+        scheduleBlades6CU(216000);
+        scheduleBlades6LU(216000);
+
+        scheduleBlades6CU(217000);
+        scheduleBlades6RU(217000);
+
+        scheduleBlades6CU(218000);
+        scheduleBlades6RU(218000);
+
+
+        scheduleBlades3(221000);
+        scheduleBlades3(224000);
+        scheduleBlades3(227000);
+        scheduleBladesParalels1(229000);
+        scheduleBladesParalels2(231000);
+        scheduleBladesParalels1(233000);
+        scheduleBladesParalels2(235000);
+        scheduleBlades5_1(237000);
+        scheduleBlades5_2(239000);
+        scheduleBlades5_1(241000);
+
+        scheduleBlades5_1(243000);
+        scheduleBlades5_2(243000);
+        scheduleBlades4(246000);
+        scheduleBlades4(246500);
+
+        scheduleBlades4(247000);
+        scheduleBlades4_1(247500);
+        scheduleBlades4_2(248000);
+        scheduleBlades4_6(248500);
+        scheduleBlades4_2(249000);
+        scheduleBlades4_1(249500);
+        scheduleBlades4(250000);
+        scheduleBlades4_3(250500);
+        scheduleBlades4_4(251000);
+        scheduleBlades4_5(251500);
+        scheduleBlades4_5(252000);
+        scheduleBlades4_5(252500);
+        scheduleBlades4_5(253000);
+        scheduleBlades4_4(253500);
+        scheduleBlades4_3(254000);
+        scheduleBlades4(254500);
+        scheduleBlades4(255000);
+        scheduleBlades4_3(255500);
+        scheduleBlades4_4(256000);
+        scheduleBlades4_5(256500);
+        scheduleBlades4_5(257000);
+        scheduleBlades4_4(257500);
+        scheduleBlades4_3(258000);
+        scheduleBlades4(258500);
+        scheduleBlades4_1(259000);
+        scheduleBlades4_2(259500);
+        scheduleBlades4_6(260000);
+
+        scheduleBladesCos1(263000);
+
+        scheduleBladesCos1(263500);
+        scheduleBladesCos2(263500);
+
+        scheduleBladesCos1(264000);
+        scheduleBladesCos2(264000);
+
+        scheduleBladesCos1(264500);
+        scheduleBladesCos2(264500);
+
+        scheduleBladesCos1(265000);
+
+        scheduleBladesCos1(265500);
+
+        scheduleBladesCos1_1(266000);
+        scheduleBladesCos2(266000);
+
+
+        scheduleBladesCos1(266500);
+        scheduleBladesCos2_1(266500);
+
+
+        scheduleBladesCos1_2(266750);
+        scheduleBladesCos2_1(266750);
+
+
+
+
+        scheduleGrenade(272000);
+
+        scheduleGrenades(277000);
+
+        scheduleGrenades2(282000);
+
+        scheduleGrenades3(287000);
+
+        scheduleGrenades(292000);
+
+        scheduleGrenadesLast(297000);
+
+        scheduleGrenades3(302000);
+
+        scheduleGrenadesLast(307000);
+
+        scheduleGrenadesLast(312000);
+
+
+        return arena;
+    }
+
+    public void scheduleBlades1(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBlades6LU());
+                arena.addBlades(createBlades1());
             }
-        }, 203000);
+        }, seconds);
+    }
+    public void scheduleBlades2_1(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBlades6RU());
+                arena.addBlades(createBlades2_1());
             }
-        }, 204000);
+        }, seconds);
+    }
+    public void scheduleBlades2_2(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBlades6RU());
-                arena.addBlades(createBlades6LU());
+                arena.addBlades(createBlades2_2());
             }
-        }, 205000);
+        }, seconds);
+    }
+
+    public void scheduleBlades2_1L(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6LU());
+                arena.addBlades(createBlades2_1L());
             }
-        }, 206000);
+        }, seconds);
+    }
+
+    public void scheduleBlades2_2L(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBlades6RU());
-                arena.addBlades(createBlades6LU());
+                arena.addBlades(createBlades2_2L());
             }
-        }, 207000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-            }
-        }, 208000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-            }
-        }, 209000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6LU());
-            }
-        }, 210000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-            }
-        }, 211000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6LU());
-            }
-        }, 212000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6RU());
-            }
-        }, 213000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-            }
-        }, 214000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6LU());
-            }
-        }, 215000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6LU());
-            }
-        }, 216000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6RU());
-            }
-        }, 217000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades6CU());
-                arena.addBlades(createBlades6RU());
-            }
-        }, 218000);
-
-
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades3());
-            }
-        }, 221000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades3());
-            }
-        }, 224000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades3());
-            }
-        }, 227000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels1());
-            }
-        }, 229000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels2());
-            }
-        }, 231000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels1());
-            }
-        }, 233000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesParalels2());
-            }
-        }, 235000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_1());
-            }
-        }, 237000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_2());
-            }
-        }, 239000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_1());
-            }
-        }, 241000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades5_1());
-                arena.addBlades(createBlades5_2());
-            }
-        }, 243000);
-
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 246000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 246500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 247000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_1());
-            }
-        }, 247500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_2());
-            }
-        }, 248000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_6());
-            }
-        }, 248500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_2());
-            }
-        }, 249000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_1());
-            }
-        }, 249500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 250000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 250500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 251000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 251500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 252000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 252500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 253000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 253500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 254000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 254500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 255000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 255500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 256000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 256500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_5());
-            }
-        }, 257000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_4());
-            }
-        }, 257500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_3());
-            }
-        }, 258000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4());
-            }
-        }, 258500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_1());
-            }
-        }, 259000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_2());
-            }
-        }, 259500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBlades4_6());
-            }
-        }, 260000);
+        }, seconds);
+    }
+    public void scheduleBladesCos1(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addBlades(createBladesCos1());
             }
-        }, 263000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 263500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 264000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 264500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 265000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 265500);
+        }, seconds);
+    }
+    public void scheduleBladesCos1_1(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addBlades(createBladesCos1_1());
+            }
+        }, seconds);
+    }
+    public void scheduleBladesCos1_2(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBladesCos1_2());
+            }
+        }, seconds);
+    }
+    public void scheduleBladesCos2(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
                 arena.addBlades(createBladesCos2());
             }
-        }, 266000);
+        }, seconds);
+    }
+    public void scheduleBladesCos2_1(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBladesCos1());
                 arena.addBlades(createBladesCos2_1());
             }
-        }, 266500);
+        }, seconds);
+    }
+    public void scheduleBladesCos2_2(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_1());
+                arena.addBlades(createBladesCos2_2());
             }
-        }, 266750);
+        }, seconds);
+    }
+    public void scheduleBladesCos2_3(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBladesCos1_2());
-            }
-        }, 267000);
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-            }
-        }, 267250);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_1());
-                arena.addBlades(createBladesCos2());
-            }
-        }, 267500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 267750);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-                arena.addBlades(createBladesCos2_1());
-            }
-        }, 268500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
-            }
-        }, 269500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addBlades(createBladesCos1_2());
                 arena.addBlades(createBladesCos2_3());
             }
-        }, 269750);
+        }, seconds);
+    }
+    public void scheduleBladesCos3(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addBlades(createBladesCos3());
-                arena.addBlades(createBladesCos2_3());
             }
-        }, 270000);
+        }, seconds);
+    }
+    public void scheduleBladesCos3_1(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                arena.addBlades(createBladesCos3());
                 arena.addBlades(createBladesCos3_1());
             }
-        }, 270500);
+        }, seconds);
+    }
+
+    public void scheduleBlades3(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades3());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades4(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades4());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades4_1(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades4_1());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades4_2(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades4_2());
+            }
+        }, seconds);
+    }
+
+    public void scheduleBlades4_3(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades4_3());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades4_4(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades4_4());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades4_5(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades4_5());
+            }
+        }, seconds);
+    }
+
+    public void scheduleBlades4_6(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades4_6());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades5_1(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades5_1());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades5_2(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades5_2());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades6LU(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades6LU());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades6RU(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades6RU());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades6CU(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades6CU());
+            }
+        }, seconds);
+    }
+    public void scheduleBlades6CD(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBlades6CD());
+            }
+        }, seconds);
+    }
+    public void scheduleBladesParalels1(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBladesParalels1());
+            }
+        }, seconds);
+    }
+    public void scheduleBladesParalels2(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBladesParalels2());
+            }
+        }, seconds);
+    }
+    public void scheduleBladesParalels3(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBladesParalels3());
+            }
+        }, seconds);
+    }
+    public void scheduleBladesParalels4(int seconds) {
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                arena.addBlades(createBladesParalels4());
+            }
+        }, seconds);
+    }
+    public void scheduleGrenade(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addGrenades(createGrenade());
-
             }
-        }, 275000);
+        }, seconds);
+    }
+    public void scheduleGrenades(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addGrenades(createGrenades());
-
             }
-        }, 279000);
+        }, seconds);
+    }
+    public void scheduleGrenades2(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addGrenades(createGrenades2());
-
             }
-        }, 284000);
+        }, seconds);
+    }
+    public void scheduleGrenades3(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addGrenades(createGrenades3());
-
             }
-        }, 288500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades());
-
-            }
-        }, 293500);
+        }, seconds);
+    }
+    public void scheduleGrenadesLast(int seconds) {
+        Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 arena.addGrenades(createGrenadesLast());
-
             }
-        }, 298500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenades3());
-
-            }
-        }, 303000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenadesLast());
-
-            }
-        }, 307500);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                arena.addGrenades(createGrenadesLast());
-
-            }
-        }, 312500);
-
-
-
-        return arena;
+        }, seconds);
     }
 
 
@@ -1633,11 +877,9 @@ public class ArenaBuilder {
 
 
 
-    
 
-
-    public Hero createHero() {
-        return new Hero(width/2, height/2-3);
+    public Soul createHero() {
+        return new Soul(width/2, height/2-3);
     }
 
 
@@ -1846,8 +1088,8 @@ public class ArenaBuilder {
 
     public List<Blade> createBlades5_2() {
         List<Blade> blades = new ArrayList<>();
-        for (int i=0; i<16;i++) {
-            blades.add(new Blade(getWidth()/2-14+2*i-1,38, 1)); //1=up 2=down 3=left 4=right
+        for (int i=0; i<15;i++) {
+            blades.add(new Blade(width/2-14+2*i,38, 1)); //1=up 2=down 3=left 4=right
         }
 
         return blades;

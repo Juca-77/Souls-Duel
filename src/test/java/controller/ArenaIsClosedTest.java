@@ -1,6 +1,6 @@
 package controller;
 
-import com.aor.hero.controller.game.HeroController;
+import com.aor.hero.controller.game.SoulController;
 import com.aor.hero.gui.GUI;
 import com.aor.hero.model.game.arena.Arena;
 import com.aor.hero.model.game.arena.ArenaBuilder;
@@ -16,7 +16,7 @@ public class ArenaIsClosedTest {
     void allArenasAreClosed(@ForAll @IntRange(min = 1, max = 5) int level,@ForAll @IntRange(min = 49, max = 100) int width, @ForAll @IntRange(min = 60, max = 70) int height, @ForAll List<GUI.@From("moveActions") ACTION> actions) throws IOException {
         ArenaBuilder ab = new ArenaBuilder(level, width, height);
         Arena arena = ab.createArena();
-        HeroController controller = new HeroController(arena);
+        SoulController controller = new SoulController(arena);
 
         for (GUI.ACTION action : actions) {
             controller.step(null, action, 100);

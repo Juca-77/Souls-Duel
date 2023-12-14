@@ -15,7 +15,7 @@ public class Arena {
 
     private int level;
 
-    private Hero hero;
+    private Soul soul;
 
     private Enemy enemy;
 
@@ -39,30 +39,19 @@ public class Arena {
         return width;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public void setTimer(Timer timer) {
-        this.timer = timer;
-    }
-
     public Timer getTimer() {
         return timer;
     }
 
-    public Hero getHero() {
-        return hero;
+    public Soul getHero() {
+        return soul;
     }
 
-    public void setHero(Hero hero) {
-        this.hero = hero;
+    public void setHero(Soul soul) {
+        this.soul = soul;
     }
 
     public Enemy getEnemy() {return enemy;}
-
-
-    public void setEnemy(Enemy enemy) {this.enemy = enemy;}
 
     
 

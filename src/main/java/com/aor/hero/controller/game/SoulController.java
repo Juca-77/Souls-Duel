@@ -6,13 +6,13 @@ import com.aor.hero.model.Position;
 import com.aor.hero.model.game.arena.Arena;
 import com.aor.hero.viewer.Music;
 
-public class HeroController extends GameController {
+public class SoulController extends GameController {
     private static final double MOVEMENT_SPEED = 0.1; // Adjust the speed as needed
     private long lastUpdateTime = System.currentTimeMillis();
 
     private Music damage = new Music("damage_sound.wav");
 
-    public HeroController(Arena arena) {
+    public SoulController(Arena arena) {
         super(arena);
     }
 
@@ -20,7 +20,7 @@ public class HeroController extends GameController {
         return damage;
     }
 
-    private void moveHero(Position position) {
+    public void moveSoul(Position position) {
         if (getModel().isEmpty(position)) {
             getModel().getHero().setPosition(position);
             if (getModel().isBlade(position)) {
@@ -33,26 +33,26 @@ public class HeroController extends GameController {
 
     @Override
     public void step(Game game, GUI.ACTION action, long time) {
-        if (action == GUI.ACTION.UP) moveHeroUp();
-        if (action == GUI.ACTION.RIGHT) moveHeroRight();
-        if (action == GUI.ACTION.DOWN) moveHeroDown();
-        if (action == GUI.ACTION.LEFT) moveHeroLeft();
+        if (action == GUI.ACTION.UP) moveSoulUp();
+        if (action == GUI.ACTION.RIGHT) moveSoulRight();
+        if (action == GUI.ACTION.DOWN) moveSoulDown();
+        if (action == GUI.ACTION.LEFT) moveSoulLeft();
     }
 
-    public void moveHeroLeft() {
-        moveHero(getModel().getHero().getPosition().getLeft());
+    public void moveSoulLeft() {
+        moveSoul(getModel().getHero().getPosition().getLeft());
     }
 
-    public void moveHeroRight() {
-        moveHero(getModel().getHero().getPosition().getRight());
+    public void moveSoulRight() {
+        moveSoul(getModel().getHero().getPosition().getRight());
     }
 
-    public void moveHeroUp() {
-        moveHero(getModel().getHero().getPosition().getUp());
+    public void moveSoulUp() {
+        moveSoul(getModel().getHero().getPosition().getUp());
     }
 
-    public void moveHeroDown() {
-        moveHero(getModel().getHero().getPosition().getDown());
+    public void moveSoulDown() {
+        moveSoul(getModel().getHero().getPosition().getDown());
     }
 
 
