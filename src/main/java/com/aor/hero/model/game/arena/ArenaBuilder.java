@@ -464,7 +464,7 @@ public class ArenaBuilder {
     }
 
     public void scheduleBlades1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -474,7 +474,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades2_1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -484,7 +484,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades2_2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -495,7 +495,7 @@ public class ArenaBuilder {
     }
 
     public void scheduleBlades2_1L(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -506,7 +506,7 @@ public class ArenaBuilder {
     }
 
     public void scheduleBlades2_2L(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -516,7 +516,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -526,7 +526,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos1_1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -536,7 +536,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos1_2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -546,7 +546,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -556,7 +556,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos2_1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -566,7 +566,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos2_2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -576,7 +576,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos2_3(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -586,7 +586,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos3(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -596,7 +596,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesCos3_1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -607,7 +607,7 @@ public class ArenaBuilder {
     }
 
     public void scheduleBlades3(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -617,7 +617,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades4(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -627,7 +627,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades4_1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -637,7 +637,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades4_2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -648,7 +648,7 @@ public class ArenaBuilder {
     }
 
     public void scheduleBlades4_3(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -658,7 +658,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades4_4(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -668,7 +668,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades4_5(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -679,7 +679,7 @@ public class ArenaBuilder {
     }
 
     public void scheduleBlades4_6(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -689,7 +689,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades5_1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -699,7 +699,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades5_2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -709,7 +709,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades6LU(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -719,7 +719,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades6RU(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -729,7 +729,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades6CU(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -739,7 +739,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBlades6CD(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -749,7 +749,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesParalels1(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -759,7 +759,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesParalels2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -769,7 +769,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesParalels3(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -779,7 +779,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleBladesParalels4(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -789,7 +789,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleGrenade(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -799,7 +799,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleGrenades(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -809,7 +809,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleGrenades2(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -819,7 +819,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleGrenades3(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -829,7 +829,7 @@ public class ArenaBuilder {
         }, seconds);
     }
     public void scheduleGrenadesLast(int seconds) {
-        Timer timer = new Timer();
+         
 
         timer.schedule(new TimerTask() {
             @Override
@@ -840,16 +840,12 @@ public class ArenaBuilder {
     }
 
 
-
     public ArenaBuilder(int level, int width, int height) throws IOException {
         this.level = level;
         this.width=width;
         this.height=height;
     }
 
-    public Timer getTimer() {
-        return timer;
-    }
 
     public int getWidth() {
         return width;
@@ -1275,4 +1271,11 @@ public class ArenaBuilder {
         return grenades;
     }
 
+    public void setArena(Arena arena) {
+        this.arena=arena;
+    }
+
+    public void setTimer(Timer timer) {
+        this.timer = timer;
+    }
 }
