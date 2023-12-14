@@ -1,9 +1,9 @@
 package com.aor.hero.model.game.elements;
 
-public class Hero extends Element {
+public class Soul extends Element {
     private int hp;
 
-    public Hero(int x, int y) {
+    public Soul(int x, int y) {
         super(x, y);
         this.hp = 30;
     }

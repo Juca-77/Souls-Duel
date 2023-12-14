@@ -22,6 +22,8 @@ import java.net.URL;
 
 public class LanternaGUI implements GUI {
     private final Screen screen;
+    private int width;
+    private int heigth;
 
     public LanternaGUI(Screen screen) {
         this.screen = screen;
@@ -29,6 +31,8 @@ public class LanternaGUI implements GUI {
 
     public LanternaGUI(int width, int height) throws IOException, FontFormatException, URISyntaxException {
         AWTTerminalFontConfiguration fontConfig = loadFont();
+        this.width=width;
+        this.heigth=height;
         Terminal terminal = createTerminal(width, height, fontConfig);
         this.screen = createScreen(terminal);
     }
@@ -346,7 +350,7 @@ public class LanternaGUI implements GUI {
 
     @Override
     public void drawGrenade(Position position) {
-
+        drawCharacter(position.getX(), position.getY(), '*', "#FFFFFF");
     }
 
     @Override
@@ -376,5 +380,14 @@ public class LanternaGUI implements GUI {
     @Override
     public void close() throws IOException {
         screen.close();
+    }
+    @Override
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeigth() {
+        return heigth;
     }
 }

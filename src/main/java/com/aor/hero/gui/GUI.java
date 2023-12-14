@@ -30,6 +30,8 @@ public interface GUI {
     void refresh() throws IOException;
 
     void close() throws IOException;
+    public int getHeigth();
+    public int getWidth();
 
     enum ACTION {UP, RIGHT, DOWN, LEFT, NONE, QUIT, SELECT}
 }

@@ -1,5 +1,6 @@
 package com.aor.hero;
 
+import com.aor.hero.gui.GUI;
 import com.aor.hero.gui.LanternaGUI;
 import com.aor.hero.model.menu.MainMenu;
 import com.aor.hero.states.MainMenuState;
@@ -31,7 +32,7 @@ public class Game {
         this.state = state;
     }
 
-    private void start() throws IOException {
+    public void start() throws IOException {
         int FPS = 30;
         int frameTime = 1000 / FPS;
         Music normalMode = new Music("gameplaysong.wav");
@@ -51,5 +52,13 @@ public class Game {
         }
 
         gui.close();
+    }
+
+    public GUI getGui() {
+        return gui;
+    }
+
+    public State getState() {
+        return state;
     }
 }

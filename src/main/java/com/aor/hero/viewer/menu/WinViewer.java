@@ -11,7 +11,7 @@ public class WinViewer extends Viewer<WinMenu> {
     }
 
     @Override
-    protected void drawElements(GUI gui) {
+    public void drawElements(GUI gui) {
         int menuWidth = 100;
         int entryX = (menuWidth - getModel().getEntry(0).length()) / 2;
         gui.drawWin(new Position(49-23,25));

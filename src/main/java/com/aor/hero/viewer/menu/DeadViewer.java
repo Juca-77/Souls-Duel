@@ -11,7 +11,7 @@ public class DeadViewer extends Viewer<DeadMenu> {
     }
 
     @Override
-    protected void drawElements(GUI gui) {
+    public void drawElements(GUI gui) {
         int menuWidth = 100;
 
         for (int i = 0; i < getModel().getNumberEntries(); i++) {

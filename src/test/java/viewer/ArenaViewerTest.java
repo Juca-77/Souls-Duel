@@ -26,7 +26,7 @@ class ArenaViewerTest {
         arena.setWalls(Arrays.asList(new Wall(1, 2), new Wall(2, 3), new Wall(3, 4)));
         arena.setGrenades(Arrays.asList(new Grenade(4, 5,1)));
         arena.setBlades(Arrays.asList(new Blade(4, 5,1)));
-        arena.setHero(new Hero(5, 8));
+        arena.setHero(new Soul(5, 8));
     }
 
 
