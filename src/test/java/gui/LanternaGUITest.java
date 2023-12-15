@@ -1,13 +1,17 @@
 package gui;
 
-import com.aor.hero.gui.LanternaGUI;
-import com.aor.hero.model.Position;
+import SoulsDuel.gui.LanternaGUI;
+import SoulsDuel.model.Position;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 import com.googlecode.lanterna.screen.Screen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
+import java.io.IOException;
+
+import static org.mockito.Mockito.verify;
 
 class LanternaGUITest {
     private Screen screen;
@@ -29,15 +33,62 @@ class LanternaGUITest {
     void drawHero() {
         gui.drawHero(new Position(1, 1));
 
-        Mockito.verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(255, 0, 0));
-        Mockito.verify(tg, Mockito.times(1)).putString(1, 2, "+");
+        verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(255, 0, 0));
+        verify(tg, Mockito.times(1)).putString(1, 2, "+");
     }
 
     @Test
     void drawText() {
         gui.drawText(new Position(1, 1), "Hello World", "#336699");
 
-        Mockito.verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(51, 102, 153));
-        Mockito.verify(tg, Mockito.times(1)).putString(1, 1, "Hello World");
+        verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(51, 102, 153));
+        verify(tg, Mockito.times(1)).putString(1, 1, "Hello World");
+    }
+
+
+
+
+    @Test
+    void testClear() {
+        gui.clear();
+
+        verify(screen).clear();
+    }
+
+    @Test
+    void testRefresh() throws IOException {
+        gui.refresh();
+
+        verify(screen).refresh();
+    }
+
+    @Test
+    void testClose() throws IOException {
+        gui.close();
+
+        verify(screen).close();
+    }
+    @Test
+    void drawWall() {
+        gui.drawWall(new Position(1, 1));
+
+        verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(255, 255, 255));
+        verify(tg, Mockito.times(1)).putString(1, 2, "#");
+    }
+
+    @Test
+    void testDrawBlade() throws IOException {
+        gui.drawBlade(new Position(1, 1));
+
+        verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(255, 255, 255));
+        verify(tg, Mockito.times(1)).putString(1, 2, "@");
+    }
+    @Test
+    void testDrawGrenade() throws IOException {
+        gui.drawGrenade(new Position(1, 1));
+
+        verify(tg, Mockito.times(1)).setForegroundColor(new TextColor.RGB(255, 255, 255));
+        verify(tg, Mockito.times(1)).putString(1, 2, "*");
     }
 }
+

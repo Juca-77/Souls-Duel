@@ -1,6 +1,6 @@
 package model;
 
-import com.aor.hero.model.Position;
+import SoulsDuel.model.Position;
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Property;
 

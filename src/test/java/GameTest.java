@@ -1,30 +1,48 @@
 
-import com.aor.hero.Game;
+import SoulsDuel.Game;
+import SoulsDuel.gui.GUI;
+import SoulsDuel.gui.LanternaGUI;
+import SoulsDuel.states.MainMenuState;
+import SoulsDuel.states.State;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-/*
+
 public class GameTest {
 
     @Test
-    public void testGameStart() {
-        Game game = new Game();
-        assertEquals(0, game.getSoul().getX());
-        assertEquals(0, game.getSoul().getY());
+    void testGameConstructor() {
+        assertDoesNotThrow(() -> {
+            Game game = new Game();
+            assertNotNull(game.getGui());
+            assertNotNull(game.getState());
+            assertTrue(game.getGui() instanceof LanternaGUI);
+            assertTrue(game.getState() instanceof MainMenuState);
+        });
     }
 
     @Test
-    public void testGameGenerateAttack() {
-        Game game = new Game();
-        game.update();
-        assertNotNull(game.getAttacks());
+    void testGuiDimensions() {
+        assertDoesNotThrow(() -> {
+            Game game = new Game();
+            GUI gui = game.getGui();
+            assertEquals(100, gui.getWidth());
+            assertEquals(70, gui.getHeigth());
+        });
     }
 
     @Test
-    public void testGameOver() {
-        Game game = new Game();
-        game.getSoul().setHealth(0);
-        game.update();
-        assertFalse(game.isRunning());
+    void testInitialState() {
+        assertDoesNotThrow(() -> {
+            Game game = new Game();
+            State initialState = game.getState();
+            assertTrue(initialState instanceof MainMenuState);
+
+            MainMenuState mainMenuState = (MainMenuState) initialState;
+            assertNotNull(mainMenuState.getModel());
+            // You might add more specific assertions related to MainMenuState or MainMenu
+        });
     }
-}*/
+
+
+}
