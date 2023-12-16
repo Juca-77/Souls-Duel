@@ -22,8 +22,8 @@ public class GameViewer extends Viewer<Arena> {
         drawElements(gui, new ArrayList<>(getModel().getBlades()), new BladeViewer());
         drawElements(gui, new ArrayList<>(getModel().getGrenades()), new GrenadeViewer());
 
-        gui.drawText(new Position(getModel().getWidth() / 2 - 15, 41), "HP: " + getModel().getHero().getHp() + "/30", "#FFFFFF");
-        gui.drawText(new Position(getModel().getWidth() / 2 + 9, 41), "LEVEL:" + getModel().getLevel(), "#FFFFFF");
+        gui.drawText(new Position(getModel().getWidth()/2-15, 41), "HP: " + getModel().getHero().getHp() + "/30", "#FFFFFF");
+        gui.drawText(new Position(getModel().getWidth()/2+9, 41), "LEVEL:" + getModel().getLevel(), "#FFFFFF");
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {
@@ -34,6 +34,7 @@ public class GameViewer extends Viewer<Arena> {
     private <T extends Element> void drawElement(GUI gui, T element, ElementViewer<T> viewer) {
         viewer.draw(element, gui);
     }
+
 }
 
 
