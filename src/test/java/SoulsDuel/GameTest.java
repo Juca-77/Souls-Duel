@@ -5,11 +5,28 @@ import SoulsDuel.gui.GUI;
 import SoulsDuel.gui.LanternaGUI;
 import SoulsDuel.states.MainMenuState;
 import SoulsDuel.states.State;
+import com.googlecode.lanterna.graphics.TextGraphics;
+import com.googlecode.lanterna.screen.Screen;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GameTest {
+    private Screen screen;
+    private LanternaGUI gui;
+    private TextGraphics tg;
+    @BeforeEach
+    void setUp() {
+        screen = Mockito.mock(Screen.class);
+        tg = Mockito.mock(TextGraphics.class);
+
+        Mockito.when(screen.newTextGraphics()).thenReturn(tg);
+
+        gui = new LanternaGUI(screen);
+    }
+
 
     @Test
     void testGameConstructor() {
@@ -26,7 +43,7 @@ public class GameTest {
     void testGuiDimensions() {
         assertDoesNotThrow(() -> {
             Game game = new Game();
-            GUI gui = game.getGui();
+            gui = (LanternaGUI) game.getGui();
             assertEquals(100, gui.getWidth());
             assertEquals(70, gui.getHeigth());
         });
