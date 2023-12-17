@@ -1,18 +1,22 @@
 plugins {
     id ("java")
     id ("application")
-    //id "org.kordamp.gradle.errorprone" version "0.47.0"
+    id 'info.solidsoft.pitest' version '1.15.0'
+
 }
 
-application {
-    mainClass.set('com.aor.hero.game.Game')
-}
+//application {
+//    mainClass.set('SoulsDuel.game.Game')
+//}
 
-group = "com.juca-77.Soul"
+group = "SoulsDuel"
 version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+}
+pitest {
+    junit5PluginVersion = '1.2.0'
 }
 
 dependencies {
