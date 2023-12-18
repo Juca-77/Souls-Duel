@@ -11,10 +11,10 @@ The following screenshots ilustrate the general look of our game, as well as the
 ### Game preview
 
 <p align="center" justify="center">
-  <img src="docs/gifs/"/>
+  <img src="docs/gifs/Show.gif"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Sneak peak into OVERKILL game</i></b>
+  <b><i>Gif 1. Preview of Soul's Duel</i></b>
 </p>
 <br>
 <br />
@@ -26,7 +26,7 @@ The following screenshots ilustrate the general look of our game, as well as the
   <img src="docs/images/MainMenu.png"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Main Menu</i></b>
+  <b><i>Fig 1. Main Menu</i></b>
 </p>
 <br>
 <br />
@@ -35,7 +35,7 @@ The following screenshots ilustrate the general look of our game, as well as the
   <img src="docs/images/DeadMenu.png"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Dead Menu</i></b>
+  <b><i>Fig 2. Dead Menu</i></b>
 </p>
 <br>
 <br />
@@ -44,7 +44,7 @@ The following screenshots ilustrate the general look of our game, as well as the
   <img src="docs/images/WinMenu.png"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Win Menu</i></b>
+  <b><i>Fig 3. Win Menu</i></b>
 </p>
 <br>
 <br />
@@ -58,7 +58,7 @@ The following screenshots ilustrate the general look of our game, as well as the
   <img src="docs/gifs/Level1.gif"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Level 1, battle with Sans</i></b>
+  <b><i>Gif 2. Level 1, battle with Sans</i></b>
 </p>
 <br>
 <br />
@@ -67,7 +67,7 @@ The following screenshots ilustrate the general look of our game, as well as the
   <img src="docs/gifs/Level2.gif"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Level 2, battle with Flowey</i></b>
+  <b><i>Gif 3. Level 2, battle with Flowey</i></b>
 </p>
 <br>
 <br />
@@ -76,7 +76,7 @@ The following screenshots ilustrate the general look of our game, as well as the
   <img src="docs/gifs/Level3.gif"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Level 3, battle with Annoying Dog</i></b>
+  <b><i>Gif 4. Level 3, battle with Annoying Dog</i></b>
 </p>
 <br>
 <br />
@@ -85,7 +85,7 @@ The following screenshots ilustrate the general look of our game, as well as the
   <img src="docs/gifs/Level4.gif"/>
 </p>
 <p align="center">
-  <b><i>Gif 1. Level 4, battle with Frog</i></b>
+  <b><i>Gif 5. Level 4, battle with Frog</i></b>
 </p>
 <br>
 <br />
@@ -94,6 +94,15 @@ The following screenshots ilustrate the general look of our game, as well as the
 
 
 ### Animations
+
+<p align="center" justify="center">
+  <img src="docs/gifs/Grenade.gif"/>
+</p>
+<p align="center">
+  <b><i>Gif 6. Grenade exploding</i></b>
+</p>
+<br>
+<br />
 
 
 
