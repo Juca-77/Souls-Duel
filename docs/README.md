@@ -9,18 +9,18 @@ Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense 
 
 ### IMPLEMENTED FEATURES
 
-- **Move** - The game character will be able to move with the WASD keys.
-- **HP** - The player will have hearth points.
+- **Move** - The game character is able to move with the WASD keys.
+- **HP** - The player have hearth points.
 - **Get hitted** - If the character get hitted he will lose Health Points(HP).
-- **Enemys** - There will be a display area where the enemys will be displayed in a Ascii design.
-- **Different attacks** - The enemys will have diferent combinations of attacks.
-- **Menu** - There will be a menu with play options.
-- **Music** - Music in the menus/in game and some sound effects.
-- **Skin** - The hero will not be a letter, using FontForge we will 'create' him as a hearth.
-- **Levels** - The player will be able to play in 4 different levels.
+- **Enemys** - There is a display area where the enemys will be displayed in a Ascii design.
+- **Different attacks** - The enemys have diferent combinations of attacks.
+- **Menu** - There is a menu with play option.
+- **Music** - Music in the menus/in game and hit sound effect.
+- **Skin** - The hero is not a letter, using FontForge we 'created' him as a hearth.
+- **Levels** - The player is able to play in 4 different levels.
 
   
-As inspiration and ilustration (Mockup) of what the game will look like (or at least we will try to make it look like) there's this GIFs of two Undertale fights:
+As inspiration and ilustration (Mockup) of what the game will look like (or at least we tried to make it look like) there's this GIFs of two Undertale fights:
 
 <p align="center" justify="center">
   <img src="gifs/undertale-fight-sans.gif"/>
