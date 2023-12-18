@@ -180,27 +180,70 @@ Applying the Factory Method pattern to our controller and viewer instantiation o
 
 ### Strategy Pattern instead of Switch
 
-In the implementation of blade and grenade movement, a switch case has been employed, inadvertently violating several SOLID principles. Specifically, the code exhibits issues related to the Single Responsibility Principle (SRP), Open/Closed Principle (OCP), and Dependency Inversion Principle (DIP).
+In the implementation of blade and grenade movement, a switch 
+case has been employed, inadvertently violating several SOLID 
+principles. Specifically, the code exhibits issues related to 
+the Single Responsibility Principle (SRP), Open/Closed Principle
+(OCP), and Dependency Inversion Principle (DIP).
 
-To address these concerns and enhance the codebase, a recommended improvement is the adoption of a **Strategy pattern**. This design pattern facilitates the encapsulation of different movement strategies into separate classes, aligning with the OCP by allowing for easy extension without modifying existing code. Furthermore, the Strategy pattern promotes adherence to the SRP by segregating responsibilities and facilitates adherence to the DIP by introducing abstraction and reducing tight coupling.
+To address these concerns and enhance the codebase, a 
+recommended improvement is the adoption of a **Strategy pattern**.
+This design pattern facilitates the encapsulation of different 
+movement strategies into separate classes, aligning with the 
+OCP by allowing for easy extension without modifying existing
+code. Furthermore, the Strategy pattern promotes adherence to
+the SRP by segregating responsibilities and facilitates 
+adherence to the DIP by introducing abstraction and reducing
+tight coupling.
 
-Implementing a Strategy pattern for moving strategies would not only mitigate the current violations but also contribute to a more modular, maintainable, and extensible codebase.
+Implementing a Strategy pattern for moving strategies would 
+not only mitigate the current violations but also contribute
+to a more modular, maintainable, and extensible codebase.
 
 ### GUI smells
 
-The current implementation exhibits a code smell related to the direct embedding of ASCII art representing images within the methods, thereby violating the Open/Closed Principle (OCP). This practice requires code modification each time an image change is necessary, contradicting the principle's goal of facilitating easy extension without altering existing code.
+The current implementation exhibits a code smell related to 
+the direct embedding of ASCII art representing images within
+the methods, thereby violating the Open/Closed Principle 
+(OCP). This practice requires code modification each time
+an image change is necessary, contradicting the principle's
+goal of facilitating easy extension without altering existing code.
 
-To address this issue, a recommended improvement involves implementing a dedicated file to store all ASCII art representations. By externalizing the image content, we adhere to the OCP and introduce a more flexible and maintainable solution. This approach allows for easy image modifications without the need to alter the existing codebase.
+To address this issue, a recommended improvement involves 
+implementing a dedicated file to store all ASCII art 
+representations. By externalizing the image content, 
+we adhere to the OCP and introduce a more flexible 
+and maintainable solution. This approach allows for 
+easy image modifications without the need to alter the
+existing codebase.
 
-Implementing a file that owns all the ASCII arts represents a valid solution for several reasons. Firstly, it aligns with the Open/Closed Principle by separating image representation from the code logic, enabling easy extension without modifying existing methods. Additionally, this approach promotes a more modular and organized codebase, enhancing readability and maintainability. It establishes a clear 
-separation of concerns, making it simpler to manage and update images independently of the application's core logic.
+Implementing a file that owns all the ASCII arts represents
+a valid solution for several reasons. Firstly, it aligns 
+with the Open/Closed Principle by separating image representation
+from the code logic, enabling easy extension without modifying 
+existing methods. Additionally, this approach promotes a more 
+modular and organized codebase, enhancing readability and 
+maintainability. It establishes a clear 
+separation of concerns, making it simpler 
+to manage and update images independently 
+of the application's core logic.
 
 ### Arena Builder, a BIG issue
 
 
-The ArenaBuilder class, initially prioritizing functionality over good programming practices, has grown excessively large, violating key SOLID principles. Particularly, the class currently exhibits a violation of the Single Responsibility Principle (SRP) by taking on multiple responsibilities, including creating game elements, scheduling events, and initializing the arena. This lack of separation of concerns hinders maintainability and adaptability.
+The ArenaBuilder class, initially prioritizing functionality 
+over good programming practices, has grown excessively large, 
+violating key SOLID principles. Particularly, the class 
+currently exhibits a violation of the Single Responsibility 
+Principle (SRP) by taking on multiple responsibilities, 
+including creating game elements, scheduling events, and
+initializing the arena. This lack of separation of concerns
+hinders maintainability and adaptability.
 
-While the initial development approach focused on making the code work, the accumulated size and complexity of the ArenaBuilder class now present challenges. The violation of the SRP not only impacts the class's readability but also restricts its extensibility. Refactoring this class, though a non-trivial task, is essential to bring it in line with SOLID principles and ensure a more modular and maintainable codebase.
+While the initial development approach focused on making the 
+code work, the accumulated size and complexity of the ArenaBuilder 
+class now present challenges. The violation of the SRP not only impacts 
+the class's readability but also restricts its extensibility.
 
 <p align="center" justify="center">
   <img src="images/ArenaBuilderPROBLEM.png"/>
@@ -212,19 +255,27 @@ While the initial development approach focused on making the code work, the accu
 ## <p align="center">TESTING</p>
 
 <p align="center" justify="center">
-  <img src="images/CodeCoverage.png"/>
+  <img src="images/coverage.png"/>
 </p>
 <p align="center">
   <b><i>Fig 9. Code coverage screenshot</i></b>
 </p>
 
 <p align="center" justify="center">
-  <img src="images/"/>
+  <img src="images/pitestcoverage.png"/>
 </p>
 <p align="center">
   <b><i>Fig 10. PITest page</i></b>
 </p>
 
+
+The ArenaBuilder class has become a stumbling block, 
+negatively impacting the overall code quality as it drags 
+down the percentage metrics. The extensive size and intricate 
+logic within the class contribute to its difficulty in testing. 
+A large class often entails more complex test 
+scenarios, and without proper modularization, it becomes 
+harder to isolate test individual units effectively.
 
 ### SELF-EVALUATION
 
