@@ -24,22 +24,25 @@ public class BladeController extends GameController{
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         if (time - lastMovement > 100) {
-            Iterator<Blade> iterator = getModel().getBlades().iterator();
 
-            while (iterator.hasNext()) {
-                Blade blade = iterator.next();
 
-                if (blade.isAlive()) {
-                    moveBlade(blade);
-                }
+                Iterator<Blade> iterator = getModel().getBlades().iterator();
+                while (iterator.hasNext()) {
+                    Blade blade = iterator.next();
 
-                // Check and remove the blade if needed
+                    if (blade.isAlive()) {
+                        moveBlade(blade);
+                    }
+
+                    // Check and remove the blade if needed
 //                if (!blade.isAlive()) {
 //                    iterator.remove();
 //                }
-            }
+                }
+
 
             this.lastMovement = time;
+
         }
     }
 
