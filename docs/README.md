@@ -1,5 +1,5 @@
-# LDTS - Soul's Duel
-## project-l14gr09
+# <p align="center">LDTS - Soul's Duel</p>
+## <p align="center">project-l14gr09</p>
 
 This project was developed by *João Rey*(up202205576@fe.up.pt) and *Antero Morgado*(up202204971@fe.up.pt) for the curricular unity LDTS 2023/24.
 
@@ -9,22 +9,33 @@ Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense 
 
 ### IMPLEMENTED FEATURES
 
-- **Move** - The game character will be able to move with the WASD keys.
-- **HP** - The player will have hearth points.
+- **Move** - The game character is able to move with the WASD keys.
+- **HP** - The player have hearth points.
 - **Get hitted** - If the character get hitted he will lose Health Points(HP).
-- **Enemys** - There will be a display area where the enemys will be displayed in a Ascii design.
-- **Different attacks** - The enemys will have diferent combinations of attacks.
-- **Menu** - There will be a menu with play options.
-- **Music** - Music in the menus/in game and some sound effects.
-- **Skin** - The hero will not be a letter, using FontForge we will 'create' him as a hearth.
-- **Levels** - The player will be able to play in 4 different levels.
+- **Enemys** - There is a display area where the enemys will be displayed in a Ascii design.
+- **Different attacks** - The enemys have diferent combinations of attacks.
+- **Menu** - There is a menu with play option.
+- **Music** - Music in the menus/in game and hit sound effect.
+- **Skin** - The hero is not a letter, using FontForge we 'created' him as a hearth.
+- **Levels** - The player is able to play in 4 different levels.
 
   
-As inspiration and ilustration (Mockup) of what the game will look like (or at least we will try to make it look like) there's this GIFs of two Undertale fights:
+As inspiration and ilustration (Mockup) of what the game will look like (or at least we tried to make it look like) there's this GIFs of two Undertale fights:
 
-![undertale-fight](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/01a079c5-7c83-4dc7-adf5-960c9f2f9a33)
+<p align="center" justify="center">
+  <img src="gifs/undertale-fight-sans.gif"/>
+</p>
+<p align="center">
+  <b><i>Fig 1. Undertale Fight with Sans (Mockup)</i></b>
+</p>
 
-![3-3118](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/7d3289a4-36a6-4791-8a9e-d9146a22eaae)
+
+<p align="center" justify="center">
+  <img src="gifs/undertale-fight-toriel.gif"/>
+</p>
+<p align="center">
+  <b><i>Fig 2. Undertale Fight with Toriel (Mockup)</i></b>
+</p>
 
 ------
 
@@ -42,7 +53,12 @@ Recognizing the importance of managing data (Model), user interface (View), and 
 
 The following diagram illustrates how the MVC pattern is implemented in our application:
 
-![Screenshot from 2023-12-17 16-07-27](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/c70d7e33-dfa8-4ab6-a23c-b2ab73f58688)
+<p align="center" justify="center">
+  <img src="images/UML/MVCpattern.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 3. UML representing the MVC pattern (and more)</i></b>
+</p>
 
 - Model: Represents the data and business logic of the application. It stores and manages the application state, ensuring data integrity and consistency.
 
@@ -74,8 +90,12 @@ In our game development, we recognized the need for managing distinct states suc
 
 This figure can ilustrate how the pattern were mapped to the application classes:
 
-![Screenshot from 2023-12-17 15-51-09](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/a74d44f1-8659-48b4-98d1-0557386e8559)
-
+<p align="center" justify="center">
+  <img src="images/UML/Statepattern.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 4. UML screenshot of the State pattern</i></b>
+</p>
 
 **Consequences**
 
@@ -100,12 +120,17 @@ We've incorporated the **Game Loop** pattern into our application, aligning with
 
 This figure can ilustrate how the pattern were mapped to the application classes:
 
-![Screenshot from 2023-12-17 15-53-26](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/60059d6e-b68c-4913-83da-13ca9f9e734e)
+<p align="center" justify="center">
+  <img src="images/UML/GameLoop.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 5. UML screenshot of the Game Loop</i></b>
+</p>
 
 
 **Consequences**
 
-The integration of the com.aor.soulsduel.Game Loop pattern into our Model-Controller-Viewer architecture yields several advantages:
+The integration of the Game Loop pattern into our Model-Controller-Viewer architecture yields several advantages:
 
 - Consistent Game Logic Execution: The Game Loop ensures a steady and consistent execution of the game logic, promoting smooth gameplay experiences.
 - Separation of Concerns: The Model-Controller-Viewer architecture remains well-defined, with the game loop acting as the orchestrator, keeping the concerns of the model, controller, and viewer separate.
@@ -123,12 +148,16 @@ Within our game development, we recognized the need for dynamic instantiation of
 
 This illustration demonstrates how the Factory Method pattern is applied in our application:
 
-![Screenshot from 2023-12-17 15-54-34](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/02aaf4f4-52d5-4241-ba2c-27fac3552b5e)
-
+<p align="center" justify="center">
+  <img src="images/UML/FactoryMethod.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 6. UML screenshot of the Factory Method pattern</i></b>
+</p>
 
 **Consequences**
 
-Applying the Factory Method pattern to our com.aor.soulsduel.controller and viewer instantiation offers several advantages:
+Applying the Factory Method pattern to our controller and viewer instantiation offers several advantages:
 - Decoupling: The creation logic for controllers and viewers is decoupled from the Game class, enhancing flexibility and maintainability.
 - Extensibility: Introducing new states and corresponding controllers/viewers becomes a modular process without affecting existing code.
 - State-specific Implementations: Each state can have its own implementation of controller and viewer creation, tailoring the components to specific state requirements.
@@ -136,13 +165,66 @@ Applying the Factory Method pattern to our com.aor.soulsduel.controller and view
 
 ------
 
-#### KNOWN CODE SMELLS
+### <p align="center">Classes Diagram</p>
 
-> None so far.
+<p align="center" justify="center">
+  <img src="images/DiagramFromIntelliJ.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 7. Classes Diagram from IntelliJ</i></b>
+</p>
 
-### TESTING
+------
 
-![Screenshot from 2023-12-17 12-32-10](https://github.com/FEUP-LDTS-2023/project-l14gr09/assets/144793333/b7061d24-82d6-45f2-b858-356219647b2a)
+## KNOWN CODE SMELLS
+
+### Strategy Pattern instead of Switch
+
+In the implementation of blade and grenade movement, a switch case has been employed, inadvertently violating several SOLID principles. Specifically, the code exhibits issues related to the Single Responsibility Principle (SRP), Open/Closed Principle (OCP), and Dependency Inversion Principle (DIP).
+
+To address these concerns and enhance the codebase, a recommended improvement is the adoption of a **Strategy pattern**. This design pattern facilitates the encapsulation of different movement strategies into separate classes, aligning with the OCP by allowing for easy extension without modifying existing code. Furthermore, the Strategy pattern promotes adherence to the SRP by segregating responsibilities and facilitates adherence to the DIP by introducing abstraction and reducing tight coupling.
+
+Implementing a Strategy pattern for moving strategies would not only mitigate the current violations but also contribute to a more modular, maintainable, and extensible codebase.
+
+### GUI smells
+
+The current implementation exhibits a code smell related to the direct embedding of ASCII art representing images within the methods, thereby violating the Open/Closed Principle (OCP). This practice requires code modification each time an image change is necessary, contradicting the principle's goal of facilitating easy extension without altering existing code.
+
+To address this issue, a recommended improvement involves implementing a dedicated file to store all ASCII art representations. By externalizing the image content, we adhere to the OCP and introduce a more flexible and maintainable solution. This approach allows for easy image modifications without the need to alter the existing codebase.
+
+Implementing a file that owns all the ASCII arts represents a valid solution for several reasons. Firstly, it aligns with the Open/Closed Principle by separating image representation from the code logic, enabling easy extension without modifying existing methods. Additionally, this approach promotes a more modular and organized codebase, enhancing readability and maintainability. It establishes a clear 
+separation of concerns, making it simpler to manage and update images independently of the application's core logic.
+
+### Arena Builder, a BIG issue
+
+
+The ArenaBuilder class, initially prioritizing functionality over good programming practices, has grown excessively large, violating key SOLID principles. Particularly, the class currently exhibits a violation of the Single Responsibility Principle (SRP) by taking on multiple responsibilities, including creating game elements, scheduling events, and initializing the arena. This lack of separation of concerns hinders maintainability and adaptability.
+
+While the initial development approach focused on making the code work, the accumulated size and complexity of the ArenaBuilder class now present challenges. The violation of the SRP not only impacts the class's readability but also restricts its extensibility. Refactoring this class, though a non-trivial task, is essential to bring it in line with SOLID principles and ensure a more modular and maintainable codebase.
+
+<p align="center" justify="center">
+  <img src="images/ArenaBuilderPROBLEM.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 8. The ArenaBuilder Problem</i></b>
+</p>
+
+## <p align="center">TESTING</p>
+
+<p align="center" justify="center">
+  <img src="images/CodeCoverage.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 9. Code coverage screenshot</i></b>
+</p>
+
+<p align="center" justify="center">
+  <img src="images/"/>
+</p>
+<p align="center">
+  <b><i>Fig 10. PITest page</i></b>
+</p>
+
 
 ### SELF-EVALUATION
 

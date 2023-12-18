@@ -39,7 +39,9 @@ public class BladeController extends GameController{
 //                }
             }
 
+
             this.lastMovement = time;
+
         }
     }
 

@@ -6,7 +6,6 @@ plugins {
 }
 
 
-
 group = "SoulsDuel"
 version = "1.0-SNAPSHOT"
 
