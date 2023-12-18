@@ -5,9 +5,6 @@ plugins {
 
 }
 
-//application {
-//    mainClass.set('SoulsDuel.game.Game')
-//}
 
 group = "SoulsDuel"
 version = "1.0-SNAPSHOT"
