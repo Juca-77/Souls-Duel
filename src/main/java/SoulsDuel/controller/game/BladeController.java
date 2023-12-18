@@ -8,7 +8,9 @@ import SoulsDuel.model.game.elements.Blade;
 import SoulsDuel.viewer.Music;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class BladeController extends GameController{
     private long lastMovement;
@@ -24,25 +26,14 @@ public class BladeController extends GameController{
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         if (time - lastMovement > 100) {
-            synchronized (getModel().getBlades()) {
-                Iterator<Blade> iterator = getModel().getBlades().iterator();
 
-                while (iterator.hasNext()) {
-                    Blade blade = iterator.next();
-
-                    if (blade.isAlive()) {
-                        moveBlade(blade);
-                    }
-
-                    // Check and remove the blade if needed
-//                if (!blade.isAlive()) {
-//                    iterator.remove();
-//                }
+            List<Blade> bladesCopy = new ArrayList<>(getModel().getBlades());
+            for (Blade blade : bladesCopy) {
+                if (blade.isAlive()) {
+                    moveBlade(blade);
                 }
             }
-
             this.lastMovement = time;
-
         }
     }
 

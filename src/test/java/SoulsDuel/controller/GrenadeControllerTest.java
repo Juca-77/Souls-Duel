@@ -105,24 +105,4 @@ public class GrenadeControllerTest {
         controller.step(game, GUI.ACTION.NONE, 1000);
         assertFalse(grenade.isAlive());
     }
-
-//    @Test
-//    void grenadeExplode() throws IOException {
-//        Grenade grenade=new Grenade(5,5,1);
-//        arena.setGrenades(Arrays.asList(grenade));
-//        long time=1000;
-//        controller.step(game, GUI.ACTION.NONE, time);
-//        time+=1000;
-//        controller.step(game, GUI.ACTION.NONE, time);
-//        time+=1000;
-//        controller.step(game, GUI.ACTION.NONE, time);
-//        time+=1000;
-//        controller.step(game, GUI.ACTION.NONE, time);
-//        time+=1000;
-//        controller.step(game, GUI.ACTION.NONE, time);
-//        time+=1000;
-//        controller.step(game, GUI.ACTION.NONE, time);
-//        assertEquals(new Position(0, 0), grenade.getPosition());
-//        assertFalse(grenade.isAlive());
-//    }
 }
