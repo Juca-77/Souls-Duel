@@ -7,10 +7,8 @@ import SoulsDuel.model.Position;
 import SoulsDuel.model.game.arena.Arena;
 
 public class SoulController extends GameController {
-    private static final double MOVEMENT_SPEED = 0.1; // Adjust the speed as needed
-    private long lastUpdateTime = System.currentTimeMillis();
 
-    private Music damage = new Music("damage_sound.wav");
+    private Music damage = new Music("sounds/damage_sound.wav");
 
     public SoulController(Arena arena) {
         super(arena);

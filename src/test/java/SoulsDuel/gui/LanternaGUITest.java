@@ -91,4 +91,3 @@ class LanternaGUITest {
         verify(tg, Mockito.times(1)).putString(1, 2, "*");
     }
 }
-

@@ -16,7 +16,7 @@ public class MusicTest {
     Music music;
     @BeforeEach
     void setUp(){
-        music=new Music("gameplaysong.wav");
+        music=new Music("sounds/gameplaysong.wav");
     }
 
     @Test
@@ -25,7 +25,7 @@ public class MusicTest {
     }
 
     @Test
-    public void MusicTest(){
+    public void musictest(){
         Clip sound=mock(Clip.class);
         music.setSound(sound);
         assertEquals(false, music.isPlaying());
@@ -39,7 +39,7 @@ public class MusicTest {
 
     @Test
     void createAndLoadSound() {
-        String path = "gameplaysong.wav";
+        String path = "sounds/gameplaysong.wav";
         music = new Music(path);
         FloatControl floatControl = (FloatControl) music.getSound().getControl(FloatControl.Type.MASTER_GAIN);
         assertNotNull(music);

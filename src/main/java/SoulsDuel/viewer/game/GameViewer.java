@@ -16,7 +16,7 @@ public class GameViewer extends Viewer<Arena> {
 
     public void drawElements(GUI gui) {
         drawElements(gui, new ArrayList<>(getModel().getWalls()), new WallViewer());
-        // drawElements(gui, new ArrayList<>(getModel().getMonsters()), new MonsterViewer());
+
         drawElement(gui, getModel().getHero(), new SoulViewer());
         drawElement(gui, getModel().getEnemy(), new EnemyViewer());
         drawElements(gui, new ArrayList<>(getModel().getBlades()), new BladeViewer());

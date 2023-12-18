@@ -13,7 +13,7 @@ import java.util.Iterator;
 public class BladeController extends GameController{
     private long lastMovement;
 
-    private Music damage = new Music("damage_sound.wav");
+    private Music damage = new Music("sounds/damage_sound.wav");
 
     public BladeController(Arena arena) {
         super(arena);
@@ -24,21 +24,22 @@ public class BladeController extends GameController{
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         if (time - lastMovement > 100) {
-            Iterator<Blade> iterator = getModel().getBlades().iterator();
+            synchronized (getModel().getBlades()) {
+                Iterator<Blade> iterator = getModel().getBlades().iterator();
 
-            while (iterator.hasNext()) {
-                Blade blade = iterator.next();
+                while (iterator.hasNext()) {
+                    Blade blade = iterator.next();
 
-                if (blade.isAlive()) {
-                    moveBlade(blade);
-                }
+                    if (blade.isAlive()) {
+                        moveBlade(blade);
+                    }
 
-                // Check and remove the blade if needed
+                    // Check and remove the blade if needed
 //                if (!blade.isAlive()) {
 //                    iterator.remove();
 //                }
+                }
             }
-
 
             this.lastMovement = time;
 

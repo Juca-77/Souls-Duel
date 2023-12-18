@@ -28,7 +28,6 @@ public class ArenaBuilder {
         arena.setBlades(new ArrayList<>());
         arena.setGrenades(new ArrayList<>());
         timer=arena.getTimer();
-        //arena.setMonsters(createMonsters());
 
         scheduleBlades2_1(1500);
 

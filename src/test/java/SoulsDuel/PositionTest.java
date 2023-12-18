@@ -22,4 +22,3 @@ public class PositionTest {
         Assertions.assertEquals(5,yp);
     }
 }
-

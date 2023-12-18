@@ -35,7 +35,7 @@ public class Game {
     public void start() throws IOException {
         int FPS = 30;
         int frameTime = 1000 / FPS;
-        Music normalMode = new Music("gameplaysong.wav");
+        Music normalMode = new Music("sounds/gameplaysong.wav");
         normalMode.start();
         while (this.state != null) {
             long startTime = System.currentTimeMillis();

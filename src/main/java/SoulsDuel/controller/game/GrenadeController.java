@@ -22,26 +22,27 @@ public class GrenadeController extends GameController{
     @Override
     public void step(Game game, GUI.ACTION action, long time) throws IOException {
         if (time - lastMovement > 200) {
-            Iterator<Grenade> iterator = getModel().getGrenades().iterator();
+            synchronized (getModel().getGrenades()) {
+                Iterator<Grenade> iterator = getModel().getGrenades().iterator();
 
-            while (iterator.hasNext()) {
-                Grenade grenade = iterator.next();
+                while (iterator.hasNext()) {
+                    Grenade grenade = iterator.next();
 
-                if (grenade.isAlive()) {
-                    moveGrenade(grenade);
-                } else if (!grenade.isAlive() && !Objects.equals(grenade.getPosition(), new Position(0, 0))) {
-                    List<Blade> blades = new ArrayList<>();
-                    blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 1));
-                    blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 2));
-                    blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 3));
-                    blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 4));
-                    getModel().addBlades(blades);
+                    if (grenade.isAlive()) {
+                        moveGrenade(grenade);
+                    } else if (!grenade.isAlive() && !Objects.equals(grenade.getPosition(), new Position(0, 0))) {
+                        List<Blade> blades = new ArrayList<>();
+                        blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 1));
+                        blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 2));
+                        blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 3));
+                        blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 4));
+                        getModel().addBlades(blades);
 
-                    // Use iterator to remove the grenade
-                    iterator.remove();
+                        // Use iterator to remove the grenade
+                        iterator.remove();
+                    }
                 }
             }
-
             this.lastMovement = time;
         }
     }

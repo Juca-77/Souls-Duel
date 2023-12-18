@@ -16,7 +16,7 @@ import java.util.TimerTask;
 
 public class ArenaController extends GameController {
     private final SoulController soulController;
-    //private final MonsterController monsterController;
+
     private final BladeController bladesController;
     private final GrenadeController grenadeController;
     private Arena arena;
@@ -34,7 +34,7 @@ public class ArenaController extends GameController {
         }, 319000);
 
         this.soulController = new SoulController(arena);
-        //this.monsterController = new MonsterController(arena);
+
         this.bladesController = new BladeController(arena);
         this.grenadeController = new GrenadeController(arena);
     }
@@ -57,7 +57,7 @@ public class ArenaController extends GameController {
 
         else {
             soulController.step(game, action, time);
-            //monsterController.step(game, action, time);
+
             bladesController.step(game, action, time);
             grenadeController.step(game,action,time);
         }
