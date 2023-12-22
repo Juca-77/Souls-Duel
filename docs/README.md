@@ -1,5 +1,7 @@
-# <p align="center">LDTS - Soul's Duel</p>
-## <p align="center">project-l14gr09</p>
+
+# <p align="center">Soul's Duel</p>
+## <p align="center">LDTS</p>
+### <p align="center">Project - l14gr09</p>
 
 This project was developed by *João Rey*(up202205576@fe.up.pt) and *Antero Morgado*(up202204971@fe.up.pt) for the curricular unity LDTS 2023/24.
 
@@ -19,6 +21,12 @@ Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense 
 - **Skin** - The hero is not represented by a letter; using FontForge, we crafted their appearance as a heart.
 - **Levels** - Players can experience four different levels.
 
+<p align="center" justify="center">
+  <img src="gifs/Show.gif"/>
+</p>
+<p align="center">
+  <b><i>Fig 1. First Seconds </i></b>
+</p>
 
 As inspiration and illustration (Mockup), here are GIFs of two Undertale fights:
 
@@ -26,7 +34,7 @@ As inspiration and illustration (Mockup), here are GIFs of two Undertale fights:
   <img src="gifs/undertale-fight-sans.gif"/>
 </p>
 <p align="center">
-  <b><i>Fig 1. Undertale Fight with Sans (Mockup)</i></b>
+  <b><i>Fig 2. Undertale Fight with Sans (Mockup)</i></b>
 </p>
 
 
@@ -34,7 +42,7 @@ As inspiration and illustration (Mockup), here are GIFs of two Undertale fights:
   <img src="gifs/undertale-fight-toriel.gif"/>
 </p>
 <p align="center">
-  <b><i>Fig 2. Undertale Fight with Toriel (Mockup)</i></b>
+  <b><i>Fig 3. Undertale Fight with Toriel (Mockup)</i></b>
 </p>
 
 ------
@@ -57,7 +65,7 @@ The following diagram illustrates how the MVC pattern is implemented in our appl
   <img src="images/UML/MVCpattern.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 3. UML representing the MVC pattern (and more)</i></b>
+  <b><i>Fig 4. UML representing the MVC pattern (and more)</i></b>
 </p>
 
 - Model: Represents the data and business logic of the application. It stores and manages the application state, ensuring data integrity and consistency.
@@ -94,7 +102,7 @@ This figure can ilustrate how the pattern were mapped to the application classes
   <img src="images/UML/Statepattern.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 4. UML screenshot of the State pattern</i></b>
+  <b><i>Fig 5. UML screenshot of the State pattern</i></b>
 </p>
 
 **Consequences**
@@ -124,7 +132,7 @@ This figure can ilustrate how the pattern were mapped to the application classes
   <img src="images/UML/GameLoop.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 5. UML screenshot of the Game Loop</i></b>
+  <b><i>Fig 6. UML screenshot of the Game Loop</i></b>
 </p>
 
 
@@ -152,7 +160,7 @@ This illustration demonstrates how the Factory Method pattern is applied in our 
   <img src="images/UML/FactoryMethod.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 6. UML screenshot of the Factory Method pattern</i></b>
+  <b><i>Fig 7. UML screenshot of the Factory Method pattern</i></b>
 </p>
 
 **Consequences**
@@ -171,8 +179,19 @@ Applying the Factory Method pattern to our controller and viewer instantiation o
   <img src="images/DiagramFromIntelliJ.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 7. Classes Diagram from IntelliJ</i></b>
+  <b><i>Fig 8. Classes Diagram from IntelliJ</i></b>
 </p>
+
+------
+
+## ConcurrentModificationException
+
+While developing the game, we encountered an issue related to the 
+ConcurrentModificationException. This exception occurred when 
+attempting to modify (add values) to a List while iterating through it in a 
+for loop. Resolving this problem took some time as we explored various approaches, 
+including synchronizing the Lists and iterating using pointers. 
+Ultimately, we found success by copying the List and then iterating through the copied version.
 
 ------
 
@@ -248,7 +267,7 @@ the class's readability but also restricts its extensibility.
   <img src="images/ArenaBuilderPROBLEM.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 8. The ArenaBuilder Problem</i></b>
+  <b><i>Fig 9. The ArenaBuilder Problem</i></b>
 </p>
 
 ## <p align="center">TESTING</p>
@@ -257,14 +276,14 @@ the class's readability but also restricts its extensibility.
   <img src="images/coverage.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 9. Code coverage screenshot</i></b>
+  <b><i>Fig 10. Code coverage screenshot</i></b>
 </p>
 
 <p align="center" justify="center">
   <img src="images/pitestcoverage.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 10. First PITest page</i></b>
+  <b><i>Fig 11. First PITest page</i></b>
 </p>
 
 After a brief discussion with the Professor Daniel Fortunato, our team made a
@@ -273,14 +292,14 @@ in Fig. 11 compared to Fig. 10. The overarching goal was to achieve approximatel
 80% test coverage, but unfortunately, this target was not reached in the Game.java
 and ArenaBuilder.java classes.
 In the classes that improved coverage, the mutations that we killed were mostly
-conditional negations and conditional boundary changed in for cycles.
+conditional negations and conditional boundary changed in for loops.
 
 
 <p align="center" justify="center">
   <img src="images/Pitest2.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 11. Last PITest page</i></b>
+  <b><i>Fig 12. Last PITest page</i></b>
 </p>
 
 The Game.java class currently exhibits 0% mutation coverage and line coverage in Pitest.
@@ -306,13 +325,13 @@ Most surviving mutation tests in ArenaBuilder involve the removal of calls to Ar
 
 
 
-In the End we ended up getting the following coverage in IntelliJ(with the GameTest.java not commented):
+In the End we ended up getting the following coverage in IntelliJ (with the GameTest.java not commented):
 
 <p align="center" justify="center">
   <img src="images/finalCoverage.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 12. Last Coverage</i></b>
+  <b><i>Fig 13. Last Coverage</i></b>
 </p>
 
 ### SELF-EVALUATION
