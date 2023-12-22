@@ -10,9 +10,11 @@ import SoulsDuel.model.game.arena.Arena;
 import SoulsDuel.model.game.elements.Blade;
 import SoulsDuel.model.game.elements.Soul;
 import SoulsDuel.model.game.elements.Wall;
+import SoulsDuel.viewer.Music;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.sound.sampled.Clip;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -30,7 +32,7 @@ public class BladeControllerTest {
         arena = new Arena(10, 10,1);
 
         soul = new Soul(5, 5);
-        arena.setHero(soul);
+        arena.setSoul(soul);
 
         arena.setWalls(Arrays.asList());
         arena.setBlades(Arrays.asList());
@@ -131,6 +133,169 @@ public class BladeControllerTest {
         assertNotNull(blade.getPosition());
         // Add additional assertions based on your requirements for case 5
     }
+
+    @Test
+    void moveBladeCase1SoulCollision() throws IOException {
+        Soul soul = mock(Soul.class);
+        when(soul.getPosition()).thenReturn(new Position(5, 4));
+        arena.setSoul(soul);
+
+        Blade blade = new Blade(5, 5, 1);
+        arena.setBlades(Arrays.asList(blade));
+
+        Music damage = mock(Music.class); // Mocking the Music class
+        when(damage.loadSound(anyString())).thenReturn(mock(Clip.class));
+
+        BladeController controller = new BladeController(arena);
+        controller.setDamage(damage); // Set the mocked damage in the controller
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        verify(soul).decreaseHP();
+
+        verify(damage).stop();
+        verify(damage).startonce();
+    }
+
+    @Test
+    void moveBladeCase2SoulCollision() throws IOException {
+        Soul soul = mock(Soul.class);
+        when(soul.getPosition()).thenReturn(new Position(5, 6));
+        arena.setSoul(soul);
+
+        Blade blade = new Blade(5, 5, 2);
+        arena.setBlades(Arrays.asList(blade));
+
+        Music damage = mock(Music.class); // Mocking the Music class
+        when(damage.loadSound(anyString())).thenReturn(mock(Clip.class));
+
+        BladeController controller = new BladeController(arena);
+        controller.setDamage(damage); // Set the mocked damage in the controller
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        verify(soul).decreaseHP();
+
+        verify(damage).stop();
+        verify(damage).startonce();
+    }
+
+    @Test
+    void moveBladeCase3SoulCollision() throws IOException {
+        Soul soul = mock(Soul.class);
+        when(soul.getPosition()).thenReturn(new Position(4, 5));
+        arena.setSoul(soul);
+
+        Blade blade = new Blade(5, 5, 3);
+        arena.setBlades(Arrays.asList(blade));
+
+        Music damage = mock(Music.class); // Mocking the Music class
+        when(damage.loadSound(anyString())).thenReturn(mock(Clip.class));
+
+        BladeController controller = new BladeController(arena);
+        controller.setDamage(damage); // Set the mocked damage in the controller
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        verify(soul).decreaseHP();
+
+        verify(damage).stop();
+        verify(damage).startonce();
+    }
+
+    @Test
+    void moveBladeCase4SoulCollision() throws IOException {
+        Soul soul = mock(Soul.class);
+        when(soul.getPosition()).thenReturn(new Position(6, 5));
+        arena.setSoul(soul);
+
+        Blade blade = new Blade(5, 5, 4);
+        arena.setBlades(Arrays.asList(blade));
+
+        Music damage = mock(Music.class); // Mocking the Music class
+        when(damage.loadSound(anyString())).thenReturn(mock(Clip.class));
+
+        BladeController controller = new BladeController(arena);
+        controller.setDamage(damage); // Set the mocked damage in the controller
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        verify(soul).decreaseHP();
+
+        verify(damage).stop();
+        verify(damage).startonce();
+    }
+
+    @Test
+    void moveBladeCase5SoulCollision() throws IOException {
+        Soul soul = mock(Soul.class);
+        when(soul.getPosition()).thenReturn(new Position(3, 6));
+        arena.setSoul(soul);
+
+        Blade blade = new Blade(5, 5, 5);
+        arena.setBlades(Arrays.asList(blade));
+
+        Music damage = mock(Music.class); // Mocking the Music class
+        when(damage.loadSound(anyString())).thenReturn(mock(Clip.class));
+
+        BladeController controller = new BladeController(arena);
+        controller.setDamage(damage); // Set the mocked damage in the controller
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        verify(soul).decreaseHP();
+
+        verify(damage).stop();
+        verify(damage).startonce();
+    }
+
+    @Test
+    void moveBladeCase6SoulCollision() throws IOException {
+        Soul soul = mock(Soul.class);
+        when(soul.getPosition()).thenReturn(new Position(7, 6));
+        arena.setSoul(soul);
+
+        Blade blade = new Blade(5, 5, 6);
+        arena.setBlades(Arrays.asList(blade));
+
+        Music damage = mock(Music.class); // Mocking the Music class
+        when(damage.loadSound(anyString())).thenReturn(mock(Clip.class));
+
+        BladeController controller = new BladeController(arena);
+        controller.setDamage(damage); // Set the mocked damage in the controller
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        verify(soul).decreaseHP();
+
+        verify(damage).stop();
+        verify(damage).startonce();
+    }
+
+    @Test
+    void moveBladeCase5Boundary() throws IOException {
+        Blade blade = new Blade(5, 5, 5);
+        arena.setBlades(Arrays.asList(blade));
+        arena.setWalls(Arrays.asList(new Wall(3, 6)));
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        assertEquals(new Position(0, 0), blade.getPosition());
+        assertFalse(blade.isAlive());
+    }
+
+    @Test
+    void moveBladeCase6Boundary() throws IOException {
+        Blade blade = new Blade(5, 5, 6);
+        arena.setBlades(Arrays.asList(blade));
+        arena.setWalls(Arrays.asList(new Wall(7, 6)));
+
+        controller.step(game, GUI.ACTION.NONE, 1000);
+
+        assertEquals(new Position(0, 0), blade.getPosition());
+        assertFalse(blade.isAlive());
+    }
+
 
 
 }

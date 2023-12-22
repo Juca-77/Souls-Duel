@@ -1,6 +1,5 @@
 package SoulsDuel.model;
 
-import SoulsDuel.model.Position;
 import SoulsDuel.model.game.arena.Arena;
 import SoulsDuel.model.game.elements.*;
 import org.junit.jupiter.api.Test;
@@ -57,12 +56,12 @@ public class ArenaTest {
     void testGetters() {
         Arena arena = new Arena(10, 10, 1);
         Soul soul = new Soul(0, 0);
-        arena.setHero(soul);
+        arena.setSoul(soul);
 
         // Testing getters
         assertEquals(10, arena.getWidth());
         assertNotNull(arena.getTimer());
-        assertEquals(soul, arena.getHero());
+        assertEquals(soul, arena.getSoul());
     }
 
     @Test

@@ -6,6 +6,9 @@ import SoulsDuel.model.menu.DeadMenu;
 import SoulsDuel.viewer.menu.DeadViewer;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.mockito.Mockito.*;
 
@@ -32,5 +35,19 @@ public class DeadViewerTest {
             // Verify that drawDead was called on the GUI mock
             verify(mockGui, times(1)).drawDead(new Position(16, 20));
         });
+    }
+
+    @Test
+    void testLoopBoundary() {
+        // Arrange
+        DeadMenu model = new DeadMenu(); // Adjust the number accordingly
+        model.setEntries(new ArrayList<>(5));
+        DeadViewer instance = new DeadViewer(model);
+        GUI mockGui = mock(GUI.class);
+        // Act
+        instance.drawElements(mockGui); // Ensure yourMethod contains the loop
+
+        // Assert
+        // Add assertions here to check the expected behavior when i reaches getModel().getNumberEntries()
     }
 }

@@ -1,5 +1,9 @@
 package SoulsDuel;
 
+import SoulsDuel.controller.game.SoulController;
+import SoulsDuel.model.Position;
+import SoulsDuel.model.game.arena.Arena;
+import SoulsDuel.model.game.elements.Soul;
 import SoulsDuel.viewer.Music;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,6 +11,9 @@ import org.mockito.Mockito;
 
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
+
+import java.io.IOException;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -46,20 +53,47 @@ public class MusicTest {
         assertEquals(-25.0f, floatControl.getValue());
     }
 
-    /*@Test
-    void damageSoundonHero() throws IOException {
-        Arena arena = new Arena(10, 10,1);
+    @Test
+    void testStart() {
+        // Arrange
+        Music music = new Music("testSound.wav");
+        Clip mockClip = mock(Clip.class);
+        music.setSound(mockClip);
 
-        Hero hero = new Hero(5, 5);
-        arena.setHero(hero);
+        // Act
+        music.start();
 
-        arena.setWalls(Arrays.asList());
+        // Assert
+        verify(mockClip).setMicrosecondPosition(0);
+        verify(mockClip).start();
+        verify(mockClip).loop(Clip.LOOP_CONTINUOUSLY);
+    }
 
-        HeroController controller = new HeroController(arena);
 
-        controller.moveHeroUp();
-        assertEquals(new Position(5,4),hero.getPosition());
-        assertTrue(controller.getDamage().isPlaying());
-    }*/
+
+    @Test
+    void testSleep() {
+        // Arrange
+        Music music = new Music("testSound.wav");
+
+        // Act and Assert
+        assertDoesNotThrow(() -> music.sleep());
+    }
+
+    @Test
+    void testStop() {
+        // Arrange
+        Music music = new Music("testSound.wav");
+        Clip mockClip = mock(Clip.class);
+        music.setSound(mockClip);
+
+        // Act
+        music.stop();
+
+        // Assert
+        verify(mockClip).stop();
+    }
+
+
 }
 

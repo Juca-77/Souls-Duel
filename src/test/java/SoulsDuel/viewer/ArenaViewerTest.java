@@ -29,7 +29,7 @@ class ArenaViewerTest {
         arena.setWalls(Arrays.asList(new Wall(1, 2), new Wall(2, 3), new Wall(3, 4)));
         arena.setGrenades(Arrays.asList(new Grenade(4, 5,1)));
         arena.setBlades(Arrays.asList(new Blade(4, 5,1)));
-        arena.setHero(new Soul(5, 8));
+        arena.setSoul(new Soul(5, 8));
     }
 
 
@@ -42,15 +42,6 @@ class ArenaViewerTest {
         Mockito.verify(gui, Mockito.times(1)).drawWall(new Position(3, 4));
         Mockito.verify(gui, Mockito.times(3)).drawWall(Mockito.any(Position.class));
     }
-/*
-    @Test
-    void drawMonsters() throws IOException {
-        viewer.draw(gui);
-
-        Mockito.verify(gui, Mockito.times(1)).drawMonster(new Position(4, 5));
-        Mockito.verify(gui, Mockito.times(1)).drawMonster(new Position(5, 6));
-        Mockito.verify(gui, Mockito.times(2)).drawMonster(Mockito.any(Position.class));
-    }*/
 
     @Test
     void drawHero() throws IOException {
