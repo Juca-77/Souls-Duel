@@ -13,6 +13,10 @@ public class Grenade extends Element{
         isAlive=true;
     }
 
+    public int getMoves() {
+        return moves;
+    }
+
     public int getMove() {return move;}
 
     public void decreaseMoves() {

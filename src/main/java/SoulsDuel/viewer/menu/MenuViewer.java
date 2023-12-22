@@ -13,12 +13,11 @@ public class MenuViewer extends Viewer<MainMenu> {
     @Override
     public void drawElements(GUI gui) {
 
-        int menuWidth = 100;
-        int titleX = (menuWidth - "Menu".length()) / 2;
+
         gui.drawText(new Position(50-3, 33), "Menu", "#FFFFFF");
 
         for (int i = 0; i < getModel().getNumberEntries(); i++) {
-            //int entryX = (menuWidth - getModel().getEntry(i).length()) / 2;
+
             gui.drawText(new Position(50-7+7*i, 35), getModel().getEntry(i), getModel().isSelected(i) ? "#FF0000" : "#FFFFFF");
         }
         gui.drawImage(new Position(0,0));

@@ -35,7 +35,7 @@ public class GrenadeController extends GameController{
                     blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 3));
                     blades.add(new Blade((int) grenade.getPosition().getX(), (int) grenade.getPosition().getY(), 4));
                     getModel().addBlades(blades);
-                    getModel().getGrenades().remove(grenade);
+                    grenade.setPosition(new Position(0,0));
                 }
             }
             this.lastMovement = time;

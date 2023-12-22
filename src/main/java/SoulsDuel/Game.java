@@ -13,7 +13,7 @@ import java.net.URISyntaxException;
 import java.util.ConcurrentModificationException;
 
 public class Game {
-    public final LanternaGUI gui;
+    public GUI gui;
     public State state;
 
     public Game() throws FontFormatException, IOException, URISyntaxException {
@@ -24,7 +24,7 @@ public class Game {
 
     }
 
-    public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException, ConcurrentModificationException {
+    public static void main(String[] args) throws IOException, FontFormatException, URISyntaxException {
         new Game().start();
     }
 
@@ -56,6 +56,10 @@ public class Game {
 
     public GUI getGui() {
         return gui;
+    }
+
+    public void setGui(GUI gui) {
+        this.gui = gui;
     }
 
     public State getState() {

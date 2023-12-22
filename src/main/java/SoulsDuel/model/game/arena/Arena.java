@@ -44,11 +44,11 @@ public class Arena {
         return timer;
     }
 
-    public Soul getHero() {
+    public Soul getSoul() {
         return soul;
     }
 
-    public void setHero(Soul soul) {
+    public void setSoul(Soul soul) {
         this.soul = soul;
     }
 

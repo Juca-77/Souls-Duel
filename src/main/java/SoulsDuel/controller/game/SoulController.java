@@ -20,9 +20,9 @@ public class SoulController extends GameController {
 
     public void moveSoul(Position position) {
         if (getModel().isEmpty(position)) {
-            getModel().getHero().setPosition(position);
+            getModel().getSoul().setPosition(position);
             if (getModel().isBlade(position)) {
-                getModel().getHero().decreaseHP();
+                getModel().getSoul().decreaseHP();
                 damage.stop();
                 damage.startonce();
             }
@@ -38,22 +38,24 @@ public class SoulController extends GameController {
     }
 
     public void moveSoulLeft() {
-        moveSoul(getModel().getHero().getPosition().getLeft());
+        moveSoul(getModel().getSoul().getPosition().getLeft());
     }
 
     public void moveSoulRight() {
-        moveSoul(getModel().getHero().getPosition().getRight());
+        moveSoul(getModel().getSoul().getPosition().getRight());
     }
 
     public void moveSoulUp() {
-        moveSoul(getModel().getHero().getPosition().getUp());
+        moveSoul(getModel().getSoul().getPosition().getUp());
     }
 
     public void moveSoulDown() {
-        moveSoul(getModel().getHero().getPosition().getDown());
+        moveSoul(getModel().getSoul().getPosition().getDown());
     }
 
 
-
+    public void setDamage(Music damage) {
+        this.damage = damage;
+    }
 
 }

@@ -48,7 +48,7 @@ public class LanternaGUI implements GUI {
         return screen;
     }
 
-    private Terminal createTerminal(int width, int height, AWTTerminalFontConfiguration fontConfig) throws IOException {
+    Terminal createTerminal(int width, int height, AWTTerminalFontConfiguration fontConfig) throws IOException {
         TerminalSize terminalSize = new TerminalSize(width, height + 1);
         DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory()
                 .setInitialTerminalSize(terminalSize);
@@ -58,7 +58,7 @@ public class LanternaGUI implements GUI {
         return terminal;
     }
 
-    private AWTTerminalFontConfiguration loadFont() throws URISyntaxException, FontFormatException, IOException {
+    AWTTerminalFontConfiguration loadFont() throws URISyntaxException, FontFormatException, IOException {
         URL resource = getClass().getClassLoader().getResource("fonts/Soulsduel.ttf");
         File fontFile = new File(resource.toURI());
         Font font = Font.createFont(Font.TRUETYPE_FONT, fontFile);
@@ -125,8 +125,8 @@ public class LanternaGUI implements GUI {
 
             String[] wordsArray = s.split("\n");
             //List<String> wordsList = Arrays.asList(wordsArray);
-            for (int i = 0; i < 25; i++) {
-                for (int j = 0; j < 48; j++) {
+            for (int i = 0; i < wordsArray.length; i++) {
+                for (int j = 0; j < wordsArray[0].length(); j++) {
 
                     if ("▓".equals(String.valueOf(wordsArray[i].charAt(j)))) {
                         drawCharacter(position.getX() + j, position.getY() + i, wordsArray[i].charAt(j), "#FFFFFF");
@@ -159,12 +159,11 @@ public class LanternaGUI implements GUI {
                     "▓▓▓▓▓▓░░░░▓░░░░░░░░░░░░▓▓▓▓▓▓░░░░░░░░░░░░▓░░░░▓▓▓▓▓▓ " +
                     "▓▓▓▓▓░░░░░▓░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░▓░░░░░▓▓▓▓▓ " +
                     "▓▓▓▓▓▓░░░░░░░▓▓▓▓▓▓▓▓▓▓░░░░░▓▓▓▓▓▓▓▓▓▓░░░░░░░░▓▓▓▓▓▓ " +
-                    "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ " +
-                    "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓";
+                    "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ";
             String[] wordsArray = s.split(" ");
 
-            for (int i = 0; i < 23; i++) {
-                for (int j = 0; j < 52; j++) {
+            for (int i = 0; i < wordsArray.length; i++) {
+                for (int j = 0; j < wordsArray[0].length(); j++) {
 
                     if ("░".equals(String.valueOf(wordsArray[i].charAt(j)))) {
                         drawCharacter(position.getX() + j, position.getY() + i, wordsArray[i].charAt(j), "#FFFFFF");
@@ -272,8 +271,8 @@ public class LanternaGUI implements GUI {
 
             String[] wordsArray = s.split("\n");
             //List<String> wordsList = Arrays.asList(wordsArray);
-            for (int i = 0; i < 30; i++) {
-                for (int j = 0; j < 89; j++) {
+            for (int i = 0; i < wordsArray.length; i++) {
+                for (int j = 0; j < wordsArray[0].length(); j++) {
 
                     if ("▓".equals(String.valueOf(wordsArray[i].charAt(j)))) {
                         drawCharacter(position.getX() + j, position.getY() + i, wordsArray[i].charAt(j), "#FF0000");

@@ -45,7 +45,7 @@ public class ArenaController extends GameController {
             game.setState(new MainMenuState(new MainMenu()));
 
         }
-        if(getModel().getHero().getHp() == 0) {
+        if(getModel().getSoul().getHp() == 0) {
             getModel().getTimer().cancel();
             game.setState(new DeadState(new DeadMenu()));
         }

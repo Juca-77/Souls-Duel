@@ -22,12 +22,13 @@ public class ArenaBuilder {
 
     public Arena createArena() {
         arena = new Arena(getWidth(), getHeight(), level);
+        timer=arena.getTimer();
         arena.setWalls(createWalls());
 
-        arena.setHero(createHero());
+        arena.setSoul(createHero());
         arena.setBlades(new ArrayList<>());
         arena.setGrenades(new ArrayList<>());
-        timer=arena.getTimer();
+
 
         scheduleBlades2_1(1500);
 

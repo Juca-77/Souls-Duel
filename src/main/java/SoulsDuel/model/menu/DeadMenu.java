@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DeadMenu  {
-    private final List<String> entries;
+    private List<String> entries;
     private int currentEntry = 0;
 
     public DeadMenu() {this.entries= Arrays.asList("Restart", "Back");}
@@ -43,5 +43,8 @@ public class DeadMenu  {
 
     public int getCurrentEntry() {
         return currentEntry;
+    }
+    public void setEntries(List<String> entries) {
+        this.entries=entries;
     }
 }
