@@ -9,18 +9,18 @@ Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense 
 
 ### IMPLEMENTED FEATURES
 
-- **Move** - The game character is able to move with the WASD keys.
-- **HP** - The player have hearth points.
-- **Get hitted** - If the character get hitted he will lose Health Points(HP).
-- **Enemys** - There is a display area where the enemys will be displayed in a Ascii design.
-- **Different attacks** - The enemys have diferent combinations of attacks.
-- **Menu** - There is a menu with play option.
-- **Music** - Music in the menus/in game and hit sound effect.
-- **Skin** - The hero is not a letter, using FontForge we 'created' him as a hearth.
-- **Levels** - The player is able to play in 4 different levels.
+- **Move** - The game character can be controlled using the WASD keys.
+- **HP** - The player has health points.
+- **Get hit** - If the character gets hit, he will lose Health Points (HP).
+- **Enemies** - An area displays enemies in an ASCII design.
+- **Different attacks** - Enemies have various combinations of attacks.
+- **Menu** - The game includes a menu with a play option.
+- **Music** - There is music in the menus and in-game, along with hit sound effects.
+- **Skin** - The hero is not represented by a letter; using FontForge, we crafted their appearance as a heart.
+- **Levels** - Players can experience four different levels.
 
-  
-As inspiration and ilustration (Mockup) of what the game will look like (or at least we tried to make it look like) there's this GIFs of two Undertale fights:
+
+As inspiration and illustration (Mockup), here are GIFs of two Undertale fights:
 
 <p align="center" justify="center">
   <img src="gifs/undertale-fight-sans.gif"/>
@@ -110,7 +110,7 @@ The use of the State pattern in our game design brings several benefits:
 
 **Make the game work**
 
-We encountered a critical challenge related to the continuous and synchronized execution of the game logic. Without a structured approach to manage the dynamic nature of gameplay, we faced difficulties in maintaining consistent interactions between the model, controller, and viewer components. So we decided to implement the **Game Loop** as sugested by the teacher. 
+We encountered a critical challenge related to the continuous and synchronized execution of the game logic. Without a structured approach to manage the dynamic nature of gameplay, we faced difficulties in maintaining consistent interactions between the model, controller, and viewer components. So we decided to implement the **Game Loop** as sugested by the teacher.
 
 **The Game Loop Pattern**
 
@@ -180,69 +180,68 @@ Applying the Factory Method pattern to our controller and viewer instantiation o
 
 ### Strategy Pattern instead of Switch
 
-In the implementation of blade and grenade movement, a switch 
-case has been employed, inadvertently violating several SOLID 
-principles. Specifically, the code exhibits issues related to 
+In the implementation of blade and grenade movement, a switch
+case has been employed, inadvertently violating several SOLID
+principles. Specifically, the code exhibits issues related to
 the Single Responsibility Principle (SRP), Open/Closed Principle
 (OCP), and Dependency Inversion Principle (DIP).
 
-To address these concerns and enhance the codebase, a 
-recommended improvement is the adoption of a **Strategy pattern**.
-This design pattern facilitates the encapsulation of different 
-movement strategies into separate classes, aligning with the 
+To address these concerns and enhance the codebase, a
+possible improvement is the adoption of a **Strategy pattern**.
+This design pattern facilitates the encapsulation of different
+movement strategies into separate classes, aligning with the
 OCP by allowing for easy extension without modifying existing
 code. Furthermore, the Strategy pattern promotes adherence to
-the SRP by segregating responsibilities and facilitates 
+the SRP by segregating responsibilities and facilitates
 adherence to the DIP by introducing abstraction and reducing
 tight coupling.
 
-Implementing a Strategy pattern for moving strategies would 
+Implementing a Strategy pattern for moving strategies would
 not only mitigate the current violations but also contribute
 to a more modular, maintainable, and extensible codebase.
 
 ### GUI smells
 
-The current implementation exhibits a code smell related to 
+The current implementation exhibits a code smell related to
 the direct embedding of ASCII art representing images within
-the methods, thereby violating the Open/Closed Principle 
+the methods, thereby violating the Open/Closed Principle
 (OCP). This practice requires code modification each time
 an image change is necessary, contradicting the principle's
 goal of facilitating easy extension without altering existing code.
 
-To address this issue, a recommended improvement involves 
-implementing a dedicated file to store all ASCII art 
-representations. By externalizing the image content, 
-we adhere to the OCP and introduce a more flexible 
-and maintainable solution. This approach allows for 
+To address this issue, a possible improvement involves
+implementing a dedicated file to store all ASCII art
+representations. By externalizing the image content,
+we adhere to the OCP and introduce a more flexible
+and maintainable solution. This approach allows for
 easy image modifications without the need to alter the
 existing codebase.
 
 Implementing a file that owns all the ASCII arts represents
-a valid solution for several reasons. Firstly, it aligns 
+a valid solution for several reasons. Firstly, it aligns
 with the Open/Closed Principle by separating image representation
-from the code logic, enabling easy extension without modifying 
-existing methods. Additionally, this approach promotes a more 
-modular and organized codebase, enhancing readability and 
-maintainability. It establishes a clear 
-separation of concerns, making it simpler 
-to manage and update images independently 
+from the code logic, enabling easy extension without modifying
+existing methods. Additionally, this approach promotes a more
+modular and organized codebase, enhancing readability and
+maintainability. It establishes a clear
+separation of concerns, making it simpler
+to manage and update images independently
 of the application's core logic.
 
 ### Arena Builder, a BIG issue
 
-
-The ArenaBuilder class, initially prioritizing functionality 
-over good programming practices, has grown excessively large, 
-violating key SOLID principles. Particularly, the class 
-currently exhibits a violation of the Single Responsibility 
-Principle (SRP) by taking on multiple responsibilities, 
+The ArenaBuilder class, initially prioritizing functionality
+over good programming practices, has grown excessively large,
+violating key SOLID principles. Particularly, the class
+currently exhibits a violation of the Single Responsibility
+Principle (SRP) by taking on multiple responsibilities in single methods,
 including creating game elements, scheduling events, and
 initializing the arena. This lack of separation of concerns
 hinders maintainability and adaptability.
 
-While the initial development approach focused on making the 
-code work, the accumulated size and complexity of the ArenaBuilder 
-class now present challenges. The violation of the SRP not only impacts 
+While the initial development approach focused on making the
+code work, the accumulated size and complexity of the ArenaBuilder
+class now present challenges. The violation of the SRP not only impacts
 the class's readability but also restricts its extensibility.
 
 <p align="center" justify="center">
@@ -265,17 +264,45 @@ the class's readability but also restricts its extensibility.
   <img src="images/pitestcoverage.png"/>
 </p>
 <p align="center">
-  <b><i>Fig 10. PITest page</i></b>
+  <b><i>Fig 10. First PITest page</i></b>
 </p>
 
+After a brief discussion with the Professor Daniel Fortunato, our team made a
+concerted effort to enhance the test coverage of various classes, as depicted
+in Fig. 11 compared to Fig. 10. The overarching goal was to achieve approximately
+80% test coverage, but unfortunately, this target was not reached in the Game.java
+and ArenaBuilder.java classes.
+In the classes that improved coverage, the mutations that we killed were mostly
+conditional negations and conditional boundary changed in for cycles.
 
-The ArenaBuilder class has become a stumbling block, 
-negatively impacting the overall code quality as it drags 
-down the percentage metrics. The extensive size and intricate 
-logic within the class contribute to its difficulty in testing. 
-A large class often entails more complex test 
-scenarios, and without proper modularization, it becomes 
-harder to isolate test individual units effectively.
+
+<p align="center" justify="center">
+  <img src="images/Pitest2.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 11. Last PITest page</i></b>
+</p>
+
+The Game.java class currently exhibits 0% mutation coverage and line coverage in Pitest.
+This is primarily due to challenges associated with testing scenarios that involve opening
+windows (in this case, Terminal). Attempts were made to mock the LanternaGui to prevent the
+terminal from opening. However, given that LanternaGui is initialized in the Game constructor,
+these efforts were not successful. Despite these obstacles, some tests have been included
+in the GameTest.java file, although they are currently commented out.
+
+The ArenaBuilder.java class has achieved lower percentages compared to other classes.
+This discrepancy is attributed to the use of the Timer library from java.util and the
+schedule method, which is employed to spawn elements at specific times in the arena for
+creating a "temporal line" and levels.
+
+The challenge arises from the schedule method, which dynamically defines a new
+function with each invocation. Consequently, formulating exhaustive tests that
+adequately cover these dynamically generated functions poses a difficulty. While
+there might be potential strategies to address this testing challenge, we have
+failed to explore or implement them at this time.
+
+Most surviving mutation tests in ArenaBuilder involve the removal of calls to ArenaBuilder's scheduling methods
+("1. removed call to ArenaBuilder::SchedulingMethod → SURVIVED").
 
 ### SELF-EVALUATION
 
