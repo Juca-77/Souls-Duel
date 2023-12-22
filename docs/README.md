@@ -304,6 +304,17 @@ failed to explore or implement them at this time.
 Most surviving mutation tests in ArenaBuilder involve the removal of calls to ArenaBuilder's scheduling methods
 ("1. removed call to ArenaBuilder::SchedulingMethod → SURVIVED").
 
+
+
+In the End we ended up getting the following coverage in IntelliJ(with the GameTest.java not commented):
+
+<p align="center" justify="center">
+  <img src="images/finalCoverage.png"/>
+</p>
+<p align="center">
+  <b><i>Fig 12. Last Coverage</i></b>
+</p>
+
 ### SELF-EVALUATION
 
 - Antero Morgado: 50%
