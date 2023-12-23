@@ -121,7 +121,7 @@ public class BladeControllerTest {
         controller.step(game, GUI.ACTION.NONE, 1000);
 
         assertNotNull(blade.getPosition());
-        // Add additional assertions based on your requirements for case 5
+
     }
 
     @Test
@@ -131,7 +131,7 @@ public class BladeControllerTest {
         controller.step(game, GUI.ACTION.NONE, 1000);
 
         assertNotNull(blade.getPosition());
-        // Add additional assertions based on your requirements for case 5
+
     }
 
     @Test

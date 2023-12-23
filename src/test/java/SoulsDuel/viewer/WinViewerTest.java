@@ -58,6 +58,5 @@ public class WinViewerTest {
 
         verify(mockGui, times(entries.size())).drawText(any(Position.class), anyString(), anyString());
 
-        // Add more specific verifications based on your actual implementation
     }
 }

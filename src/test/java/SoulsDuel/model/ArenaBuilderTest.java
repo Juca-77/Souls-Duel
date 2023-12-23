@@ -190,14 +190,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 - 14, 33), blades.get(4).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
     @Test
     void testCreateBlades4_2() throws IOException {
@@ -212,14 +208,12 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
+
+
         assertEquals(new Position(width / 2 - 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 - 14, 33), blades.get(4).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -235,14 +229,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width/2-14,27), blades.get(0).getPosition());
         assertEquals(new Position(width/2-14,35), blades.get(6).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -258,14 +248,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width/2-14,27), blades.get(0).getPosition());
         assertEquals(new Position(width/2-14,36), blades.get(7).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -281,14 +267,12 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
+
         assertEquals(new Position(width/2-14,27), blades.get(0).getPosition());
         assertEquals(new Position(width/2-14,37), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
+
     }
 
     @Test
@@ -304,13 +288,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width/2-14,27), blades.get(0).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -326,15 +306,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(29, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width/2-14,27), blades.get(0).getPosition());
         assertEquals(new Position(width/2+5,27), blades.get(10).getPosition());
         assertEquals(new Position(width/2-4,38), blades.get(20).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
     @Test
     void testCreateBladesParalels2() throws IOException {
@@ -349,15 +325,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(29, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
-
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 38), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 + 5, 38), blades.get(10).getPosition());
         assertEquals(new Position(width / 2 - 4, 27), blades.get(20).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -373,15 +344,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(12, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 - 14, 35), blades.get(4).getPosition());
         assertEquals(new Position(width / 2 + 14, 31), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -397,15 +364,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(12, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 + 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 + 14, 35), blades.get(4).getPosition());
         assertEquals(new Position(width / 2 - 14, 31), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
     @Test
     void testCreateBlades2_1() throws IOException {
@@ -420,14 +383,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 30), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 - 14, 38), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
+
     }
 
     @Test
@@ -443,14 +403,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 - 14, 35), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
+
     }
 
     @Test
@@ -466,14 +423,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(28, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2-14,27), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -489,14 +442,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
-
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2-14,27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 - 14, 34), blades.get(5).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -512,14 +460,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 - 14, 31), blades.get(2).getPosition());
 
-        // Add more assertions based on your specific requirements
+
     }
 
     @Test
@@ -535,14 +480,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 + 14, 30), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 + 14, 38), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -558,14 +499,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 + 14, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 + 14, 35), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -581,10 +518,7 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(15, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), blades.get(0).getPosition());
 
     }
@@ -602,14 +536,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(14, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 13, 38), blades.get(0).getPosition());
 
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -625,14 +555,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 + 5, 38), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 + 14, 38), blades.get(9).getPosition());
 
-        // Add more assertions based on your specific requirements
+
     }
 
     @Test
@@ -648,14 +575,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(10, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 38), blades.get(0).getPosition());
 
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -671,14 +594,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 4, 38), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 + 4, 38), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -694,14 +613,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, blades.size());
 
-        // Test the positions of the blades
-        // You may want to check specific positions based on your logic
-
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 4, 27), blades.get(0).getPosition());
         assertEquals(new Position(width / 2 + 4, 27), blades.get(8).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
     @Test
     void testCreateBladesCos1() throws IOException {
@@ -716,14 +630,8 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(1, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
-
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2, 27), blades.get(0).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -739,14 +647,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(1, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 1, 27), blades.get(0).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
     @Test
     void testCreateBladesCos1_2() throws IOException {
@@ -761,14 +664,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(1, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2-2,27), blades.get(0).getPosition());
 
 
-        // Add more assertions based on your specific requirements
     }
     @Test
     void testCreateBladesCos2() throws IOException {
@@ -783,14 +682,8 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(1, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
-
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2,27), blades.get(0).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -806,14 +699,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(1, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2+1,27), blades.get(0).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -829,14 +717,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(1, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2+2,27), blades.get(0).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -852,17 +735,12 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(2, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2+1,27), blades.get(0).getPosition());
 
 
-        // Add more assertions based on your specific requirements
     }
 
-    // Add similar tests for createBladesCos1_2, createBladesCos2, createBladesCos2_1, and so on...
 
     @Test
     void testCreateBladesCos3() throws IOException {
@@ -877,16 +755,11 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(4, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 + 5, 27), blades.get(0).getPosition());
 
         assertEquals(new Position(width / 2 - 5, 27), blades.get(1).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
     @Test
     void testCreateBladesCos3_1() throws IOException {
@@ -901,16 +774,12 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(2, blades.size());
 
-        // Test the positions and directions of the blades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2-13,27), blades.get(0).getPosition());
 
         assertEquals(new Position(width / 2+13,27), blades.get(1).getPosition());
 
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -926,14 +795,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(1, grenades.size());
 
-        // Test the positions and directions of the grenades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2, 27), grenades.get(0).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -949,14 +813,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(9, grenades.size());
 
-        // Test the positions and directions of the grenades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 8, 27), grenades.get(0).getPosition());
 
-
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -972,14 +831,10 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(26, grenades.size());
 
-        // Test the positions and directions of the grenades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), grenades.get(0).getPosition());
 
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -995,13 +850,9 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(12, grenades.size());
 
-        // Test the positions and directions of the grenades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), grenades.get(0).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 
     @Test
@@ -1017,12 +868,8 @@ public class ArenaBuilderTest {
         // Test the size of the resulting list
         assertEquals(18, grenades.size());
 
-        // Test the positions and directions of the grenades
-        // You may want to check specific positions and directions based on your logic
 
-        // Example assertions (modify as per your actual logic)
         assertEquals(new Position(width / 2 - 14, 27), grenades.get(0).getPosition());
 
-        // Add more assertions based on your specific requirements
     }
 }

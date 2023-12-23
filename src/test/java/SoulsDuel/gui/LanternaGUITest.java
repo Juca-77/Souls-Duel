@@ -288,7 +288,6 @@ class LanternaGUITest {
         assertEquals(GUI.ACTION.RIGHT, result);
     }
 
-    // Repeat similar tests for other cases (ArrowRight, ArrowDown, ArrowLeft, Enter, etc.)
 
     @Test
     void testGetNextAction_None() throws IOException {

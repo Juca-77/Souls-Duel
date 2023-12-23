@@ -8,6 +8,7 @@ import SoulsDuel.viewer.Viewer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class GameViewer extends Viewer<Arena> {
     public GameViewer(Arena arena) {
@@ -27,7 +28,8 @@ public class GameViewer extends Viewer<Arena> {
     }
 
     private <T extends Element> void drawElements(GUI gui, List<T> elements, ElementViewer<T> viewer) {
-        for (T element : elements)
+        List<T> copy =new CopyOnWriteArrayList<>(elements);
+        for (T element : copy)
             drawElement(gui, element, viewer);
     }
 

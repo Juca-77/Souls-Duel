@@ -17,13 +17,11 @@ public class MainMenuTest {
         mainMenu.nextEntry();
         assertEquals(1, mainMenu.getCurrentEntry());
 
-        // Calling nextEntry repeatedly until the end of the list
         for (int i = 2; i < mainMenu.getNumberEntries(); i++) {
             mainMenu.nextEntry();
             assertEquals(i, mainMenu.getCurrentEntry());
         }
 
-        // After reaching the end, calling nextEntry should wrap around to 0
         mainMenu.nextEntry();
         assertEquals(0, mainMenu.getCurrentEntry());
     }

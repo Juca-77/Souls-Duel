@@ -28,11 +28,9 @@ public class DeadViewerTest {
         assertDoesNotThrow(() -> {
             deadViewer.drawElements(mockGui);
 
-            // Verify that drawText was called on the GUI mock for each entry with the expected arguments
-            verify(mockGui, times(1)).drawText(new Position(51-8, 42), "Entry", "#FF0000");
+           verify(mockGui, times(1)).drawText(new Position(51-8, 42), "Entry", "#FF0000");
             verify(mockGui, times(1)).drawText(new Position(51, 42), "Entry", "#FFFFFF");
 
-            // Verify that drawDead was called on the GUI mock
             verify(mockGui, times(1)).drawDead(new Position(16, 20));
         });
     }
@@ -47,7 +45,5 @@ public class DeadViewerTest {
         // Act
         instance.drawElements(mockGui); // Ensure yourMethod contains the loop
 
-        // Assert
-        // Add assertions here to check the expected behavior when i reaches getModel().getNumberEntries()
-    }
+     }
 }

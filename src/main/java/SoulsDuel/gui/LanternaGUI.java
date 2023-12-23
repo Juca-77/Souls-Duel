@@ -124,14 +124,14 @@ public class LanternaGUI implements GUI {
                             "░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░\n";
 
             String[] wordsArray = s.split("\n");
-            //List<String> wordsList = Arrays.asList(wordsArray);
+
             for (int i = 0; i < wordsArray.length; i++) {
                 for (int j = 0; j < wordsArray[0].length(); j++) {
 
                     if ("▓".equals(String.valueOf(wordsArray[i].charAt(j)))) {
                         drawCharacter(position.getX() + j, position.getY() + i, wordsArray[i].charAt(j), "#FFFFFF");
                     }
-                    //drawCharacter(95+j,1+i, wordsArray[i].charAt(j),"#FFFFFF");
+
                 }
             }
             drawText(new Position(48, 42), "Sans", "#FFFFFF");
@@ -270,14 +270,14 @@ public class LanternaGUI implements GUI {
 
 
             String[] wordsArray = s.split("\n");
-            //List<String> wordsList = Arrays.asList(wordsArray);
+
             for (int i = 0; i < wordsArray.length; i++) {
                 for (int j = 0; j < wordsArray[0].length(); j++) {
 
                     if ("▓".equals(String.valueOf(wordsArray[i].charAt(j)))) {
                         drawCharacter(position.getX() + j, position.getY() + i, wordsArray[i].charAt(j), "#FF0000");
                     }
-                    //drawCharacter(95+j,1+i, wordsArray[i].charAt(j),"#FFFFFF");
+
                 }
             }
 

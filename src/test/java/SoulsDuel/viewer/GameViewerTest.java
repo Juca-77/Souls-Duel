@@ -52,21 +52,19 @@ public class GameViewerTest {
         verify(soul, times(1)).getHp();
         verify(arena, times(1)).getLevel();
 
-        // You may want to verify other interactions based on your actual implementation
     }
 
 
     private GameViewer gameViewer;
     private Arena arena;
     private GUI mockGui;
-    private EnemyViewer mockEnemyViewer;
+
 
     @BeforeEach
     void setUp() {
         arena = Mockito.mock(Arena.class);
         gameViewer = new GameViewer(arena);
         mockGui = Mockito.mock(GUI.class);
-        mockEnemyViewer = Mockito.mock(EnemyViewer.class);
     }
 
     @Test

@@ -24,7 +24,6 @@ public class DeadMenuTest {
             assertEquals(i, deadMenu.getCurrentEntry());
         }
 
-        // After reaching the end, calling nextEntry should wrap around to 0
         deadMenu.nextEntry();
         assertEquals(0, deadMenu.getCurrentEntry());
     }

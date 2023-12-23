@@ -60,7 +60,6 @@ public class MenuViewerTest {
         verify(mockGui, times(1)).drawText(new Position(50 - 3, 33), "Menu", "#FFFFFF");
         verify(mockGui, times(3)).drawText(any(Position.class), anyString(), anyString());
 
-        // Add more specific verifications based on your actual implementation
     }
 
     @Test
@@ -83,6 +82,5 @@ public class MenuViewerTest {
         verify(mockGui, times(1)).drawText(new Position(50 - 3, 33), "Menu", "#FFFFFF");
         verify(mockGui, times(entries.size()+1)).drawText(any(Position.class), anyString(), anyString());
 
-        // Add more specific verifications based on your actual implementation
     }
 }

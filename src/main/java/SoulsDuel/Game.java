@@ -18,7 +18,7 @@ public class Game {
 
     public Game() throws FontFormatException, IOException, URISyntaxException {
         //bigger than 47 to have a normal execution
-         //always 60 pls ***se alterar as dimensoes alterar tmb no menucontroler para evitar erros qndo se dá replay(ou play)***
+        //always 60 pls ***se alterar as dimensoes alterar tmb no menucontroler para evitar erros qndo se dá replay(ou play)***
         this.gui = new LanternaGUI(100, 70);
         this.state = new MainMenuState(new MainMenu());
 
