@@ -11,7 +11,7 @@ Embark on an epic adventure in "Soul's Duel," a 2D game inspired by the intense 
 
 ### IMPLEMENTED FEATURES
 
-- **Move** - The game character can be controlled using the WASD keys.
+- **Move** - The game character can be controlled using the arrow keys keys.
 - **HP** - The player has health points.
 - **Get hit** - If the character gets hit, he will lose Health Points (HP).
 - **Enemies** - An area displays enemies in an ASCII design.
